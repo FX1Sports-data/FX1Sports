@@ -13,7 +13,7 @@ title: FX1 Sports — Interactive Roadmap
   /* Fond global et typographie */
   html, body, #header_background, #main_content_wrap, #footer_wrap {
     background-color: #050811 !important;
-    background-image: none !important; /* Supprime le motif de fond du thème Hacker */
+    background-image: none !important;
     color: #94A3B8 !important;
     font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
   }
@@ -64,10 +64,10 @@ title: FX1 Sports — Interactive Roadmap
 </style>
 
 <div class="fx1-card">
-  <object data="./FX1roadmap.svg" type="image/svg+xml" width="100%" height="1020px" style="width:100%; border:none; display:block;">
+  <object data="./FX1roadmap.svg?v=2" type="image/svg+xml" width="100%" height="1020px" style="width:100%; border:none; display:block;">
     <p style="padding:20px; text-align:center;">
       Votre navigateur ne charge pas le SVG. 
-      <a href="./FX1roadmap.svg" style="color:#00E5FF;">Cliquez ici pour l'ouvrir directement</a>.
+      <a href="./FX1roadmap.svg?v=2" style="color:#00E5FF;">Cliquez ici pour l'ouvrir directement</a>.
     </p>
   </object>
 </div>
