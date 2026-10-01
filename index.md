@@ -1,4 +1,11 @@
 ---
+<style>
+  /* Masque les boutons de téléchargement et le lien GitHub dans le header */
+  .downloads, header a.button, a[href*="github.com"] {
+    display: none !important;
+  }
+</style>
+---
 layout: default
 title: Roadmap FX1
 ---
