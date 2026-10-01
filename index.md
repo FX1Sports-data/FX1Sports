@@ -153,7 +153,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
     display: flex;
   }
 
-  /* Conteneur de la carte SVG */
+  /* Conteneur de la carte SVG / Images */
   .fx1-card {
     background: #0B0F19;
     border: 1px solid rgba(0, 229, 255, 0.2);
@@ -167,7 +167,9 @@ title: FX1 Sports — Portal & Interactive Roadmap
     max-height: calc(100vh - 80px);
   }
 
-  .fx1-card object {
+  .fx1-card object,
+  .fx1-card img,
+  .fx1-card iframe {
     width: 100%;
     height: 100%;
     border: none;
@@ -247,10 +249,10 @@ title: FX1 Sports — Portal & Interactive Roadmap
         <p>Discover our strategic vision and the multi-phased rollout of the platform.</p>
       </div>
       <div class="fx1-card">
-        <object data="./FX1roadmap.svg?v=5" type="image/svg+xml">
+        <object data="{{ '/FX1roadmap.svg' | relative_url }}?v=5" type="image/svg+xml">
           <p style="padding:20px; text-align:center; color:#94A3B8;">
             Votre navigateur ne charge pas le SVG. 
-            <a href="./FX1roadmap.svg?v=5" style="color:#00E5FF;">Cliquez ici pour l'ouvrir directement</a>.
+            <a href="{{ '/FX1roadmap.svg' | relative_url }}?v=5" style="color:#00E5FF;">Cliquez ici pour l'ouvrir directement</a>.
           </p>
         </object>
       </div>
@@ -263,10 +265,10 @@ title: FX1 Sports — Portal & Interactive Roadmap
         <p>Intelligence artificielle prédictive et analyse de données sportives en temps réel.</p>
       </div>
       <div class="fx1-card">
-        <object data="./FX1pulseai.svg?v=1" type="image/svg+xml">
+        <object data="{{ '/FX1pulseai.svg' | relative_url }}?v=1" type="image/svg+xml">
           <p style="padding:20px; text-align:center; color:#94A3B8;">
             Votre navigateur ne charge pas le SVG. 
-            <a href="./FX1pulseai.svg?v=1" style="color:#00E5FF;">Cliquez ici pour l'ouvrir directement</a>.
+            <a href="{{ '/FX1pulseai.svg' | relative_url }}?v=1" style="color:#00E5FF;">Cliquez ici pour l'ouvrir directement</a>.
           </p>
         </object>
       </div>
