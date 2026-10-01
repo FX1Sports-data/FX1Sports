@@ -4,8 +4,11 @@ title: Roadmap FX1
 ---
 
 <style>
-  /* Masque les boutons de téléchargement et le lien GitHub dans le header */
-  .downloads, header a.button, a[href*="github.com"] {
+  /* Cible spécifiquement la section de boutons et liens du thème Hacker */
+  header section,
+  header .button,
+  header a.buttons,
+  header a[href*="github.com"] {
     display: none !important;
   }
 </style>
