@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 900" width="100%" role="img" aria-labelledby="svg-title svg-desc" lang="en">
+  <title id="svg-title">FX1 Token Utility &amp; Commercial Revenue Loop System</title>
+  <desc id="svg-desc">An interactive three-panel infographic showing the $FXI user loop, FX1 commercial revenue lines, and MotionAI Learn's productive economy flow.</desc>
+  <defs>
+    <filter id="glow" x="-35%" y="-35%" width="170%" height="170%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#1fb9c9" stroke-width=".5"/>
+    </pattern>
+    <marker id="arrow-cyan" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0 0L8 4.5L0 9Z" fill="#1fb9c9"/>
+    </marker>
+    <style><![CDATA[
+      @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&display=swap");
+      text { font-family: "Barlow Condensed", "Arial Narrow", Arial, sans-serif; fill: #e9f4f5; }
+      .bg { fill: #04090c; }
+      .grid { fill: url(#grid); opacity: .1; }
+      .panel { fill: #06131a; stroke: #1fb9c9; stroke-width: 2.5; }
+      .card { fill: #07141a; stroke: #14535c; stroke-width: 1.8; }
+      .panel-stage { cursor: pointer; outline: none; }
+      .panel-stage-hidden { display: none; }
+      .panel-stage > .panel { transition: stroke .2s ease, filter .2s ease; }
+      .panel-stage:hover > .panel, .panel-stage:focus > .panel { stroke: #4ade50; filter: url(#glow); }
+      .business-item, .revenue-summary, .learn-step, .learn-copy { opacity: 0; visibility: hidden; transition: opacity .3s ease; }
+      .business-item-visible, .revenue-summary-visible, .learn-step-visible, .learn-copy-visible { opacity: 1; visibility: visible; }
+      .title { font-size: 42px; font-weight: 800; }
+      .section { fill: #7fd8cc; font-size: 28px; font-weight: 800; }
+      .subsection { fill: #7fd8cc; font-size: 22px; font-weight: 700; }
+      .body { font-size: 21px; font-weight: 500; }
+      .business-line { font-size: 24px; }
+      .business-line-note { font-size: 20px; }
+      .flow-copy { font-size: 21px; }
+      .utility-summary { font-size: 29px; }
+      .utility-heading { font-size: 24px; }
+      .revenue-note { font-size: 20px; }
+      .small { font-size: 18px; font-weight: 500; }
+      .small.revenue-note { font-size: 22px; }
+      .cyan { fill: #1fb9c9; }
+      .mint { fill: #7fd8cc; }
+      .pink { fill: #f472b6; }
+      .green { fill: #70ed69; }
+      .icon { fill: none; stroke: #1fb9c9; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+      .icon-pink { fill: none; stroke: #f472b6; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .flow { fill: none; stroke: #1fb9c9; stroke-width: 2.8; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow-cyan); }
+      .glow { filter: url(#glow); }
+    ]]></style>
+  </defs>
+
+  <rect class="bg" width="1800" height="900"/>
+  <rect class="grid" width="1800" height="900"/>
+  <path d="M25 18H49L82 50L49 82H25L57 50Z" fill="#1fb9c9"/>
+  <path d="M49 18H73L105 50L73 82H49L81 50Z" fill="#1fb9c9" opacity=".8"/>
+  <text x="92" y="73" style="font-size:58px;font-weight:800;font-style:italic;fill:#fff">FX<tspan fill="#1fb9c9">1</tspan></text>
+  <text class="title" x="252" y="65">TOKEN UTILITY &amp; COMMERCIAL REVENUE LOOP SYSTEM</text>
+  <text x="254" y="96" style="font-size:16px;fill:#f472b6">Click each panel to reveal the next</text>
+  <path d="M24 110H1776" stroke="#14535c" stroke-width="1.5"/>
+  <path d="M24 110H482" stroke="#1fb9c9" stroke-width="3" filter="url(#glow)"/>
+
+  <!-- Panel 1: Token utility -->
+  <g id="panel1" class="panel-stage" tabindex="0" role="button" aria-label="Reveal commercial business lines" aria-expanded="false">
+    <rect class="panel" x="24" y="128" width="550" height="720" rx="18"/>
+    <text class="section" x="54" y="172">TOKEN UTILITY:</text>
+    <text class="section" x="54" y="207">THE USER LOOP</text>
+    <g class="glow">
+      <circle cx="507" cy="183" r="29" fill="#06131a" stroke="#1fb9c9" stroke-width="2"/>
+      <path d="M498 181C499 169 515 166 521 176M521 176L520 167M521 176L512 177M516 187C515 199 499 202 493 192M493 192L494 201M493 192L502 191" class="icon"/>
+      <text x="507" y="190" text-anchor="middle" style="font-size:20px;font-weight:700;fill:#7fd8cc">$</text>
+    </g>
+
+    <g>
+      <text x="55" y="326" style="font-size:72px;font-weight:800;fill:#70ed69">1</text>
+        <text class="body business-line" x="128" y="290"><tspan style="font-weight:800">PLAY</tspan> STRUCTURED ACTIVITIES</text>
+        <text class="body" x="128" y="322">(predictions, battles, trivia)</text>
+      <g class="glow">
+        <path d="M487 290L497 279H515L527 287L524 314H492L487 306Z" class="icon"/>
+        <path d="M494 294H503M498 290V299M513 292H514M518 300H519" class="icon-pink"/>
+        <path d="M505 280V273Q505 269 510 269H521" class="icon"/>
+      </g>
+    </g>
+    <path d="M54 348H544" stroke="#14535c" stroke-width="1.5"/>
+
+    <g>
+      <text x="55" y="454" style="font-size:72px;font-weight:800;fill:#70ed69">2</text>
+        <text class="body business-line" x="128" y="418"><tspan style="font-weight:800">EARN</tspan> <tspan fill="#7fd8cc" style="font-weight:800">SHOTS</tspan> &amp; <tspan style="font-weight:800">CONVERT</tspan></text>
+        <text class="body business-line" x="128" y="450"><tspan style="font-weight:800">TO</tspan> <tspan fill="#70ed69" style="font-weight:800">$FXI</tspan></text>
+      <g class="glow">
+        <ellipse cx="508" cy="398" rx="18" ry="7" class="icon"/><path d="M490 398V417C490 422 498 426 508 426S526 422 526 417V398M490 408C490 413 498 417 508 417S526 413 526 408" class="icon"/>
+        <ellipse cx="488" cy="420" rx="18" ry="7" class="icon"/><path d="M470 420V439C470 444 478 448 488 448S506 444 506 439V420M470 430C470 435 478 439 488 439S506 435 506 430" class="icon"/>
+        <circle cx="526" cy="441" r="16" fill="#06131a" stroke="#1fb9c9" stroke-width="1.8"/><text x="526" y="447" text-anchor="middle" style="font-size:19px;font-weight:700;fill:#70ed69">$</text>
+      </g>
+    </g>
+    <path d="M54 470H544" stroke="#14535c" stroke-width="1.5"/>
+
+    <g>
+      <text x="55" y="576" style="font-size:72px;font-weight:800;fill:#70ed69">3</text>
+        <text class="body business-line" x="128" y="540"><tspan style="font-weight:800">USE</tspan> <tspan fill="#70ed69" style="font-weight:800">$FXI</tspan> TO SPEND, HOLD,</text>
+        <text class="body business-line" x="128" y="572">OR LOCK INSIDE ARENA</text>
+      <g class="glow">
+        <rect x="481" y="510" width="52" height="60" rx="5" fill="#06131a" stroke="#1fb9c9" stroke-width="2"/>
+        <circle cx="507" cy="538" r="18" class="icon"/><circle cx="507" cy="538" r="10" class="icon-pink"/>
+        <path d="M499 538H515M507 530V546M522 552V564M518 552V548Q522 540 526 548V552" class="icon"/>
+      </g>
+    </g>
+
+    <rect x="47" y="609" width="504" height="205" rx="11" fill="#07141a" stroke="#14535c" stroke-width="1.6"/>
+    <text x="68" y="647" class="utility-heading" style="font-weight:700;fill:#7fd8cc">SIMPLE ON THE SURFACE</text>
+    <text class="body utility-summary" x="68" y="684">User participation improves AI validation,</text>
+    <text class="body utility-summary" x="68" y="721">improves FX1's products, and drives</text>
+    <text class="body utility-summary" x="68" y="758">commercial revenue. Engagement is</text>
+    <text class="body utility-summary" x="68" y="795">productive, not just entertaining.</text>
+  </g>
+
+  <!-- Panel 2: Commercial business -->
+  <g id="panel2" class="panel-stage panel-stage-hidden" tabindex="0" role="button" aria-label="Reveal MotionAI Learn economy flow" aria-expanded="false">
+    <rect class="panel" x="600" y="128" width="550" height="720" rx="18"/>
+    <text class="section" x="628" y="172">DIVERSIFIED COMMERCIAL</text>
+    <text class="section" x="628" y="207">BUSINESS LINES</text>
+
+    <g class="business-item">
+      <text x="631" y="276" style="font-size:53px;font-weight:800;fill:#70ed69">1.</text>
+      <text class="body business-line" x="696" y="272">MotionAI Live Data Products</text>
+      <g class="glow" transform="translate(-34 0)"><circle cx="1090" cy="261" r="18" class="icon"/><path d="M1081 261C1081 256 1085 253 1090 255C1095 253 1099 256 1099 261C1099 266 1090 271 1090 271C1090 271 1081 266 1081 261Z" class="icon-pink"/></g>
+    </g>
+    <g class="business-item">
+      <text x="631" y="344" style="font-size:53px;font-weight:800;fill:#70ed69">2.</text>
+      <text class="body business-line" x="696" y="340">Pulse SaaS</text>
+      <g class="glow" transform="translate(-34 0)"><circle cx="1090" cy="330" r="18" class="icon"/><path d="M1092 316L1084 331H1090L1087 344L1098 327H1092Z" class="icon-pink"/></g>
+    </g>
+    <g class="business-item">
+      <text x="631" y="412" style="font-size:53px;font-weight:800;fill:#70ed69">3.</text>
+      <text class="body business-line" x="696" y="400">Betting Odds Feed</text>
+      <text class="small business-line-note" x="696" y="426">(launching late 2026)</text>
+      <g class="glow" transform="translate(-34 0)"><rect x="1069" y="382" width="42" height="37" rx="3" fill="#06131a" stroke="#1fb9c9" stroke-width="1.7"/><path d="M1075 411L1084 403L1090 407L1104 390M1099 390H1104V395" class="icon-pink"/><path d="M1075 414H1105" class="icon"/></g>
+    </g>
+    <g class="business-item">
+      <text x="631" y="478" style="font-size:53px;font-weight:800;fill:#70ed69">4.</text>
+      <text class="body business-line" x="696" y="474">HeadShield Safety Intelligence</text>
+      <g class="glow" transform="translate(-34 0)"><path d="M1090 445L1111 452V470C1111 484 1090 494 1090 494S1069 484 1069 470V452Z" class="icon"/><path d="M1080 468L1087 475L1101 459" class="icon-pink"/></g>
+    </g>
+    <g class="business-item">
+      <text x="631" y="546" style="font-size:53px;font-weight:800;fill:#70ed69">5.</text>
+      <text class="body business-line" x="696" y="542">Rights Holder Partnerships</text>
+      <g class="glow" transform="translate(-34 0)"><path d="M1070 530L1084 520L1097 528L1110 523L1113 532L1102 539L1089 536L1081 544Z" class="icon"/><path d="M1079 542L1089 550L1099 542L1108 548" class="icon-pink"/></g>
+    </g>
+    <g class="business-item">
+      <text x="631" y="614" style="font-size:53px;font-weight:800;fill:#70ed69">6.</text>
+      <text class="body business-line" x="696" y="610">Arena Platform Commerce itself</text>
+      <g class="glow" transform="translate(-34 0)"><path d="M1071 593H1110V604H1071ZM1076 604V625M1087 604V625M1098 604V625M1106 604V625M1069 625H1112" class="icon"/><path d="M1069 593L1074 585H1107L1112 593" class="icon-pink"/></g>
+    </g>
+
+    <g class="revenue-summary">
+    <rect x="620" y="646" width="510" height="188" rx="11" fill="#07141a" stroke="#14535c" stroke-width="1.6"/>
+    <text class="subsection" x="638" y="678">REAL REVENUE LINES. NON-TRADING DRIVEN.</text>
+    <text class="small revenue-note" x="638" y="710">A defined share of net revenue from these businesses flows</text>
+    <text class="small revenue-note" x="638" y="742">directly into the <tspan fill="#70ed69">$FXI treasury</tspan>, funding buybacks,</text>
+    <text class="small revenue-note" x="638" y="774">jackpots and ecosystem programs. Commercial activity</text>
+    <text class="small revenue-note" x="638" y="806">anchors utility to operating revenue, not trading volume.</text>
+    </g>
+  </g>
+
+  <!-- Panel 3: MotionAI Learn -->
+  <g id="panel3" class="panel-stage panel-stage-hidden" tabindex="0" role="button" aria-label="MotionAI Learn productive economy flow" aria-expanded="false">
+    <path class="panel" d="M1176 128H1754Q1776 128 1776 150V776Q1776 804 1748 804H1690C1665 804 1650 848 1630 848H1200Q1176 848 1176 824V152Q1176 128 1200 128Z"/>
+    <text class="section" x="1202" y="172">MOTIONAI LEARN:</text>
+    <text class="section" x="1202" y="207">PRODUCTIVE ECONOMY FLOW</text>
+
+    <g class="learn-step">
+      <g class="glow"><rect x="1204" y="244" width="39" height="48" rx="3" fill="#06131a" stroke="#1fb9c9" stroke-width="1.8"/><path d="M1212 255H1234M1212 263H1234M1212 271H1228M1213 280L1218 285L1233 270" class="icon-pink"/></g>
+      <text class="body" x="1320" y="267" text-anchor="middle">structured tasks</text>
+      <path class="flow" d="M1320 283V320"/>
+    </g>
+    <g class="learn-step">
+      <g class="glow"><circle cx="1223" cy="356" r="20" class="icon"/><circle cx="1223" cy="356" r="8" class="icon-pink"/><path d="M1223 328V336M1223 376V384M1195 356H1203M1243 356H1251M1203 336L1209 342M1237 370L1243 376M1243 336L1237 342M1209 370L1203 376" class="icon"/></g>
+      <text class="body" x="1320" y="352" text-anchor="middle">improve AI</text><text class="body" x="1320" y="377" text-anchor="middle">systems</text>
+      <path class="flow" d="M1320 390V417"/>
+    </g>
+    <g class="learn-step">
+      <g class="glow"><path d="M1201 465V445L1212 436L1222 443L1237 426M1230 426H1237V433" class="icon"/><path d="M1201 470H1242" class="icon-pink"/></g>
+      <text class="body" x="1320" y="447" text-anchor="middle">improve MotionAI</text><text class="body" x="1320" y="472" text-anchor="middle">data quality</text>
+      <path class="flow" d="M1320 488V525"/>
+    </g>
+    <g class="learn-step">
+      <g class="glow"><rect x="1203" y="536" width="39" height="45" rx="3" fill="#06131a" stroke="#1fb9c9" stroke-width="1.8"/><path d="M1210 545H1234M1210 553H1234M1210 561H1225" class="icon"/><circle cx="1232" cy="574" r="8" fill="#06131a" stroke="#1fb9c9" stroke-width="1.5"/><path d="M1228 574L1231 577L1236 571" class="icon-pink"/></g>
+      <text class="body" x="1320" y="557" text-anchor="middle">improved FX1</text><text class="body" x="1320" y="582" text-anchor="middle">products</text>
+      <path class="flow" d="M1320 594V621"/>
+    </g>
+    <g class="learn-step">
+      <g class="glow"><path d="M1202 649L1214 641L1227 647L1237 639L1244 649L1234 658L1224 654L1215 663Z" class="icon"/><path d="M1207 653L1217 663L1225 656L1234 663" class="icon-pink"/></g>
+      <text class="body" x="1320" y="650" text-anchor="middle">drive commercial</text><text class="body" x="1320" y="675" text-anchor="middle">revenue</text>
+      <path class="flow" d="M1320 688V725"/>
+    </g>
+    <g class="learn-step">
+      <g class="glow"><rect x="1202" y="737" width="42" height="41" rx="4" fill="#06131a" stroke="#1fb9c9" stroke-width="1.8"/><circle cx="1223" cy="757" r="14" class="icon"/><circle cx="1223" cy="757" r="6" class="icon-pink"/></g>
+      <text class="body" x="1320" y="755" text-anchor="middle">strengthens</text><text class="body" x="1320" y="780" text-anchor="middle">Arena</text>
+    </g>
+
+    <path d="M1415 234V776" stroke="#14535c" stroke-width="1.5"/>
+    <g class="learn-copy">
+      <text x="1440" y="268" style="font-size:23px;font-weight:800;fill:#7fd8cc">STRUCTURED TRAINING</text>
+      <text x="1440" y="298" style="font-size:23px;font-weight:800;fill:#7fd8cc">&amp; VALIDATION</text>
+      <text class="flow-copy" x="1440" y="338">Your structured tasks directly</text>
+      <text class="flow-copy" x="1440" y="368">improve FX1's AI systems.</text>
+      <text class="flow-copy" x="1440" y="398">Your activity is productive,</text>
+      <text class="flow-copy" x="1440" y="428">not just entertaining.</text>
+    </g>
+
+    <g class="learn-copy">
+      <text x="1440" y="565" style="font-size:23px;font-weight:800;fill:#7fd8cc">REVENUE-DRIVEN ECONOMY</text>
+      <text class="flow-copy" x="1440" y="601">Sponsors, enterprises and rights holders</text>
+      <text class="flow-copy" x="1440" y="635">pay for tools, data and engagement.</text>
+      <text class="flow-copy" x="1440" y="669">That revenue strengthens the $FXI treasury</text>
+      <text class="flow-copy" x="1440" y="703">and anchors the token side to actual</text>
+      <text class="flow-copy" x="1440" y="737">operating revenue, not trading volume.</text>
+    </g>
+
+    <text x="1680" y="836" style="font-size:14px;font-weight:700;fill:#7fd8cc">FX1.IO</text>
+    <text x="1736" y="842" text-anchor="middle" style="font-size:30px;font-weight:800;font-style:italic;fill:#fff">FX<tspan fill="#1fb9c9">1</tspan></text>
+  </g>
+
+  <script><![CDATA[
+    var stages = [].slice.call(document.querySelectorAll(".panel-stage"));
+    var businessItems = [].slice.call(document.querySelectorAll(".business-item"));
+    var revenueSummary = document.querySelector(".revenue-summary");
+    var learnSteps = [].slice.call(document.querySelectorAll(".learn-step"));
+    var learnCopies = [].slice.call(document.querySelectorAll("#panel3 .learn-copy"));
+    stages.forEach(function(stage, index) {
+      function advance() {
+        var next = stages[index + 1];
+        if (!next || !next.classList.contains("panel-stage-hidden")) return;
+        next.classList.remove("panel-stage-hidden");
+        stage.setAttribute("aria-expanded", "true");
+        if (next.id === "panel2") {
+          businessItems.forEach(function(item, itemIndex) {
+            window.setTimeout(function() {
+              item.classList.add("business-item-visible");
+            }, itemIndex * 1500);
+          });
+          window.setTimeout(function() {
+            revenueSummary.classList.add("revenue-summary-visible");
+          }, (businessItems.length - 1) * 1500 + 2000);
+        }
+        if (next.id === "panel3") {
+          learnSteps.forEach(function(step, stepIndex) {
+            window.setTimeout(function() {
+              step.classList.add("learn-step-visible");
+            }, stepIndex * 1000);
+          });
+          learnCopies.forEach(function(copy, copyIndex) {
+            window.setTimeout(function() {
+              copy.classList.add("learn-copy-visible");
+            }, (learnSteps.length - 1) * 1000 + 1500 + copyIndex * 1500);
+          });
+        }
+      }
+      stage.addEventListener("click", advance);
+      stage.addEventListener("keydown", function(event) {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          advance();
+        }
+      });
+    });
+  ]]></script>
+</svg>
