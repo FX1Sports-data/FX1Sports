@@ -293,7 +293,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
       </div>
     </div>
 
-    <!-- ARENA (NOUVELLE INTÉGRATION SVG) -->
+    <!-- ARENA -->
     <div id="view-arena" class="view-panel">
       <div class="fx1-topbar">
         <h1>FX1 Arena</h1>
@@ -321,15 +321,19 @@ title: FX1 Sports — Portal & Interactive Roadmap
       </div>
     </div>
 
-    <!-- STATUS & BENEFITS -->
+    <!-- STATUS & BENEFITS (NOUVELLE INTÉGRATION SVG) -->
     <div id="view-status" class="view-panel">
       <div class="fx1-topbar">
         <h1>Status & Benefits</h1>
         <p>Niveaux de membre, privilèges VIP et avantages pour les détenteurs.</p>
       </div>
-      <div class="fx1-card placeholder-box">
-        <h2 style="color:#00E5FF;">Programme VIP / Status</h2>
-        <p>Grille des avantages par niveau.</p>
+      <div class="fx1-card">
+        <object data="{{ '/FX1status.svg' | relative_url }}?v=1" type="image/svg+xml">
+          <p style="padding:20px; text-align:center; color:#94A3B8;">
+            Votre navigateur ne charge pas le SVG. 
+            <a href="{{ '/FX1status.svg' | relative_url }}?v=1" style="color:#00E5FF;">Cliquez ici pour l'ouvrir directement</a>.
+          </p>
+        </object>
       </div>
     </div>
 
