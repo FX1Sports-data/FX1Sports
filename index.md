@@ -244,7 +244,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
     <div id="view-roadmap" class="view-panel active">
       <div class="fx1-topbar">
         <h1>Interactive Roadmap</h1>
-        <p>Découvrez notre vision stratégique et le déploiement multi-phases de la plateforme.</p>
+        <p>Discover our strategic vision and the multi-phased rollout of the platform.</p>
       </div>
       <div class="fx1-card">
         <object data="./FX1roadmap.svg?v=5" type="image/svg+xml">
