@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1710 820" width="100%" role="img" aria-labelledby="svg-title svg-desc" lang="en">
+  <title id="svg-title">FX1 Status &amp; Benefits: OG &amp; Heritage System</title>
+  <desc id="svg-desc">An interactive three-panel overview of FX1 Heritage status, OG holder benefits, and access protection.</desc>
+  <defs>
+    <filter id="glow" x="-35%" y="-35%" width="170%" height="170%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#1fb9c9" stroke-width=".5"/>
+    </pattern>
+    <marker id="arrow-cyan" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0 0L8 4.5L0 9Z" fill="#1fb9c9"/>
+    </marker>
+    <style><![CDATA[
+      @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&display=swap");
+      text { font-family: "Barlow Condensed", "Arial Narrow", Arial, sans-serif; fill: #e9f4f5; }
+      .bg { fill: #04090c; }
+      .grid { fill: url(#grid); opacity: .1; }
+      .panel { fill: #06131a; stroke: #1fb9c9; stroke-width: 2.5; }
+      .card { fill: #07141a; stroke: #14535c; stroke-width: 1.8; }
+      .panel-stage { cursor: pointer; outline: none; }
+      .panel-stage-hidden { display: none; }
+      .panel-stage > .panel { transition: stroke .2s ease, filter .2s ease; }
+      .panel-stage:hover > .panel, .panel-stage:focus > .panel { stroke: #4ade50; filter: url(#glow); }
+      .benefit-item { opacity: 0; visibility: hidden; transition: opacity .25s ease; }
+      .benefit-item-visible { opacity: 1; visibility: visible; }
+      .title { font-size: 43px; font-weight: 800; }
+      .section { fill: #7fd8cc; font-size: 29px; font-weight: 800; }
+      .subsection { fill: #7fd8cc; font-size: 22px; font-weight: 700; }
+      .body { font-size: 22px; font-weight: 500; }
+      .layer-title { font-size: 31px; font-weight: 800; }
+      .layer-detail { font-size: 28px; }
+      .summary-copy { font-size: 26px; }
+      .benefit-icon { transform-box: fill-box; transform-origin: center; transform: scale(1.12); }
+      .og-benefits-icon { transform-box: fill-box; transform-origin: center; transform: scale(1.15); }
+      .hierarchy-icon { transform-box: fill-box; transform-origin: center; transform: scale(1.2); }
+      .hierarchy-label { font-size: 26px; font-weight: 800; }
+      .protection-heading { font-size: 23px; font-weight: 800; fill: #7fd8cc; }
+      .protection-copy { font-size: 26px; }
+      .small { font-size: 18px; font-weight: 500; }
+      .cyan { fill: #1fb9c9; }
+      .mint { fill: #7fd8cc; }
+      .pink { fill: #f472b6; }
+      .green { fill: #70ed69; }
+      .icon { fill: none; stroke: #1fb9c9; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+      .icon-pink { fill: none; stroke: #f472b6; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .flow { fill: none; stroke: #1fb9c9; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow-cyan); }
+      .glow { filter: url(#glow); }
+    ]]></style>
+  </defs>
+
+  <rect class="bg" width="1710" height="820"/>
+  <rect class="grid" width="1710" height="820"/>
+  <path d="M25 18H49L82 50L49 82H25L57 50Z" fill="#1fb9c9"/>
+  <path d="M49 18H73L105 50L73 82H49L81 50Z" fill="#1fb9c9" opacity=".8"/>
+  <text x="92" y="73" style="font-size:58px;font-weight:800;font-style:italic;fill:#fff">FX<tspan fill="#1fb9c9">1</tspan></text>
+  <text class="title" x="252" y="65">STATUS &amp; BENEFITS: OG &amp; HERITAGE SYSTEM</text>
+  <text x="254" y="94" style="font-size:16px;fill:#f472b6">Click each panel to reveal the next</text>
+  <path d="M24 108H1686" stroke="#14535c" stroke-width="1.5"/>
+  <path d="M24 108H480" stroke="#1fb9c9" stroke-width="3" filter="url(#glow)"/>
+
+  <!-- Status layers -->
+  <g id="panel1" class="panel-stage" tabindex="0" role="button" aria-label="Reveal OG holder benefits" aria-expanded="false">
+    <rect class="panel" x="24" y="124" width="518.5" height="644" rx="18"/>
+    <text class="section" x="54" y="171">3 SEPARATE</text>
+    <text class="section" x="54" y="207">STATUS LAYERS</text>
+    <g class="glow" transform="translate(-70 0)">
+      <path d="M483 151L501 176L519 151M520 151L538 176L556 151M557 151L575 176L593 151" class="icon"/>
+      <circle cx="501" cy="189" r="13" class="icon"/><circle cx="538" cy="189" r="13" class="icon"/><circle cx="575" cy="189" r="13" class="icon"/>
+      <path d="M538 181L541 187L548 188L543 193L544 200L538 196L532 200L533 193L528 188L535 187Z" class="icon-pink"/>
+      <path d="M490 207H512M527 207H549M564 207H586" class="icon"/>
+    </g>
+
+    <g>
+      <text x="54" y="326" style="font-size:76px;font-weight:800;fill:#70ed69">1</text>
+      <text class="layer-title" x="126" y="277">Heritage/OG Status</text>
+      <text class="layer-detail" x="126" y="317">(Time as part of <tspan fill="#70ed69">$FXI</tspan>)</text>
+      <g class="glow" transform="translate(-91.5 0)">
+        <circle cx="559" cy="285" r="27" class="icon"/>
+        <path d="M559 263V268M559 302V307M537 285H542M576 285H581M543 269L547 273M571 297L575 301M575 269L571 273M547 297L543 301" class="icon-pink"/>
+        <circle cx="590" cy="310" r="21" fill="#06131a" stroke="#7fd8cc" stroke-width="1.8"/>
+        <path d="M590 296C582 302 582 318 590 324C598 318 598 302 590 296Z" fill="#7fd8cc" opacity=".85"/>
+      </g>
+    </g>
+    <path d="M54 347H515" stroke="#14535c" stroke-width="1.5"/>
+
+    <g>
+      <text x="54" y="459" style="font-size:76px;font-weight:800;fill:#70ed69">2</text>
+      <text class="layer-title" x="126" y="410">Current <tspan fill="#70ed69">$FXI</tspan> Balance</text>
+      <text class="layer-detail" x="126" y="450">(Actively maintained)</text>
+      <g class="glow" transform="translate(-95 0)">
+        <ellipse cx="559" cy="397" rx="24" ry="8" class="icon"/><path d="M535 397V422C535 428 546 433 559 433S583 428 583 422V397M535 409C535 415 546 420 559 420S583 415 583 409" class="icon"/>
+        <ellipse cx="579" cy="427" rx="22" ry="7" class="icon"/><path d="M557 427V448C557 453 567 458 579 458S601 453 601 448V427M557 437C557 442 567 447 579 447S601 442 601 437" class="icon"/>
+        <circle cx="601" cy="459" r="14" fill="#06131a" stroke="#1fb9c9" stroke-width="1.7"/><text x="601" y="465" text-anchor="middle" style="font-size:18px;font-weight:700;fill:#70ed69">$</text>
+      </g>
+    </g>
+    <path d="M54 480H515" stroke="#14535c" stroke-width="1.5"/>
+
+    <g>
+      <text x="54" y="594" style="font-size:76px;font-weight:800;fill:#70ed69">3</text>
+      <text class="layer-title" x="126" y="545"><tspan fill="#70ed69">$FXI</tspan> Lock</text>
+      <text class="layer-detail" x="126" y="585">(Committed to Arena)</text>
+      <g class="glow" transform="translate(-92.5 0)">
+        <rect x="541" y="530" width="63" height="73" rx="5" fill="#06131a" stroke="#1fb9c9" stroke-width="2"/>
+        <circle cx="573" cy="565" r="21" class="icon"/><circle cx="573" cy="565" r="12" class="icon-pink"/>
+        <path d="M564 565H582M573 556V574M592 584V598M587 584V580Q592 570 597 580V584" class="icon"/>
+      </g>
+    </g>
+
+    <rect x="48" y="629" width="466" height="114" rx="11" fill="#07141a" stroke="#14535c" stroke-width="1.6"/>
+    <text class="body summary-copy" x="68" y="660">Layers work together for total benefits.</text>
+    <text class="body summary-copy" x="68" y="696.5"><tspan style="font-weight:800">Balance &amp; Lock</tspan> are active components on</text>
+    <text class="body summary-copy" x="68" y="733">top of permanent Heritage recognition.</text>
+  </g>
+
+  <!-- OG holder benefits -->
+  <g id="panel2" class="panel-stage panel-stage-hidden" transform="translate(-73.625 0)" tabindex="0" role="button" aria-label="Reveal access hierarchy and protection" aria-expanded="false">
+    <rect class="panel" x="654" y="124" width="555.75" height="644" rx="18"/>
+    <g transform="translate(37.875 0)">
+    <text class="section" x="678" y="171">OG HOLDER</text>
+    <text class="section" x="678" y="207">BENEFITS</text>
+    <g class="glow og-benefits-icon">
+      <path d="M1055 151H1097V186C1097 199 1076 211 1076 211S1055 199 1055 186Z" class="icon"/>
+      <text x="1076" y="181" text-anchor="middle" style="font-size:18px;font-weight:800;fill:#7fd8cc">OG</text>
+      <path d="M1076 187L1079 193L1086 194L1081 199L1082 205L1076 202L1070 205L1071 199L1066 194L1073 193Z" class="icon-pink"/>
+    </g>
+
+    <g class="benefit-item">
+      <text x="679" y="258" style="font-size:29px;font-weight:800;fill:#70ed69">1.</text>
+      <text class="body" x="718" y="253">Permanent Status</text><text class="body" x="718" y="279">&amp; Profile Badge</text>
+      <g transform="translate(0 -1)"><g class="benefit-icon">
+      <path d="M1070 238H1092V263C1092 271 1081 278 1081 278S1070 271 1070 263Z" class="icon"/>
+      <text x="1081" y="260" text-anchor="middle" style="font-size:11px;font-weight:800;fill:#7fd8cc">OG</text>
+      </g></g>
+    </g>
+    <g class="benefit-item">
+      <text x="679" y="328" style="font-size:29px;font-weight:800;fill:#70ed69">2.</text>
+      <text class="body" x="718" y="323">First Access to Major</text><text class="body" x="718" y="349">Marketplace Drops</text>
+      <g transform="translate(-1 10)"><g class="benefit-icon">
+      <path d="M1071 310H1093V334H1071ZM1076 310V304Q1082 296 1088 304V310M1077 320H1087" class="icon"/>
+      </g></g>
+    </g>
+    <g class="benefit-item">
+      <text x="679" y="398" style="font-size:29px;font-weight:800;fill:#70ed69">3.</text>
+      <text class="body" x="718" y="393">Reserved Inventory</text><text class="body" x="718" y="419">Allocations</text>
+      <g transform="translate(-3 2.5)"><g class="benefit-icon">
+      <circle cx="1080" cy="389" r="14" class="icon"/><circle cx="1091" cy="403" r="11" class="icon-pink"/><text x="1091" y="408" text-anchor="middle" style="font-size:15px;font-weight:700;fill:#70ed69">$</text>
+      </g></g>
+    </g>
+    <g class="benefit-item">
+      <text x="679" y="468" style="font-size:29px;font-weight:800;fill:#70ed69">4.</text>
+      <text class="body" x="718" y="463">OG-only Merchandise</text>
+      <g transform="translate(1 -10)"><g class="benefit-icon">
+      <path d="M1070 452L1080 447L1090 452L1103 455L1098 468L1093 465V482H1067V465L1062 468L1057 455Z" class="icon"/>
+      <path d="M1074 452L1080 458L1086 452" class="icon-pink"/>
+      </g></g>
+    </g>
+    <g class="benefit-item">
+      <text x="679" y="528" style="font-size:29px;font-weight:800;fill:#70ed69">5.</text>
+      <text class="body" x="718" y="523">Priority Tickets &amp;</text><text class="body" x="718" y="549">Experiences</text>
+      <g transform="translate(0 1)"><g class="benefit-icon">
+      <path d="M1062 512H1100V540H1062Z" class="icon"/><path d="M1070 518H1092M1070 525H1087M1070 532H1090" class="icon-pink"/>
+      </g></g>
+    </g>
+    <g class="benefit-item">
+      <text x="679" y="592" style="font-size:29px;font-weight:800;fill:#70ed69">6.</text>
+      <text class="body" x="718" y="587">Premium MotionAI Content</text>
+      <g transform="translate(0 -3)"><g class="benefit-icon">
+      <circle cx="1081" cy="581" r="17" class="icon"/><path d="M1073 581C1073 575 1078 572 1081 575C1086 572 1090 576 1090 581C1090 587 1081 592 1081 592C1081 592 1073 587 1073 581Z" class="icon-pink"/>
+      </g></g>
+    </g>
+    <g class="benefit-item">
+      <text x="679" y="645" style="font-size:29px;font-weight:800;fill:#70ed69">7.</text>
+      <text class="body" x="718" y="640">Exclusive Community Access</text>
+      <g transform="translate(-1.5 -4.5)"><g class="benefit-icon">
+      <circle cx="1075" cy="630" r="6" class="icon"/><circle cx="1089" cy="630" r="6" class="icon"/><path d="M1065 647C1066 636 1084 636 1085 647M1080 647C1081 636 1099 636 1100 647" class="icon-pink"/>
+      </g></g>
+    </g>
+    <g class="benefit-item">
+      <text x="679" y="704" style="font-size:29px;font-weight:800;fill:#70ed69">8.</text>
+      <text class="body" x="718" y="699">Invitations to FX1 &amp;</text><text class="body" x="718" y="725">Arena Events</text>
+      <g transform="translate(-0.5 12.5)"><g class="benefit-icon">
+      <rect x="1063" y="682" width="37" height="30" rx="4" fill="#06131a" stroke="#1fb9c9" stroke-width="1.7"/>
+      <path d="M1069 682V676Q1081 662 1094 676V682M1071 697L1078 691L1084 697L1091 689" class="icon-pink"/>
+      </g></g>
+    </g>
+    </g>
+  </g>
+
+  <!-- Access hierarchy -->
+  <g id="panel3" class="panel-stage panel-stage-hidden" tabindex="0" role="button" aria-label="Access hierarchy and protection" aria-expanded="false">
+    <path class="panel" d="M1198 124H1664Q1686 124 1686 146V692Q1686 720 1652 720H1580C1549 720 1538 760 1507 760H1198Q1174 760 1174 736V148Q1174 124 1198 124Z"/>
+    <text class="section" x="1200" y="171">ACCESS HIERARCHY</text>
+    <text class="section" x="1200" y="207">&amp; PROTECTION</text>
+
+    <g>
+      <g class="hierarchy-icon">
+      <path d="M1202 253H1244V283C1244 294 1223 304 1223 304S1202 294 1202 283Z" class="icon"/>
+      <path d="M1223 259L1227 268L1237 269L1230 276L1232 286L1223 281L1214 286L1216 276L1209 269L1219 268Z" class="icon-pink"/>
+      </g>
+      <text class="hierarchy-label" x="1262" y="267">OG &amp; HERITAGE</text>
+      <text class="hierarchy-label" x="1262" y="301">STATUS</text>
+      <path class="flow" d="M1333 321V415"/>
+    </g>
+    <g transform="translate(0 66)">
+      <g class="hierarchy-icon">
+      <ellipse cx="1222" cy="382" rx="20" ry="7" class="icon"/><path d="M1202 382V404C1202 409 1211 413 1222 413S1242 409 1242 404V382M1202 393C1202 398 1211 402 1222 402S1242 398 1242 393" class="icon"/>
+      </g>
+      <text class="hierarchy-label" x="1262" y="388">GENERAL <tspan fill="#70ed69">$FXI</tspan></text>
+      <text class="hierarchy-label" x="1262" y="423">HOLDERS</text>
+      <path class="flow" d="M1333 435V559"/>
+    </g>
+    <g transform="translate(0 161)">
+      <g class="hierarchy-icon">
+      <rect x="1201" y="494" width="43" height="43" rx="4" fill="#06131a" stroke="#1fb9c9" stroke-width="2"/>
+      <circle cx="1222" cy="515" r="13" class="icon"/><circle cx="1222" cy="515" r="6" class="icon-pink"/>
+      </g>
+      <text class="hierarchy-label" x="1262" y="507">GENERAL</text>
+      <text class="hierarchy-label" x="1262" y="542">ARENA ACCESS</text>
+    </g>
+
+    <g transform="translate(-20 0)">
+    <path d="M1470 235V728" stroke="#14535c" stroke-width="1.5"/>
+    <text class="protection-heading" x="1492" y="260">KEY PROTECTION</text>
+    <text class="protection-copy" x="1492" y="302">An OG holder keeps</text>
+    <text class="protection-copy" x="1492" y="336">their recognition</text>
+    <text class="protection-copy" x="1492" y="370">permanently.</text>
+    <text class="protection-heading" x="1492" y="527">OPEN STATUS</text>
+    <text class="protection-copy" x="1492" y="569">New users can still</text>
+    <text class="protection-copy" x="1492" y="603">build real status over</text>
+    <text class="protection-copy" x="1492" y="637">time; it's not a</text>
+    <text class="protection-copy" x="1492" y="671">closed club.</text>
+    </g>
+
+    <text x="1572" y="746" style="font-size:17px;font-weight:700;fill:#7fd8cc">FX1.IO</text>
+    <text x="1640" y="753" text-anchor="middle" style="font-size:30px;font-weight:800;font-style:italic;fill:#fff">FX<tspan fill="#1fb9c9">1</tspan></text>
+  </g>
+
+  <script><![CDATA[
+    var stages = [].slice.call(document.querySelectorAll(".panel-stage"));
+    var benefitItems = [].slice.call(document.querySelectorAll(".benefit-item"));
+    stages.forEach(function(stage, index) {
+      function advance() {
+        var next = stages[index + 1];
+        if (!next || !next.classList.contains("panel-stage-hidden")) return;
+        next.classList.remove("panel-stage-hidden");
+        stage.setAttribute("aria-expanded", "true");
+        if (next.id === "panel2") {
+          benefitItems.forEach(function(item, itemIndex) {
+            window.setTimeout(function() {
+              item.classList.add("benefit-item-visible");
+            }, itemIndex * 1500);
+          });
+        }
+      }
+      stage.addEventListener("click", advance);
+      stage.addEventListener("keydown", function(event) {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          advance();
+        }
+      });
+    });
+  ]]></script>
+</svg>
