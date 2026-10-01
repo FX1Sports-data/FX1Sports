@@ -265,10 +265,10 @@ title: FX1 Sports — Portal & Interactive Roadmap
         <p>Intelligence artificielle prédictive et analyse de données sportives en temps réel.</p>
       </div>
       <div class="fx1-card">
-        <object data="{{ '/FX1pulseAI.svg' | relative_url }}?v=1" type="image/svg+xml">
+        <object data="{{ '/FX1pulse.svg' | relative_url }}?v=1" type="image/svg+xml">
           <p style="padding:20px; text-align:center; color:#94A3B8;">
             Votre navigateur ne charge pas le SVG. 
-            <a href="{{ '/FX1pulseAI.svg' | relative_url }}?v=1" style="color:#00E5FF;">Cliquez ici pour l'ouvrir directement</a>.
+            <a href="{{ '/FX1pulse.svg' | relative_url }}?v=1" style="color:#00E5FF;">Cliquez ici pour l'ouvrir directement</a>.
           </p>
         </object>
       </div>
