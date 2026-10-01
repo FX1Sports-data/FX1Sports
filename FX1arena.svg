@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 768" width="100%" role="img" aria-labelledby="svg-title svg-desc" lang="en">
+  <title id="svg-title">FX1 Arena: Play, Earn &amp; Power AI Data</title>
+  <desc id="svg-desc">Three panels explain FX1 Arena gameplay, rewards, and how its real-data token economy differs from other fan apps.</desc>
+  <defs>
+    <filter id="glow" x="-35%" y="-35%" width="170%" height="170%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#1fb9c9" stroke-width=".5"/>
+    </pattern>
+    <style><![CDATA[
+      @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&display=swap");
+      text { font-family: "Barlow Condensed", "Arial Narrow", Arial, sans-serif; fill: #e9f4f5; }
+      .bg { fill: #04090c; }
+      .grid { fill: url(#grid); opacity: .12; }
+      .panel { fill: #06131a; stroke: #1fb9c9; stroke-width: 2.5; }
+      .panel-stage { cursor: pointer; outline: none; }
+      .panel-stage-hidden { display: none; }
+      .panel-stage > .panel { transition: stroke .2s ease, filter .2s ease; }
+      .panel-stage:hover > .panel, .panel-stage:focus > .panel { stroke: #4ade50; filter: url(#glow); }
+      .reward-item { opacity: 0; visibility: hidden; transition: opacity .25s ease; }
+      .reward-item-visible { opacity: 1; visibility: visible; }
+      .reward-summary { opacity: 0; visibility: hidden; transform-box: fill-box; transform-origin: center; }
+      .reward-summary-visible { visibility: visible; animation: reward-bounce 2s ease-out both; }
+      @keyframes reward-bounce {
+        0% { opacity: 0; transform: translateY(-18px) scale(.88); }
+        18% { opacity: 1; transform: translateY(0) scale(1.1); }
+        34% { transform: translateY(-8px) scale(.97); }
+        50% { transform: translateY(0) scale(1.03); }
+        65% { transform: translateY(-3px) scale(.99); }
+        80%, 100% { opacity: 1; transform: translateY(0) scale(1); }
+      }
+      .card { fill: #07141a; stroke: #14535c; stroke-width: 2; }
+      .mint { fill: #7fd8cc; }
+      .cyan { fill: #1fb9c9; }
+      .pink { fill: #f472b6; }
+      .green { fill: #70ed69; }
+      .title { font-size: 46px; font-weight: 800; }
+      .section { font-size: 31px; font-weight: 800; fill: #7fd8cc; }
+      .subsection { font-size: 28px; font-weight: 500; }
+      .body { font-size: 22px; font-weight: 500; }
+      .difference-content .body { font-size: 23px; }
+      .body-strong { font-size: 23px; font-weight: 700; }
+      .small { font-size: 19px; font-weight: 500; }
+      .icon { fill: none; stroke: #1fb9c9; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+      .icon-pink { fill: none; stroke: #f472b6; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .glow { filter: url(#glow); }
+    ]]></style>
+  </defs>
+
+  <rect class="bg" width="1400" height="768"/>
+  <rect class="grid" width="1400" height="768"/>
+
+  <path d="M25 20H49L83 53L49 86H25L58 53Z" fill="#1fb9c9"/>
+  <path d="M49 20H73L106 53L73 86H49L82 53Z" fill="#1fb9c9" opacity=".8"/>
+  <text x="96" y="78" style="font-size:61px;font-weight:800;font-style:italic;fill:#fff">FX<tspan fill="#1fb9c9">1</tspan></text>
+  <text class="title" x="250" y="73" fill="#fff">ARENA: <tspan>PLAY, EARN &amp; POWER AI DATA</tspan></text>
+  <text x="250" y="101" style="font-size:14px;fill:#f472b6">Click each panel to reveal the next</text>
+  <path d="M26 107H1356" stroke="#14535c" stroke-width="1.5"/>
+  <path d="M26 107H454" stroke="#1fb9c9" stroke-width="3" filter="url(#glow)"/>
+
+  <!-- Gameplay -->
+  <g id="panel1" class="panel-stage" tabindex="0" role="button" aria-label="Reveal rewards panel" aria-expanded="false">
+  <rect class="panel" x="26" y="114" width="432" height="638" rx="18"/>
+  <text class="section" x="51" y="169">WHAT YOU DO</text>
+  <text class="subsection" x="51" y="204">(GAMEPLAY)</text>
+  <g class="glow" aria-label="Gameplay controller" transform="translate(-60 0)">
+    <path d="M335 184L341 164Q343 159 350 159H405Q412 159 414 165L421 185Q425 197 416 200Q411 202 406 197L397 188H358L349 198Q343 203 338 200Q331 197 335 184Z" class="icon"/>
+    <path d="M354 174H370M362 166V182M390 170V171M400 178V179" class="icon-pink"/>
+  </g>
+  <text class="body-strong" x="51" y="248">Where fans play, earn, and power</text>
+  <text class="body-strong" x="51" y="276">FX1's AI data engine.</text>
+
+  <g>
+    <rect class="card" x="38" y="309" width="408" height="108" rx="11"/>
+    <g transform="translate(0 0)">
+      <path d="M52 351L66 337H80L91 346L88 371H63L52 361Z" class="icon"/>
+      <path d="M57 352H68M62 347V358M77 350H78M82 357H83" class="icon-pink"/>
+      <path d="M70 337V330Q70 326 75 326H86Q91 326 91 321" class="icon"/>
+    </g>
+    <circle cx="132" cy="337" r="3" class="pink"/>
+    <text class="body" x="142" y="345">Trivia &amp; Predictions — daily</text>
+    <text class="body" x="142" y="369">games, live event tournaments,</text>
+    <text class="body" x="142" y="393">powered by real MotionAI data</text>
+  </g>
+
+  <g>
+    <rect class="card" x="38" y="429" width="408" height="119" rx="11"/>
+    <path d="M53 472V457L76 449L99 457V482L76 490L53 482Z" class="icon"/>
+    <path d="M57 459L76 465L95 459M57 479L76 485L95 479M76 465V485" class="icon-pink"/>
+    <text x="76" y="478" text-anchor="middle" style="font-size:11px;font-weight:700;fill:#7fd8cc">ARENA</text>
+    <rect x="87" y="466" width="28" height="29" rx="3" fill="#030d12" stroke="#1fb9c9" stroke-width="1.7"/>
+    <path d="M93 473H109M93 479H106M93 485H109" class="icon"/>
+    <circle cx="132" cy="454" r="3" class="pink"/>
+    <text class="body" x="142" y="462">Fan Battles — knowledge</text>
+    <text class="body" x="142" y="486">tests, sportscasting face-offs,</text>
+    <text class="body" x="142" y="510">club vs club, building toward</text>
+    <text class="body" x="142" y="534">talk-show debates</text>
+  </g>
+
+  <g>
+    <rect class="card" x="38" y="560" width="408" height="130" rx="11"/>
+    <path d="M53 605L65 589L77 595L86 589L99 601L89 610L99 619L90 629L78 619L67 626L54 615Z" class="icon"/>
+    <path d="M62 597L72 605L80 599L92 610M67 621L78 611L87 618L94 612" class="icon-pink"/>
+    <path d="M59 603L73 614M83 603L93 613" class="icon"/>
+    <circle cx="132" cy="578" r="3" class="pink"/>
+    <text class="body" x="142" y="586">Competitive Annotation —</text>
+    <text class="body" x="142" y="610">label clips head-to-head,</text>
+    <text class="body" x="142" y="634">scored against AI ground</text>
+    <text class="body" x="142" y="658">truth (nobody does this)</text>
+  </g>
+  <text x="44" y="722" style="font-size:22px;font-weight:500">Simple on the surface, incredibly productive</text>
+  </g>
+
+  <!-- Rewards -->
+  <g id="panel2" class="panel-stage panel-stage-hidden" tabindex="0" role="button" aria-label="Reveal FX1 Difference panel" aria-expanded="false">
+  <rect class="panel" x="470" y="114" width="439" height="638" rx="18"/>
+  <text class="section" x="492" y="169">WHY IT'S WORTH IT</text>
+  <text class="subsection" x="492" y="204">(REWARDS)</text>
+  <g class="glow" aria-label="Rewards trophy" transform="translate(-40 4)">
+    <path d="M829 146H879V162C879 179 868 190 854 193C840 190 829 179 829 162Z" class="icon"/>
+    <path d="M829 153H819V161C819 171 824 177 836 179M879 153H889V161C889 171 884 177 872 179" class="icon"/>
+    <path d="M854 153L858 163L869 164L861 171L863 182L854 176L845 182L847 171L839 164L850 163Z" class="icon-pink"/>
+    <path d="M854 193V201M844 201H864M840 206H868" class="icon"/>
+  </g>
+  <text class="body" x="492" y="251">Front-row experience, exclusive items.</text>
+
+  <g class="reward-item">
+    <text x="508" y="330" style="font-size:60px;font-weight:800;fill:#70ed69">1<tspan fill="#70ed69">.</tspan></text>
+    <text class="body" x="569" y="316">Front-row UFC tickets</text>
+    <text class="small" x="569" y="342">($5K to $50K + tickets)</text>
+    <g class="icon" transform="translate(0 5.5)">
+      <circle cx="856" cy="302" r="6"/><circle cx="840" cy="311" r="5"/><circle cx="872" cy="311" r="5"/>
+      <path d="M845 329V324C845 312 867 312 867 324V329M830 329V322C830 314 840 312 846 316M882 329V322C882 314 872 312 866 316"/>
+    </g>
+  </g>
+  <g class="reward-item">
+    <text x="508" y="406" style="font-size:60px;font-weight:800;fill:#70ed69">2<tspan fill="#70ed69">.</tspan></text>
+    <text class="body" x="569" y="388">Cornerman access,</text>
+    <text class="small" x="569" y="413">training camp visits,</text>
+    <text class="small" x="569" y="437">athletes meet-and-greets</text>
+    <g transform="translate(1 -8.5)">
+      <rect x="829" y="381" width="52" height="35" rx="4" fill="none" stroke="#1fb9c9" stroke-width="2"/>
+      <path d="M836 390H849M836 396H861M836 402H854" class="icon"/>
+      <circle cx="870" cy="414" r="11" fill="#06131a" stroke="#1fb9c9" stroke-width="2"/>
+      <path d="M865 414L869 418L875 410" class="icon-pink"/>
+    </g>
+  </g>
+  <g class="reward-item">
+    <text x="508" y="484" style="font-size:60px;font-weight:800;fill:#70ed69">3<tspan fill="#70ed69">.</tspan></text>
+    <text class="body" x="569" y="466">Real cash — cash <tspan fill="#70ed69">$FXI</tspan></text>
+    <text class="small" x="569" y="492">anytime</text>
+    <g transform="translate(3 2)">
+      <circle cx="853" cy="469" r="19" fill="none" stroke="#1fb9c9" stroke-width="2"/>
+      <circle cx="853" cy="469" r="11" fill="none" stroke="#7fd8cc" stroke-width="1.5"/>
+      <path d="M853 461V477M848 464H856M848 474H856M867 451L858 462" class="icon-pink"/>
+    </g>
+  </g>
+  <g class="reward-item">
+    <text x="508" y="560" style="font-size:60px;font-weight:800;fill:#70ed69">4<tspan fill="#70ed69">.</tspan></text>
+    <text class="body" x="569" y="542">Exclusive signed gear</text>
+    <text class="small" x="569" y="568">&amp; merch drops</text>
+    <g transform="translate(5 -4.5)">
+      <path d="M842 536L851 531L860 536L875 539L870 553L865 550V573H837V550L832 553L827 539Z" class="icon"/>
+      <path d="M845 536L851 543L857 536M845 555H857" class="icon-pink"/>
+    </g>
+  </g>
+  <g class="reward-item">
+    <text x="508" y="636" style="font-size:60px;font-weight:800;fill:#70ed69">5<tspan fill="#70ed69">.</tspan></text>
+    <text class="body" x="569" y="618">Leaderboard status +</text>
+    <text class="small" x="569" y="644">Founding Supporter</text>
+    <text class="small" x="569" y="668">perks</text>
+    <g transform="translate(-1 4.5)">
+      <path d="M841 594H873V624C873 636 857 645 857 645S841 636 841 624Z" class="icon"/>
+      <path d="M857 599L860 607L869 608L862 614L864 623L857 618L849 623L851 614L845 608L854 607Z" class="icon-pink"/>
+      <path d="M846 645H868M850 640V645M864 640V645" class="icon"/>
+    </g>
+  </g>
+  <text class="reward-summary" x="492" y="722" style="font-size:23px;font-weight:700">Rewards <tspan style="font-weight:500">that money often can't buy.</tspan></text>
+  </g>
+
+  <!-- FX1 difference -->
+  <g id="panel3" class="panel-stage panel-stage-hidden" tabindex="0" role="button" aria-label="FX1 Difference panel" aria-expanded="false">
+  <path class="panel" d="M936 114H1356Q1374 114 1374 132V671Q1374 701 1344 701H1220C1205 701 1205 752 1185 752H936Q918 752 918 734V132Q918 114 936 114Z"/>
+  <g class="difference-content">
+  <text class="section" x="943" y="169">THE FX1</text>
+  <text class="section" x="943" y="204">DIFFERENCE</text>
+  <g class="glow" aria-label="Comparison icon" transform="translate(-127 3)">
+    <circle cx="1304" cy="177" r="28" fill="#06131a" stroke="#1fb9c9" stroke-width="2"/>
+    <path d="M1287 164V158M1287 164L1280 172M1287 164L1294 172M1321 190V196M1321 190L1314 182M1321 190L1328 182" class="icon"/>
+    <text x="1304" y="186" text-anchor="middle" style="font-size:24px;font-weight:800;fill:#f472b6">≠</text>
+  </g>
+  <text class="body-strong" x="943" y="249">The crypto part? Invisible.</text>
+
+  <g>
+    <circle cx="963" cy="294" r="19" class="icon"/>
+    <circle cx="963" cy="288" r="6" class="icon"/>
+    <path d="M951 306C952 294 974 294 975 306M990 283V310M985 305L990 310L995 305" class="icon-pink"/>
+    <ellipse cx="990" cy="322" rx="15" ry="5" fill="#06131a" stroke="#1fb9c9" stroke-width="2"/>
+    <path d="M975 322V338C975 341 982 344 990 344S1005 341 1005 338V322M975 330C975 333 982 336 990 336S1005 333 1005 330" class="icon"/>
+    <circle cx="1019" cy="288" r="3" class="pink"/>
+    <text class="body" x="1030" y="297">Sign up with email, earn</text>
+    <text class="body" x="1030" y="323">Shots, cashout <tspan fill="#70ed69">$FXI</tspan></text>
+    <text class="body" x="1030" y="350">No wallet headaches</text>
+    <text class="body" x="1030" y="376">unless you want them</text>
+  </g>
+
+  <text class="body-strong" x="943" y="425">Why FX1 ≠ other fan apps.</text>
+  <g>
+    <ellipse cx="960" cy="458" rx="17" ry="7" fill="#06131a" stroke="#1fb9c9" stroke-width="2"/>
+    <path d="M943 458V482C943 486 951 489 960 489S977 486 977 482V458M943 470C943 474 951 477 960 477S977 474 977 470" class="icon"/>
+    <ellipse cx="985" cy="478" rx="17" ry="7" fill="#06131a" stroke="#1fb9c9" stroke-width="2"/>
+    <path d="M968 478V500C968 504 976 507 985 507S1002 504 1002 500V478M968 489C968 493 976 496 985 496S1002 493 1002 489" class="icon"/>
+    <circle cx="997" cy="501" r="10" fill="#06131a" stroke="#f472b6" stroke-width="1.8"/>
+    <text x="997" y="506" text-anchor="middle" style="font-size:15px;font-weight:700;fill:#f472b6">$</text>
+    <circle cx="1019" cy="457" r="3" class="pink"/>
+    <text class="body" x="1030" y="466">Real training data <tspan fill="#e9f4f5">-&gt;</tspan></text>
+    <text class="body" x="1030" y="493"><tspan fill="#7fd8cc">Real B2B revenue</tspan> <tspan fill="#e9f4f5">-&gt;</tspan></text>
+    <text class="body" x="1030" y="520">Real rewards</text>
+  </g>
+
+  <g>
+    <circle cx="1019" cy="564" r="3" class="pink"/>
+    <text class="body" x="1030" y="573">Other platforms give you gift</text>
+    <text class="body" x="1030" y="599">cards: <tspan fill="#70ed69">FX1 gives championship</tspan></text>
+    <text class="body" x="1030" y="625"><tspan fill="#70ed69">tickets</tspan>, backed by a business</text>
+    <text class="body" x="1030" y="651">model that actually funds it</text>
+    <g class="icon" transform="translate(0 0)">
+      <ellipse cx="957" cy="562" rx="15" ry="6"/><path d="M942 562V578C942 582 949 585 957 585S972 582 972 578V562M942 570C942 574 949 577 957 577S972 574 972 570"/>
+      <ellipse cx="987" cy="562" rx="15" ry="6"/><path d="M972 562V578C972 582 979 585 987 585S1002 582 1002 578V562M972 570C972 574 979 577 987 577S1002 574 1002 570"/>
+      <ellipse cx="957" cy="598" rx="15" ry="6"/><path d="M942 598V614C942 618 949 621 957 621S972 618 972 614V598M942 606C942 610 949 613 957 613S972 610 972 606"/>
+      <path d="M969 583L979 590M979 590L972 590M979 590L977 584M957 585V592"/>
+    </g>
+  </g>
+
+  <text class="body" x="943" y="682">A token economy anchored to <tspan fill="#70ed69">operating</tspan></text>
+  <text class="body" x="943" y="709"><tspan fill="#70ed69">revenue</tspan>, not just</text>
+  <text class="body" x="943" y="736">trading volume.</text>
+  <text x="1230" y="734" style="font-size:17px;font-weight:700;fill:#7fd8cc">FX1.IO</text>
+  <text x="1322" y="742" text-anchor="middle" style="font-size:38px;font-weight:800;font-style:italic;fill:#fff">FX<tspan fill="#1fb9c9">1</tspan></text>
+  </g>
+  </g>
+
+  <script><![CDATA[
+    var stages = [].slice.call(document.querySelectorAll(".panel-stage"));
+    var rewardItems = [].slice.call(document.querySelectorAll(".reward-item"));
+    var rewardSummary = document.querySelector(".reward-summary");
+    stages.forEach(function(stage, index) {
+      function advance() {
+        var next = stages[index + 1];
+        if (!next || !next.classList.contains("panel-stage-hidden")) return;
+        next.classList.remove("panel-stage-hidden");
+        stage.setAttribute("aria-expanded", "true");
+        if (next.id === "panel2") {
+          rewardItems.forEach(function(item, itemIndex) {
+            window.setTimeout(function() {
+              item.classList.add("reward-item-visible");
+            }, itemIndex * 1000);
+          });
+          window.setTimeout(function() {
+            rewardSummary.classList.add("reward-summary-visible");
+          }, rewardItems.length * 1000);
+        }
+      }
+      stage.addEventListener("click", advance);
+      stage.addEventListener("keydown", function(event) {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          advance();
+        }
+      });
+    });
+  ]]></script>
+</svg>
