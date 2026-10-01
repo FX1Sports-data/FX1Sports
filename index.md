@@ -8,8 +8,11 @@ title: FX1 Sports — Portal & Interactive Roadmap
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
 
 <style>
-  /* --- LAYOUT GLOBAL & REINITIALISATION --- */
-  html, body, #header_background, #main_content_wrap, #footer_wrap {
+  /* --- REINITIALISATION & ADJUSTMENT ADAPTATIF PLEIN ÉCRAN --- */
+  html, body {
+    height: 100vh !important;
+    max-height: 100vh !important;
+    overflow: hidden !important; /* Empêche les barres de défilement inutiles sur le site */
     background-color: #050811 !important;
     background-image: none !important;
     color: #94A3B8 !important;
@@ -18,43 +21,47 @@ title: FX1 Sports — Portal & Interactive Roadmap
     padding: 0 !important;
   }
 
-  /* Masquer le header et footer natifs du thème pour un look App Web moderne */
+  /* Masquer le header et footer natifs de Jekyll */
   header, #header_background, footer, #footer_wrap, header section, .downloads {
     display: none !important;
   }
 
-  #main_content, .inner {
+  #main_content_wrap, #main_content, .inner {
     max-width: 100% !important;
     width: 100% !important;
+    height: 100vh !important;
     margin: 0 !important;
     padding: 0 !important;
   }
 
-  /* --- STRUCTURE DASHBOARD (SIDEBAR + MAIN) --- */
+  /* --- DASHBOARD LAYOUT (FULLSCREEN) --- */
   .fx1-dashboard {
     display: flex;
-    min-height: 100vh;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
   }
 
-  /* Sidebar gauche */
+  /* Sidebar gauche fixe */
   .fx1-sidebar {
-    width: 260px;
+    width: 250px;
     background: #0B0F19;
     border-right: 1px solid rgba(0, 229, 255, 0.15);
-    padding: 24px 16px;
+    padding: 16px 12px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
     flex-shrink: 0;
+    box-sizing: border-box;
   }
 
   .fx1-brand {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 800;
     color: #FFFFFF;
     letter-spacing: -0.02em;
-    margin-bottom: 24px;
-    padding-left: 12px;
+    margin-bottom: 12px;
+    padding-left: 8px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -62,28 +69,28 @@ title: FX1 Sports — Portal & Interactive Roadmap
 
   .fx1-brand span {
     color: #00E5FF;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     background: rgba(0, 229, 255, 0.1);
     border: 1px solid rgba(0, 229, 255, 0.3);
     padding: 2px 6px;
     border-radius: 4px;
   }
 
-  /* Boutons de navigation */
+  /* Boutons de navigation compacts */
   .nav-btn {
     background: transparent;
     border: 1px solid transparent;
     color: #94A3B8;
-    padding: 12px 16px;
+    padding: 10px 14px;
     border-radius: 8px;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-align: left;
     cursor: pointer;
     transition: all 0.2s ease;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
   }
 
   .nav-btn:hover {
@@ -102,61 +109,88 @@ title: FX1 Sports — Portal & Interactive Roadmap
   /* Zone de contenu droite */
   .fx1-content {
     flex-grow: 1;
-    padding: 24px 32px;
+    padding: 16px 20px;
     background: #050811;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    box-sizing: border-box;
   }
 
-  /* Topbar dans la zone de contenu */
+  /* Topbar ultra-compacte */
   .fx1-topbar {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   .fx1-topbar h1 {
     color: #FFFFFF !important;
-    font-size: 1.8rem !important;
+    font-size: 1.4rem !important;
     font-weight: 800 !important;
-    margin: 0 0 6px 0 !important;
+    margin: 0 0 2px 0 !important;
   }
 
   .fx1-topbar p {
     color: #64748B;
     margin: 0;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
   }
 
-  /* Carte conteneur pour le SVG et les vues */
-  .fx1-card {
-    background: #0B0F19;
-    border: 1px solid rgba(0, 229, 255, 0.2);
-    border-radius: 12px;
-    box-shadow: 0 0 30px rgba(0, 229, 255, 0.05);
-    overflow: hidden;
-  }
-
-  /* Panneaux de contenu masqués/visibles */
+  /* Conteneur principal de la vue */
   .view-panel {
     display: none;
+    height: 100%;
+    flex-direction: column;
   }
 
   .view-panel.active {
+    display: flex;
+  }
+
+  /* Carte adaptative pour le SVG (S'adapte exactement à la hauteur restante) */
+  .fx1-card {
+    background: #0B0F19;
+    border: 1px solid rgba(0, 229, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.05);
+    overflow: hidden;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: calc(100vh - 85px); /* Hauteur calculée sur mesure */
+  }
+
+  .fx1-card object {
+    width: 100%;
+    height: 100%;
+    border: none;
     display: block;
   }
 
   .placeholder-box {
-    padding: 60px;
+    padding: 40px;
     text-align: center;
     color: #94A3B8;
   }
 
   /* Mobile responsiveness */
   @media (max-width: 768px) {
+    html, body {
+      overflow: auto !important;
+      height: auto !important;
+    }
     .fx1-dashboard {
       flex-direction: column;
+      height: auto;
     }
     .fx1-sidebar {
       width: 100%;
       border-right: none;
       border-bottom: 1px solid rgba(0, 229, 255, 0.15);
+    }
+    .fx1-card {
+      height: 80vh;
+      max-height: none;
     }
   }
 </style>
@@ -169,7 +203,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
     </div>
     
     <button class="nav-btn active" onclick="switchTab('roadmap', this)">
-      🗺️️ Interactive Roadmap
+      🗺 Interactive Roadmap
     </button>
     <button class="nav-btn" onclick="switchTab('pulseai', this)">
       ⚡ PulseAI
@@ -204,10 +238,10 @@ title: FX1 Sports — Portal & Interactive Roadmap
         <p>Découvrez notre vision stratégique et le déploiement multi-phases de la plateforme.</p>
       </div>
       <div class="fx1-card">
-        <object data="./FX1roadmap.svg?v=3" type="image/svg+xml" width="100%" height="1020px" style="width:100%; border:none; display:block;">
+        <object data="./FX1roadmap.svg?v=4" type="image/svg+xml">
           <p style="padding:20px; text-align:center; color:#94A3B8;">
             Votre navigateur ne charge pas le SVG. 
-            <a href="./FX1roadmap.svg?v=3" style="color:#00E5FF;">Cliquez ici pour l'ouvrir directement</a>.
+            <a href="./FX1roadmap.svg?v=4" style="color:#00E5FF;">Cliquez ici pour l'ouvrir directement</a>.
           </p>
         </object>
       </div>
@@ -302,15 +336,12 @@ title: FX1 Sports — Portal & Interactive Roadmap
 
 <script>
   function switchTab(viewId, btnElement) {
-    // 1. Masquer toutes les vues
     const views = document.querySelectorAll('.view-panel');
     views.forEach(view => view.classList.remove('active'));
 
-    // 2. Réinitialiser l'état actif des boutons
     const buttons = document.querySelectorAll('.nav-btn');
     buttons.forEach(btn => btn.classList.remove('active'));
 
-    // 3. Activer la vue et le bouton sélectionnés
     document.getElementById('view-' + viewId).classList.add('active');
     btnElement.classList.add('active');
   }
