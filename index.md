@@ -315,9 +315,13 @@ title: FX1 Sports — Portal & Interactive Roadmap
         <h1>Token Utility</h1>
         <p>Utilisation, staking et gouvernance du jeton natif FX1.</p>
       </div>
-      <div class="fx1-card placeholder-box">
-        <h2 style="color:#00E5FF;">Tokenomics & Staking</h2>
-        <p>Informations stratégiques sur le token.</p>
+      <div class="fx1-card">
+        <object data="{{ '/FX1utility.svg' | relative_url }}?v=1" type="image/svg+xml">
+          <p style="padding:20px; text-align:center; color:#94A3B8;">
+            Votre navigateur ne charge pas le SVG. 
+            <a href="{{ '/FX1utility.svg' | relative_url }}?v=1" style="color:#00E5FF;">Cliquez ici pour l'ouvrir directement</a>.
+          </p>
+        </object>
       </div>
     </div>
 
