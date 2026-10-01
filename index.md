@@ -142,15 +142,22 @@ title: FX1 Sports — Portal & Interactive Roadmap
     font-size: 0.85rem;
   }
 
-  /* Panneaux de vue */
+  /* Panneaux de vue - CORRIGÉ POUR LES SVG INTERACTIFS */
   .view-panel {
-    display: none;
-    height: 100%;
+    display: flex;
     flex-direction: column;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
 
   .view-panel.active {
-    display: flex;
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
 
   /* Conteneur de la carte SVG / Images */
@@ -286,15 +293,19 @@ title: FX1 Sports — Portal & Interactive Roadmap
       </div>
     </div>
 
-    <!-- ARENA -->
+    <!-- ARENA (NOUVELLE INTÉGRATION SVG) -->
     <div id="view-arena" class="view-panel">
       <div class="fx1-topbar">
         <h1>FX1 Arena</h1>
         <p>Plateforme de compétition et d'engagement de la communauté.</p>
       </div>
-      <div class="fx1-card placeholder-box">
-        <h2 style="color:#00E5FF;">FX1 Arena</h2>
-        <p>Inscriptions et tournois à venir.</p>
+      <div class="fx1-card">
+        <object data="{{ '/FX1arena.svg' | relative_url }}?v=1" type="image/svg+xml">
+          <p style="padding:20px; text-align:center; color:#94A3B8;">
+            Votre navigateur ne charge pas le SVG. 
+            <a href="{{ '/FX1arena.svg' | relative_url }}?v=1" style="color:#00E5FF;">Cliquez ici pour l'ouvrir directement</a>.
+          </p>
+        </object>
       </div>
     </div>
 
