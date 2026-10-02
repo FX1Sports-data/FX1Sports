@@ -286,7 +286,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
     <div id="view-ecosystem" class="view-panel">
       <div class="fx1-topbar">
         <h1>Ecosystem</h1>
-        <p>Aperçu global du réseau de partenaires et des intégrations FX1.</p>
+        <p>The FX1 Ecosystem connects fan engagement, AI data training, and real commercial revenue lines into a single, self-sustaining network. Powered by MotionAI, Pulse SaaS, and enterprise partnerships, real operating revenue flows directly back into platform rewards and token utility. Explore the visual below to see how our interconnected infrastructure bridges fan participation with sustainable business growth.</p>
       </div>
       <div class="fx1-card">
         <object data="{{ '/FX1ecosystem.svg' | relative_url }}?v=1" type="image/svg+xml">
