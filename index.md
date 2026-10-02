@@ -86,7 +86,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
   .nav-btn {
     background: transparent;
     border: 1px solid transparent;
-    color: #E2E8F0; /* Changement de couleur ici (anciennement #94A3B8) */
+    color: #E2E8F0;
     padding: 10px 14px;
     border-radius: 8px;
     font-weight: 600;
@@ -137,10 +137,10 @@ title: FX1 Sports — Portal & Interactive Roadmap
   }
 
   .fx1-topbar p {
-    color: #CBD5E1; /* Changement de couleur ici (anciennement #64748B) */
+    color: #CBD5E1;
     margin: 0;
     font-size: 0.85rem;
-    line-height: 1.4; /* Amélioration de la lisibilité des paragraphes longs */
+    line-height: 1.4;
   }
 
   /* Panneaux de vue - CORRIGÉ POUR LES SVG INTERACTIFS */
@@ -188,7 +188,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
   .placeholder-box {
     padding: 40px;
     text-align: center;
-    color: #E2E8F0; /* Changement de couleur ici (anciennement #94A3B8) */
+    color: #E2E8F0;
   }
 
   /* Adaptation mobile */
@@ -221,14 +221,11 @@ title: FX1 Sports — Portal & Interactive Roadmap
       FX1 <span>PROT</span>
     </div>
     
-    <button class="nav-btn active" onclick="switchTab('roadmap', this)">
-      🗺 Interactive Roadmap
-    </button>
-    <button class="nav-btn" onclick="switchTab('pulseai', this)">
-      ⚡ PulseAI
-    </button>
-    <button class="nav-btn" onclick="switchTab('ecosystem', this)">
+    <button class="nav-btn active" onclick="switchTab('ecosystem', this)">
       🌐 Ecosystem
+    </button>
+    <button class="nav-btn" onclick="switchTab('roadmap', this)">
+      🗺 Interactive Roadmap
     </button>
     <button class="nav-btn" onclick="switchTab('arena', this)">
       🏟️ Arena
@@ -239,8 +236,8 @@ title: FX1 Sports — Portal & Interactive Roadmap
     <button class="nav-btn" onclick="switchTab('status', this)">
       ⭐ Status & Benefits
     </button>
-    <button class="nav-btn" onclick="switchTab('data', this)">
-      📊 Live Data
+    <button class="nav-btn" onclick="switchTab('pulseai', this)">
+      ⚡ PulseAI
     </button>
     <button class="nav-btn" onclick="switchTab('docs', this)">
       📄 Documentation
@@ -250,40 +247,8 @@ title: FX1 Sports — Portal & Interactive Roadmap
   <!-- CONTENU PRINCIPAL A DROITE -->
   <main class="fx1-content">
     
-    <!-- ROADMAP -->
-    <div id="view-roadmap" class="view-panel active">
-      <div class="fx1-topbar">
-        <h1>Interactive Roadmap</h1>
-        <p>Discover our strategic vision and the multi-phased rollout of the platform.</p>
-      </div>
-      <div class="fx1-card">
-        <object data="{{ '/FX1roadmap.svg' | relative_url }}?v=5" type="image/svg+xml">
-          <p style="padding:20px; text-align:center; color:#E2E8F0;">
-            Votre navigateur ne charge pas le SVG. 
-            <a href="{{ '/FX1roadmap.svg' | relative_url }}?v=5" style="color:#00E5FF;">Cliquez ici pour l'ouvrir directement</a>.
-          </p>
-        </object>
-      </div>
-    </div>
-
-    <!-- PULSE AI -->
-    <div id="view-pulseai" class="view-panel">
-      <div class="fx1-topbar">
-        <h1>PulseAI</h1>
-        <p>FX1 Pulse is an AI-powered SaaS platform engineered to automate personalized content creation—from articles and newsletters to social posts and marketing assets. Designed for athletes, creators, media outlets, and combat sports promotions, it turns platform activity into high-impact media. Check out the visual below to see how PulseAI powers automated content across the ecosystem.</p>
-      </div>
-      <div class="fx1-card">
-        <object data="{{ '/FX1pulse.svg' | relative_url }}?v=1" type="image/svg+xml">
-          <p style="padding:20px; text-align:center; color:#E2E8F0;">
-            Votre navigateur ne charge pas le SVG. 
-            <a href="{{ '/FX1pulse.svg' | relative_url }}?v=1" style="color:#00E5FF;">Cliquez ici pour l'ouvrir directement</a>.
-          </p>
-        </object>
-      </div>
-    </div>
-
     <!-- ECOSYSTEM -->
-    <div id="view-ecosystem" class="view-panel">
+    <div id="view-ecosystem" class="view-panel active">
       <div class="fx1-topbar">
         <h1>Ecosystem</h1>
         <p>The FX1 Ecosystem connects fan engagement, AI data training, and real commercial revenue lines into a single, self-sustaining network. Powered by MotionAI, Pulse SaaS, and enterprise partnerships, real operating revenue flows directly back into platform rewards and token utility. Explore the visual below to see how our interconnected infrastructure bridges fan participation with sustainable business growth.</p>
@@ -293,6 +258,22 @@ title: FX1 Sports — Portal & Interactive Roadmap
           <p style="padding:20px; text-align:center; color:#E2E8F0;">
             Votre navigateur ne charge pas le SVG. 
             <a href="{{ '/FX1ecosystem.svg' | relative_url }}?v=1" style="color:#00E5FF;">Cliquez ici pour l'ouvrir directement</a>.
+          </p>
+        </object>
+      </div>
+    </div>
+
+    <!-- ROADMAP -->
+    <div id="view-roadmap" class="view-panel">
+      <div class="fx1-topbar">
+        <h1>Interactive Roadmap</h1>
+        <p>Discover our strategic vision and the multi-phased rollout of the platform.</p>
+      </div>
+      <div class="fx1-card">
+        <object data="{{ '/FX1roadmap.svg' | relative_url }}?v=5" type="image/svg+xml">
+          <p style="padding:20px; text-align:center; color:#E2E8F0;">
+            Votre navigateur ne charge pas le SVG. 
+            <a href="{{ '/FX1roadmap.svg' | relative_url }}?v=5" style="color:#00E5FF;">Cliquez ici pour l'ouvrir directement</a>.
           </p>
         </object>
       </div>
@@ -330,7 +311,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
       </div>
     </div>
 
-    <!-- STATUS & BENEFITS (NOUVELLE INTÉGRATION SVG) -->
+    <!-- STATUS & BENEFITS -->
     <div id="view-status" class="view-panel">
       <div class="fx1-topbar">
         <h1>Status & Benefits</h1>
@@ -346,15 +327,19 @@ title: FX1 Sports — Portal & Interactive Roadmap
       </div>
     </div>
 
-    <!-- LIVE DATA -->
-    <div id="view-data" class="view-panel">
+    <!-- PULSE AI -->
+    <div id="view-pulseai" class="view-panel">
       <div class="fx1-topbar">
-        <h1>Live Data</h1>
-        <p>Flux de données sportives directes.</p>
+        <h1>PulseAI</h1>
+        <p>FX1 Pulse is an AI-powered SaaS platform engineered to automate personalized content creation—from articles and newsletters to social posts and marketing assets. Designed for athletes, creators, media outlets, and combat sports promotions, it turns platform activity into high-impact media. Check out the visual below to see how PulseAI powers automated content across the ecosystem.</p>
       </div>
-      <div class="fx1-card placeholder-box">
-        <h2 style="color:#00E5FF;">Flux Sportifs</h2>
-        <p>Connexions aux API directes.</p>
+      <div class="fx1-card">
+        <object data="{{ '/FX1pulse.svg' | relative_url }}?v=1" type="image/svg+xml">
+          <p style="padding:20px; text-align:center; color:#E2E8F0;">
+            Votre navigateur ne charge pas le SVG. 
+            <a href="{{ '/FX1pulse.svg' | relative_url }}?v=1" style="color:#00E5FF;">Cliquez ici pour l'ouvrir directement</a>.
+          </p>
+        </object>
       </div>
     </div>
 
