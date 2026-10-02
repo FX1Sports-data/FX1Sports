@@ -267,31 +267,18 @@ title: FX1 Sports — Portal & Interactive Roadmap
     background: rgba(0, 229, 255, 0.2);
   }
 
-  /* Conteneur Vidéo / Média de la Landing */
+  /* Conteneur Vidéo X (Twitter Embed) */
   .landing-media {
-    background: rgba(5, 8, 17, 0.6);
+    background: rgba(5, 8, 17, 0.8);
     border: 1px solid rgba(0, 229, 255, 0.2);
     border-radius: 12px;
-    overflow: hidden;
-    aspect-ratio: 16/9;
+    overflow-y: auto;
+    max-height: 380px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
-  }
-
-  .landing-media video,
-  .landing-media iframe {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .placeholder-media-text {
-    text-align: center;
-    color: #64748B;
-    font-size: 0.9rem;
-    padding: 20px;
+    padding: 10px;
   }
 
   /* Grille des fonctionnalités clés sur la landing */
@@ -418,16 +405,12 @@ title: FX1 Sports — Portal & Interactive Roadmap
                 <button class="btn-secondary" onclick="switchTab('roadmap', document.querySelectorAll('.nav-btn')[2])">View Roadmap</button>
               </div>
             </div>
-            <!-- Zone Vidéo ou Image (Remplace la balise video ou img par ton média) -->
+            <!-- Zone Intégration Vidéo X (Twitter) -->
             <div class="landing-media">
-              <!-- Exemple si tu as un fichier vidéo MP4 à la racine :
-              <video src="{{ '/votre-video.mp4' | relative_url }}" autoplay loop muted playsinline></video> 
-              -->
-              <!-- Exemple si tu as une image ou un placeholder : -->
-              <div class="placeholder-media-text">
-                📹 [Insérer ici ta vidéo ou image de présentation]<br>
-                <span style="font-size:0.75rem; color: #00E5FF;">(Prêt pour intégration MP4 ou YouTube)</span>
-              </div>
+              <blockquote class="twitter-tweet" data-theme="dark" data-conversation="none" data-cards="hidden">
+                <a href="https://twitter.com/FX1Sports/status/2010963902679695518"></a>
+              </blockquote>
+              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
           </div>
 
