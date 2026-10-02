@@ -267,18 +267,44 @@ title: FX1 Sports — Portal & Interactive Roadmap
     background: rgba(0, 229, 255, 0.2);
   }
 
-  /* Conteneur Vidéo X (Twitter Embed) */
-  .landing-media {
-    background: rgba(5, 8, 17, 0.8);
-    border: 1px solid rgba(0, 229, 255, 0.2);
-    border-radius: 12px;
-    overflow-y: auto;
-    max-height: 380px;
+  /* Conteneur Vidéo Natif */
+  .landing-media-wrapper {
     display: flex;
     flex-direction: column;
+    gap: 8px;
+  }
+
+  .landing-media {
+    background: rgba(5, 8, 17, 0.9);
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.1);
+  }
+
+  .landing-media video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .twitter-link-hint {
+    text-align: right;
+    font-size: 0.75rem;
+  }
+
+  .twitter-link-hint a {
+    color: #64748B;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .twitter-link-hint a:hover {
+    color: #00E5FF;
   }
 
   /* Grille des fonctionnalités clés sur la landing */
@@ -405,12 +431,15 @@ title: FX1 Sports — Portal & Interactive Roadmap
                 <button class="btn-secondary" onclick="switchTab('roadmap', document.querySelectorAll('.nav-btn')[2])">View Roadmap</button>
               </div>
             </div>
-            <!-- Zone Intégration Vidéo X (Twitter) -->
-            <div class="landing-media">
-              <blockquote class="twitter-tweet" data-theme="dark" data-conversation="none" data-cards="hidden">
-                <a href="https://twitter.com/FX1Sports/status/2010963902679695518"></a>
-              </blockquote>
-              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            
+            <!-- Bloc Vidéo Natif (Remplace fx1-video.mp4 par le nom de ton fichier dans ton repo GitHub) -->
+            <div class="landing-media-wrapper">
+              <div class="landing-media">
+                <video src="{{ '/fx1-video.mp4' | relative_url }}" autoplay loop muted playsinline controls></video>
+              </div>
+              <div class="twitter-link-hint">
+                <a href="https://x.com/FX1Sports/status/2010963902679695518" target="_blank">Voir le post original sur X ↗</a>
+              </div>
             </div>
           </div>
 
