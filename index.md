@@ -270,7 +270,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
     <div id="view-pulseai" class="view-panel">
       <div class="fx1-topbar">
         <h1>PulseAI</h1>
-        <p>FX1 Pulse is an AI-powered SaaS platform by FX1 that automates personalized sports content generation for athletes, creators, Brands and media outlets.</p>
+        <p>X1 Pulse is an AI-powered SaaS platform engineered to automate personalized content creation—from articles and newsletters to social posts and marketing assets. Designed for athletes, creators, media outlets, and combat sports promotions, it turns platform activity into high-impact media. Check out the visual below to see how PulseAI powers automated content across the ecosystem.</p>
       </div>
       <div class="fx1-card">
         <object data="{{ '/FX1pulse.svg' | relative_url }}?v=1" type="image/svg+xml">
