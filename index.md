@@ -347,11 +347,11 @@ title: FX1 Sports — Portal & Interactive Roadmap
     <div id="view-docs" class="view-panel">
       <div class="fx1-topbar">
         <h1>Documentation</h1>
-        <p>Whitepaper, guides techniques et documentation de l'API.</p>
+        <p>Whitepaper, technical guides and documentation.</p>
       </div>
       <div class="fx1-card placeholder-box">
         <h2 style="color:#00E5FF;">Docs & Whitepaper</h2>
-        <p>Consultez les ressources techniques de FX1.</p>
+        <p>Consult FX1's technical resources</p>
       </div>
     </div>
 
