@@ -59,6 +59,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
     gap: 6px;
     flex-shrink: 0;
     box-sizing: border-box;
+    overflow-y: auto;
   }
 
   .fx1-brand {
@@ -143,7 +144,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
     line-height: 1.4;
   }
 
-  /* Panneaux de vue - CORRIGÉ POUR LES SVG INTERACTIFS */
+  /* Panneaux de vue */
   .view-panel {
     display: flex;
     flex-direction: column;
@@ -161,7 +162,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
     pointer-events: auto;
   }
 
-  /* Conteneur de la carte SVG / Images */
+  /* Conteneur de la carte SVG / Images / Landing */
   .fx1-card {
     background: #0B0F19;
     border: 1px solid rgba(0, 229, 255, 0.2);
@@ -170,9 +171,11 @@ title: FX1 Sports — Portal & Interactive Roadmap
     overflow: hidden;
     flex-grow: 1;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     max-height: calc(100vh - 80px);
+    overflow-y: auto;
   }
 
   .fx1-card object,
@@ -185,6 +188,147 @@ title: FX1 Sports — Portal & Interactive Roadmap
     object-fit: contain;
   }
 
+  /* Style spécifique pour la Landing Page interne */
+  .landing-container {
+    padding: 30px;
+    max-width: 1100px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: auto;
+  }
+
+  .landing-hero {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .landing-text h2 {
+    color: #FFFFFF;
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  .landing-text h2 span {
+    color: #00E5FF;
+  }
+
+  .landing-text p {
+    color: #94A3B8;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .landing-cta-group {
+    display: flex;
+    gap: 12px;
+  }
+
+  .btn-primary {
+    background: #00E5FF;
+    color: #050811;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  .btn-primary:hover {
+    opacity: 0.9;
+  }
+
+  .btn-secondary {
+    background: rgba(0, 229, 255, 0.1);
+    color: #00E5FF;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .btn-secondary:hover {
+    background: rgba(0, 229, 255, 0.2);
+  }
+
+  /* Conteneur Vidéo / Média de la Landing */
+  .landing-media {
+    background: rgba(5, 8, 17, 0.6);
+    border: 1px solid rgba(0, 229, 255, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .landing-media video,
+  .landing-media iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .placeholder-media-text {
+    text-align: center;
+    color: #64748B;
+    font-size: 0.9rem;
+    padding: 20px;
+  }
+
+  /* Grille des fonctionnalités clés sur la landing */
+  .landing-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .feature-box {
+    background: rgba(11, 15, 25, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 16px;
+    border-radius: 8px;
+    transition: border-color 0.2s;
+  }
+
+  .feature-box:hover {
+    border-color: rgba(0, 229, 255, 0.4);
+  }
+
+  .feature-box h4 {
+    color: #FFFFFF;
+    margin: 0 0 6px 0;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .feature-box p {
+    color: #94A3B8;
+    font-size: 0.82rem;
+    margin: 0;
+    line-height: 1.4;
+  }
+
   .placeholder-box {
     padding: 40px;
     text-align: center;
@@ -192,7 +336,13 @@ title: FX1 Sports — Portal & Interactive Roadmap
   }
 
   /* Adaptation mobile */
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
+    .landing-hero {
+      grid-template-columns: 1fr;
+    }
+    .landing-features {
+      grid-template-columns: 1fr;
+    }
     html, body {
       overflow: auto !important;
       height: auto !important;
@@ -208,7 +358,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
       border-bottom: 1px solid rgba(0, 229, 255, 0.15);
     }
     .fx1-card {
-      height: 80vh;
+      height: auto;
       max-height: none;
     }
   }
@@ -221,7 +371,10 @@ title: FX1 Sports — Portal & Interactive Roadmap
       FX1 <span>PROT</span>
     </div>
     
-    <button class="nav-btn active" onclick="switchTab('ecosystem', this)">
+    <button class="nav-btn active" onclick="switchTab('overview', this)">
+      🚀 Overview
+    </button>
+    <button class="nav-btn" onclick="switchTab('ecosystem', this)">
       🌐 Ecosystem
     </button>
     <button class="nav-btn" onclick="switchTab('roadmap', this)">
@@ -247,11 +400,61 @@ title: FX1 Sports — Portal & Interactive Roadmap
   <!-- CONTENU PRINCIPAL A DROITE -->
   <main class="fx1-content">
     
+    <!-- OVERVIEW / LANDING PAGE -->
+    <div id="view-overview" class="view-panel active">
+      <div class="fx1-topbar">
+        <h1>Project Overview</h1>
+        <p>Discover the core engine powering the next generation of sports engagement and AI data.</p>
+      </div>
+      <div class="fx1-card">
+        <div class="landing-container">
+          <!-- Hero Section -->
+          <div class="landing-hero">
+            <div class="landing-text">
+              <h2>Bridging <span>Fan Engagement</span> & AI Data</h2>
+              <p>FX1 transforms everyday sports fandom into productive AI validation and real-world B2B revenue. Play games, make predictions, and unlock incredible real-world rewards—all with zero crypto friction.</p>
+              <div class="landing-cta-group">
+                <button class="btn-primary" onclick="switchTab('ecosystem', document.querySelectorAll('.nav-btn')[1])">Explore Ecosystem</button>
+                <button class="btn-secondary" onclick="switchTab('roadmap', document.querySelectorAll('.nav-btn')[2])">View Roadmap</button>
+              </div>
+            </div>
+            <!-- Zone Vidéo ou Image (Remplace la balise video ou img par ton média) -->
+            <div class="landing-media">
+              <!-- Exemple si tu as un fichier vidéo MP4 à la racine :
+              <video src="{{ '/votre-video.mp4' | relative_url }}" autoplay loop muted playsinline></video> 
+              -->
+              <!-- Exemple si tu as une image ou un placeholder : -->
+              <div class="placeholder-media-text">
+                📹 [Insérer ici ta vidéo ou image de présentation]<br>
+                <span style="font-size:0.75rem; color: #00E5FF;">(Prêt pour intégration MP4 ou YouTube)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature Cards / Aperçu rapide -->
+          <div class="landing-features">
+            <div class="feature-box" onclick="switchTab('arena', document.querySelectorAll('.nav-btn')[3])" style="cursor: pointer;">
+              <h4>🏟️ FX1 Arena</h4>
+              <p>Gamified predictions, trivia, and head-to-head fan battles fueled by MotionAI live data.</p>
+            </div>
+            <div class="feature-box" onclick="switchTab('pulseai', document.querySelectorAll('.nav-btn')[6])" style="cursor: pointer;">
+              <h4>⚡ PulseAI SaaS</h4>
+              <p>Automated personalized content creation for athletes, creators, and combat sports promotions.</p>
+            </div>
+            <div class="feature-box" onclick="switchTab('token', document.querySelectorAll('.nav-btn')[4])" style="cursor: pointer;">
+              <h4>🪙 Token Utility</h4>
+              <p>A self-sustaining utility loop anchored to real operating revenues, buybacks, and ecosystem rewards.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- ECOSYSTEM -->
-    <div id="view-ecosystem" class="view-panel active">
+    <div id="view-ecosystem" class="view-panel">
       <div class="fx1-topbar">
         <h1>Ecosystem</h1>
-        <p>The FX1 Ecosystem connects fan engagement, AI data training, and real commercial revenue lines into a single, self-sustaining network. Powered by MotionAI, Pulse SaaS, and enterprise partnerships, real operating revenue flows directly back into platform rewards and token utility. Explore the visual below to see how our interconnected infrastructure bridges fan participation with sustainable business growth.</p>
+        <p>The FX1 Ecosystem connects fan engagement, AI data training, and real commercial revenue lines into a single, self-sustaining network.</p>
       </div>
       <div class="fx1-card">
         <object data="{{ '/FX1ecosystem.svg' | relative_url }}?v=1" type="image/svg+xml">
@@ -283,7 +486,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
     <div id="view-arena" class="view-panel">
       <div class="fx1-topbar">
         <h1>FX1 Arena</h1>
-        <p>FX1 Arena blends gamified fan experiences—predictions, battles, and trivia—with live AI data training to deliver real-world rewards like VIP access, exclusive gear, and seamless cashouts. By turning everyday fan participation into productive B2B revenue without any crypto friction, Arena bridges play and performance. Explore the visual below to see how the Arena engine powers the whole ecosystem.</p>
+        <p>FX1 Arena blends gamified fan experiences—predictions, battles, and trivia—with live AI data training to deliver real-world rewards.</p>
       </div>
       <div class="fx1-card">
         <object data="{{ '/FX1arena.svg' | relative_url }}?v=1" type="image/svg+xml">
@@ -299,7 +502,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
     <div id="view-token" class="view-panel">
       <div class="fx1-topbar">
         <h1>Token Utility</h1>
-        <p>The $FXI token fuels a self-sustaining utility loop—linking gameplay, AI validation, and real commercial revenues to create long-term value. By anchoring holding and locking benefits directly to actual platform activity, the ecosystem turns engagement into escalating rewards. Explore the visual below to see how $FXI powers this closed-loop economy.</p>
+        <p>The $FXI token fuels a self-sustaining utility loop—linking gameplay, AI validation, and real commercial revenues.</p>
       </div>
       <div class="fx1-card">
         <object data="{{ '/FX1utility.svg' | relative_url }}?v=1" type="image/svg+xml">
@@ -315,7 +518,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
     <div id="view-status" class="view-panel">
       <div class="fx1-topbar">
         <h1>Status & Benefits</h1>
-        <p>Our ecosystem permanently rewards early supporters with exclusive OG benefits, while allowing new users to dynamically build their own premium status through our Arena Levels. Check out the visual below to see exactly how our tiered membership, priority access, and escalating rewards work for everyone.</p>
+        <p>Our ecosystem permanently rewards early supporters with exclusive OG benefits, while allowing new users to dynamically build their status.</p>
       </div>
       <div class="fx1-card">
         <object data="{{ '/FX1status.svg' | relative_url }}?v=1" type="image/svg+xml">
@@ -331,7 +534,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
     <div id="view-pulseai" class="view-panel">
       <div class="fx1-topbar">
         <h1>PulseAI</h1>
-        <p>FX1 Pulse is an AI-powered SaaS platform engineered to automate personalized content creation—from articles and newsletters to social posts and marketing assets. Designed for athletes, creators, media outlets, and combat sports promotions, it turns platform activity into high-impact media. Check out the visual below to see how PulseAI powers automated content across the ecosystem.</p>
+        <p>FX1 Pulse is an AI-powered SaaS platform engineered to automate personalized content creation for athletes and media.</p>
       </div>
       <div class="fx1-card">
         <object data="{{ '/FX1pulse.svg' | relative_url }}?v=1" type="image/svg+xml">
