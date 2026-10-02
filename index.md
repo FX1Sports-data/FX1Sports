@@ -450,7 +450,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
                 <video src="{{ '/FX1intro.mp4' | relative_url }}" autoplay loop muted playsinline controls></video>
               </div>
               <div class="twitter-link-hint">
-                <a href="https://x.com/FX1Sports/status/2010963902679695518" target="_blank">Voir le post original sur X ↗</a>
+                <a href="https://x.com/FX1Sports/status/2010963902679695518" target="_blank">View original post on X ↗</a>
               </div>
             </div>
           </div>
