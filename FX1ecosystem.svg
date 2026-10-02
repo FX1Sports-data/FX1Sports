@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 1080" width="100%" role="img" aria-labelledby="svg-title svg-desc" lang="en">
+  <title id="svg-title">FX1 Ecosystem: Utility, Token Flow and Membership</title>
+  <desc id="svg-desc">A guided three-panel introduction to how fan activity improves FX1 products, how $FXI works, and how participation unlocks Arena access.</desc>
+  <defs>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#1fb9c9" stroke-width=".5"/>
+    </pattern>
+    <marker id="arrow-cyan" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0 0L8 4.5L0 9Z" fill="#1fb9c9"/>
+    </marker>
+    <marker id="arrow-pink" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0 0L8 4.5L0 9Z" fill="#f472b6"/>
+    </marker>
+    <style><![CDATA[
+      @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&display=swap");
+      text { font-family: "Barlow Condensed", "Arial Narrow", Arial, sans-serif; fill: #e9f4f5; }
+      .bg { fill: #04090c; }
+      .grid { fill: url(#grid); opacity: .1; }
+      .panel { fill: #06131a; stroke: #1fb9c9; stroke-width: 2.5; }
+      .card { fill: #07141a; stroke: #14535c; stroke-width: 1.8; }
+      .title { font-size: 43px; font-weight: 800; }
+      .section { fill: #7fd8cc; font-size: 28px; font-weight: 800; }
+      .subsection { fill: #7fd8cc; font-size: 21px; font-weight: 700; }
+      .body { font-size: 19px; font-weight: 500; }
+      .small { font-size: 16px; font-weight: 500; }
+      .cyan { fill: #1fb9c9; }
+      .mint { fill: #7fd8cc; }
+      .pink { fill: #f472b6; }
+      .green { fill: #70ed69; }
+      .icon { fill: none; stroke: #1fb9c9; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+      .icon-pink { fill: none; stroke: #f472b6; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .flow { fill: none; stroke: #1fb9c9; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow-cyan); }
+      .bullet { fill: #f472b6; }
+      .overview-cover { fill: #06131a; stroke: none; }
+      .overview-content .diagram-card { fill: #07141a; stroke: #14535c; stroke-width: 1.6; }
+      .overview-content .guide-heading { fill: #7fd8cc; font-size: 22px; font-weight: 800; }
+      .overview-content .guide-copy { fill: #e9f4f5; font-size: 18px; font-weight: 500; }
+      .overview-content .guide-small { fill: #93b0b5; font-size: 16px; font-weight: 500; }
+      .overview-content .guide-emphasis { fill: #70ed69; font-size: 16px; font-weight: 700; }
+      .overview-content .guide-node { opacity: 0; transform-box: fill-box; transform-origin: center; animation: guide-enter .65s cubic-bezier(.2,.8,.2,1) both; animation-delay: var(--delay, 0s); }
+      @keyframes guide-enter { from { opacity: 0; transform: translateY(16px) scale(.97); } to { opacity: 1; transform: translateY(0) scale(1); } }
+      .guide-flow { fill: none; stroke: #1fb9c9; stroke-width: 2.4; stroke-linecap: round; marker-end: url(#arrow-cyan); }
+      .mode-toggle { cursor: pointer; outline: none; }
+      .mode-toggle rect { fill: #07141a; stroke: #1fb9c9; stroke-width: 1.5; }
+      .mode-toggle text { fill: #7fd8cc; font-size: 15px; font-weight: 800; text-anchor: middle; }
+      .mode-toggle:focus rect, .mode-toggle:hover rect { stroke: #70ed69; filter: url(#glow); }
+      .mode-toggle.details-toggle rect { stroke: #f472b6; }
+      .mode-toggle.details-toggle text { fill: #f472b6; }
+      .mode-toggle.details-toggle:focus rect, .mode-toggle.details-toggle:hover rect { stroke: #f472b6; }
+      .overview-toggle { display: none; }
+      svg.details-panel-1 .overview-cover-1, svg.details-panel-1 .overview-panel-1 { display: none; }
+      svg.details-panel-2 .overview-cover-2, svg.details-panel-2 .overview-panel-2 { display: none; }
+      svg.details-panel-3 .overview-cover-3, svg.details-panel-3 .overview-panel-3 { display: none; }
+      svg.details-panel-1 .details-toggle[data-panel="1"], svg.details-panel-2 .details-toggle[data-panel="2"], svg.details-panel-3 .details-toggle[data-panel="3"] { display: none; }
+      svg.details-panel-1 .overview-toggle[data-panel="1"], svg.details-panel-2 .overview-toggle[data-panel="2"], svg.details-panel-3 .overview-toggle[data-panel="3"] { display: inline; }
+      @media (prefers-reduced-motion: reduce) {
+        .overview-content .guide-node { opacity: 1; animation: none; transform: none; }
+      }
+    ]]></style>
+  </defs>
+
+  <rect class="bg" width="1700" height="1080"/>
+  <rect class="grid" width="1700" height="1080"/>
+
+  <path d="M25 18H49L82 50L49 82H25L57 50Z" fill="#1fb9c9"/>
+  <path d="M49 18H73L105 50L73 82H49L81 50Z" fill="#1fb9c9" opacity=".8"/>
+  <text x="120" y="73" style="font-size:58px;font-weight:800;font-style:italic;fill:#fff">FX<tspan fill="#1fb9c9">1</tspan></text>
+  <text class="title" x="212" y="65">HOW THE FX1 ECOSYSTEM WORKS</text>
+  <text class="small" x="214" y="94" style="fill:#f472b6">For more details, click FULL DETAILS in any panel.</text>
+  <path d="M24 111H1676" stroke="#14535c" stroke-width="1.5"/>
+  <path d="M24 111H475" stroke="#1fb9c9" stroke-width="3" filter="url(#glow)"/>
+
+  <!-- Panel 1: activity and revenue -->
+  <rect class="panel" x="24" y="128" width="526" height="928" rx="18"/>
+  <text class="section" x="48" y="171">THE CORE LOOP</text>
+  <text class="body" x="48" y="204">Fan gameplay and AI training are one activity.</text>
+  <text class="small" x="48" y="230">Fans play, label live sport and power better FX1 products.</text>
+
+  <g>
+    <circle cx="68" cy="276" r="15" fill="#06131a" stroke="#1fb9c9" stroke-width="1.8"/>
+    <text x="68" y="282" text-anchor="middle" style="font-size:17px;font-weight:800;fill:#7fd8cc">1</text>
+    <text class="body" x="96" y="282"><tspan style="font-weight:800">PLAY</tspan>  Predictions, battles, trivia, creator challenges</text>
+    <path class="flow" d="M68 294V309"/>
+    <circle cx="68" cy="329" r="15" fill="#06131a" stroke="#1fb9c9" stroke-width="1.8"/>
+    <text x="68" y="335" text-anchor="middle" style="font-size:17px;font-weight:800;fill:#7fd8cc">2</text>
+    <text class="body" x="96" y="335"><tspan style="font-weight:800">EARN</tspan>  Shots through participation and AI tasks</text>
+    <path class="flow" d="M68 347V362"/>
+    <circle cx="68" cy="382" r="15" fill="#06131a" stroke="#1fb9c9" stroke-width="1.8"/>
+    <text x="68" y="388" text-anchor="middle" style="font-size:17px;font-weight:800;fill:#7fd8cc">3</text>
+    <text class="body" x="96" y="388"><tspan style="font-weight:800">CONVERT</tspan>  Shots to existing $FXI</text>
+    <path class="flow" d="M68 400V415"/>
+    <circle cx="68" cy="435" r="15" fill="#06131a" stroke="#1fb9c9" stroke-width="1.8"/>
+    <text x="68" y="441" text-anchor="middle" style="font-size:17px;font-weight:800;fill:#7fd8cc">4</text>
+    <text class="body" x="96" y="441"><tspan style="font-weight:800">USE</tspan>  Spend, hold or lock $FXI</text>
+    <path class="flow" d="M68 453V468"/>
+    <circle cx="68" cy="488" r="15" fill="#06131a" stroke="#1fb9c9" stroke-width="1.8"/>
+    <text x="68" y="494" text-anchor="middle" style="font-size:17px;font-weight:800;fill:#7fd8cc">5</text>
+    <text class="body" x="96" y="494"><tspan style="font-weight:800">UNLOCK</tspan>  More of Arena</text>
+  </g>
+
+  <path d="M48 522H526" stroke="#14535c" stroke-width="1.5"/>
+  <text class="subsection" x="48" y="555">MOTIONAI LEARN</text>
+  <g class="glow">
+    <circle cx="495" cy="546" r="22" fill="#06131a" stroke="#1fb9c9" stroke-width="1.7"/>
+    <path d="M485 547C485 541 490 537 495 539C500 537 505 541 505 547C505 552 500 556 495 558C490 556 485 552 485 547Z" class="icon"/>
+    <path d="M490 546L493 543L496 547L500 542M490 552H500" class="icon-pink"/>
+  </g>
+  <text class="small" x="48" y="586">Structured labeling and validation tasks train FX1 AI.</text>
+  <text class="small" x="48" y="609">Fan participation → better MotionAI data → better products</text>
+  <text class="small" x="48" y="632">→ commercial revenue → a stronger Arena.</text>
+
+  <path d="M48 651H526" stroke="#14535c" stroke-width="1.5"/>
+  <text class="subsection" x="48" y="684">REAL COMMERCIAL BUSINESS</text>
+  <g>
+    <circle cx="58" cy="715" r="3" class="bullet"/><text class="small" x="70" y="721">MotionAI Live Data Products</text>
+    <circle cx="58" cy="744" r="3" class="bullet"/><text class="small" x="70" y="750">Pulse SaaS</text>
+    <circle cx="58" cy="773" r="3" class="bullet"/><text class="small" x="70" y="779">Betting Odds Feed (H2 2026)</text>
+    <circle cx="300" cy="715" r="3" class="bullet"/><text class="small" x="312" y="721">HeadShield Safety Intelligence</text>
+    <circle cx="300" cy="744" r="3" class="bullet"/><text class="small" x="312" y="750">Rights-holder partnerships</text>
+    <circle cx="300" cy="773" r="3" class="bullet"/><text class="small" x="312" y="779">Arena platform commerce</text>
+  </g>
+  <rect x="44" y="806" width="486" height="176" rx="12" fill="#07141a" stroke="#14535c" stroke-width="1.6"/>
+  <text x="64" y="841" style="font-size:20px;font-weight:800;fill:#7fd8cc">REVENUE → TREASURY</text>
+  <text class="small" x="64" y="872">A defined share of net business revenue funds</text>
+  <text class="small" x="64" y="896">buybacks, jackpots and ecosystem programs.</text>
+  <text class="small" x="64" y="930">Sponsors pay for engagement • Enterprises for data</text>
+  <text class="small" x="64" y="954">• Rights holders for tools — not trading alone.</text>
+  <text x="48" y="1022" style="font-size:19px;font-weight:700;fill:#7fd8cc">One activity. Fan engagement and AI training.</text>
+
+  <!-- Panel 2: token flows -->
+  <rect class="panel" x="587" y="128" width="526" height="928" rx="18"/>
+  <text class="section" x="611" y="171">HOW $FXI WORKS</text>
+  <text class="body" x="611" y="204">One currency powers participation inside Arena.</text>
+
+  <rect class="card" x="607" y="224" width="486" height="111" rx="11"/>
+  <text class="small" x="627" y="255" style="font-weight:800;fill:#7fd8cc">REQUIRED FOR</text>
+  <text class="body" x="627" y="284">Marketplace purchases • jackpot entries • premium tiers</text>
+  <text class="body" x="627" y="312">Heritage benefits. Fixed supply; demand follows usage.</text>
+
+  <text class="subsection" x="611" y="375">THREE WAYS TO GET $FXI</text>
+  <g>
+    <rect class="card" x="607" y="394" width="153" height="234" rx="10"/>
+    <circle cx="633" cy="422" r="13" fill="#06131a" stroke="#1fb9c9" stroke-width="1.7"/>
+    <text x="633" y="428" text-anchor="middle" style="font-size:16px;font-weight:800;fill:#7fd8cc">1</text>
+    <text x="655" y="429" style="font-size:20px;font-weight:800;fill:#7fd8cc">EARN</text>
+    <text class="small" x="622" y="466">Shots from games,</text>
+    <text class="small" x="622" y="489">creators and MotionAI</text>
+    <text class="small" x="622" y="512">Learn. Stay off-chain</text>
+    <text class="small" x="622" y="535">until conversion.</text>
+    <text class="small" x="622" y="575" style="fill:#70ed69">Existing Rewards Pool;</text>
+    <text class="small" x="622" y="598" style="fill:#70ed69">no new tokens minted.</text>
+
+    <rect class="card" x="773" y="394" width="153" height="234" rx="10"/>
+    <circle cx="799" cy="422" r="13" fill="#06131a" stroke="#1fb9c9" stroke-width="1.7"/>
+    <text x="799" y="428" text-anchor="middle" style="font-size:16px;font-weight:800;fill:#7fd8cc">2</text>
+    <text x="821" y="429" style="font-size:20px;font-weight:800;fill:#7fd8cc">BUY</text>
+    <text class="small" x="788" y="466">Normal payment</text>
+    <text class="small" x="788" y="489">experience. Approved</text>
+    <text class="small" x="788" y="512">providers source $FXI</text>
+    <text class="small" x="788" y="535">behind the scenes.</text>
+    <text class="small" x="788" y="575" style="fill:#70ed69">External purchases</text>
+    <text class="small" x="788" y="598" style="fill:#70ed69">create market demand.</text>
+
+    <rect class="card" x="939" y="394" width="153" height="234" rx="10"/>
+    <circle cx="965" cy="422" r="13" fill="#06131a" stroke="#1fb9c9" stroke-width="1.7"/>
+    <text x="965" y="428" text-anchor="middle" style="font-size:16px;font-weight:800;fill:#7fd8cc">3</text>
+    <text x="987" y="429" style="font-size:20px;font-weight:800;fill:#7fd8cc">BRING</text>
+    <text class="small" x="954" y="466">Connect a wallet;</text>
+    <text class="small" x="954" y="489">Arena recognizes your</text>
+    <text class="small" x="954" y="512">holdings and benefits.</text>
+    <text class="small" x="954" y="535">Deposit or withdraw.</text>
+    <text class="small" x="954" y="575" style="fill:#70ed69">One Arena — no separate</text>
+    <text class="small" x="954" y="598" style="fill:#70ed69">crypto version.</text>
+  </g>
+
+  <path d="M611 650H1089" stroke="#14535c" stroke-width="1.5"/>
+  <text class="subsection" x="611" y="683">CRYPTO STAYS UNDER THE PRODUCT</text>
+  <text class="small" x="611" y="714">Fans see Shots, available/locked $FXI, level and Heritage.</text>
+  <text class="small" x="611" y="738">Custody holds assets; Arena keeps the ledger.</text>
+  <text class="small" x="611" y="762">Ethereum is mainly for external transfers and settlement.</text>
+  <text class="small" x="611" y="786">Daily actions stay off-chain; custody covers gas.</text>
+
+  <path d="M611 807H1089" stroke="#14535c" stroke-width="1.5"/>
+  <text class="subsection" x="611" y="840">MARKETPLACE ECONOMICS</text>
+  <text class="small" x="611" y="870">2% fee goes to the Arena Reserve — not a buyback;</text>
+  <text class="small" x="611" y="893">FX1 already owns received tokens.</text>
+  <text class="small" x="611" y="925">Vendor costs are settled separately, typically in fiat,</text>
+  <text class="small" x="611" y="948">so a purchase does not automatically sell its $FXI.</text>
+  <text class="small" x="611" y="980">Cash, margins, terms, partners, inventory and periodic</text>
+  <text class="small" x="611" y="1003">treasury rebalancing manage working capital at scale.</text>
+
+  <!-- Panel 3: membership and rollout -->
+  <path class="panel" d="M1199 128H1654Q1676 128 1676 150V986Q1676 1012 1650 1012H1580C1555 1012 1540 1056 1520 1056H1199Q1175 1056 1175 1032V152Q1175 128 1199 128Z"/>
+  <text class="section" x="1199" y="171">HOLD, LOCK &amp; BUILD</text>
+  <text class="body" x="1199" y="204">Membership grows with your involvement.</text>
+
+  <text class="subsection" x="1199" y="247">HOLD FOR MORE THAN SPENDING</text>
+  <text class="small" x="1199" y="276">Early marketplace access • exclusive inventory</text>
+  <text class="small" x="1199" y="299">Premium MotionAI data • member pricing • ticket priority</text>
+  <text class="small" x="1199" y="322">Premium content • creator tools • partner benefits</text>
+
+  <path d="M1199 345H1652" stroke="#14535c" stroke-width="1.5"/>
+  <text class="subsection" x="1199" y="378">LOCK: 30 DAYS • 90 DAYS • FULL SEASON</text>
+  <text class="small" x="1199" y="407">You still own $FXI, but cannot spend or withdraw it</text>
+  <text class="small" x="1199" y="430">during the term. No APY or yield product.</text>
+  <text class="small" x="1199" y="453">More benefits can retain tokens and reduce sell pressure.</text>
+
+  <path d="M1199 477H1652" stroke="#14535c" stroke-width="1.5"/>
+  <text class="subsection" x="1199" y="510">OG / HERITAGE: THREE LAYERS</text>
+  <text class="small" x="1199" y="539">Permanent OG recognition + current balance + FXI Lock.</text>
+  <text class="small" x="1199" y="562">OG status stays forever; balance and lock add active perks.</text>
+  <text class="small" x="1199" y="591" style="fill:#7fd8cc">Badge • first access • reserved drops • OG merchandise</text>
+  <text class="small" x="1199" y="614" style="fill:#7fd8cc">Priority tickets • premium content • events • community</text>
+  <text class="small" x="1199" y="643">Access: OG/Heritage → holders → general Arena.</text>
+
+  <path d="M1199 667H1652" stroke="#14535c" stroke-width="1.5"/>
+  <text class="subsection" x="1199" y="700">ARENA LEVELS &amp; ROLLOUT</text>
+  <text class="small" x="1199" y="729">Arena → Pro → Elite → Heritage + Active.</text>
+  <text class="small" x="1199" y="752">Levels can reflect sustained/average balance, lock,</text>
+  <text class="small" x="1199" y="775">participation and Heritage status.</text>
+  <text class="small" x="1199" y="810" style="font-weight:700;fill:#7fd8cc">BUILT IN PARALLEL</text>
+  <text class="small" x="1199" y="836">Telegram + Heritage → jackpot → private → public launch.</text>
+  <text class="small" x="1199" y="859">Community, rewards and business lines grow together.</text>
+
+  <rect x="1195" y="883" width="460" height="91" rx="11" fill="#07141a" stroke="#14535c" stroke-width="1.5"/>
+  <text x="1214" y="914" style="font-size:19px;font-weight:800;fill:#7fd8cc">WHY THE MODEL WORKS</text>
+  <text class="small" x="1214" y="940">Real demand from users, sponsors, partners and FX1's</text>
+  <text class="small" x="1214" y="962">commercial business — not token trading alone.</text>
+  <text x="1199" y="1000" style="font-size:18px;font-weight:700;fill:#70ed69">We can't control price; we can build reasons to use $FXI.</text>
+
+  <text x="1569" y="1040" style="font-size:16px;font-weight:700;fill:#7fd8cc">FX1.IO</text>
+  <text x="1628" y="1046" text-anchor="middle" style="font-size:30px;font-weight:800;font-style:italic;fill:#fff">FX<tspan fill="#1fb9c9">1</tspan></text>
+
+  <g id="novice-overview">
+    <g class="overview-covers">
+      <rect class="overview-cover overview-cover-1" x="27" y="131" width="520" height="922" rx="15"/>
+      <rect class="overview-cover overview-cover-2" x="590" y="131" width="520" height="922" rx="15"/>
+      <path class="overview-cover overview-cover-3" d="M1200 131H1653Q1673 131 1673 151V985Q1673 1009 1649 1009H1581C1556 1009 1542 1053 1520 1053H1200Q1177 1053 1177 1031V152Q1177 131 1200 131Z"/>
+    </g>
+
+    <g class="overview-content">
+      <g class="overview-panel-1">
+      <text class="section" x="48" y="171">THE CORE LOOP</text>
+      <text class="body" x="48" y="204">Your activity helps make FX1 better.</text>
+      <g class="guide-node" style="--delay:.1s">
+        <rect class="diagram-card" x="48" y="243" width="478" height="88" rx="10"/>
+        <circle cx="82" cy="287" r="23" fill="#06131a" stroke="#1fb9c9" stroke-width="2"/><text x="82" y="294" text-anchor="middle" style="font-size:21px;font-weight:800;fill:#70ed69">1</text>
+        <text class="guide-heading" x="120" y="279">PLAY</text><text class="guide-copy" x="120" y="307">Predictions, battles, trivia and creator challenges</text>
+      </g>
+      <path class="guide-flow" d="M82 331V347"/><circle r="3.5" fill="#70ed69"><animateMotion dur="1.1s" repeatCount="indefinite" path="M82 333V345"/></circle>
+      <g class="guide-node" style="--delay:.28s">
+        <rect class="diagram-card" x="48" y="350" width="478" height="88" rx="10"/>
+        <circle cx="82" cy="394" r="23" fill="#06131a" stroke="#1fb9c9" stroke-width="2"/><text x="82" y="401" text-anchor="middle" style="font-size:21px;font-weight:800;fill:#70ed69">2</text>
+        <text class="guide-heading" x="120" y="386">TRAIN AI</text><text class="guide-copy" x="120" y="414">Fans label live sport moments to validate AI</text>
+      </g>
+      <path class="guide-flow" d="M82 438V454"/><circle r="3.5" fill="#70ed69"><animateMotion dur="1.1s" repeatCount="indefinite" path="M82 440V452"/></circle>
+      <g class="guide-node" style="--delay:.46s">
+        <rect class="diagram-card" x="48" y="457" width="478" height="88" rx="10"/>
+        <circle cx="82" cy="501" r="23" fill="#06131a" stroke="#1fb9c9" stroke-width="2"/><text x="82" y="508" text-anchor="middle" style="font-size:21px;font-weight:800;fill:#70ed69">3</text>
+        <text class="guide-heading" x="120" y="493">IMPROVE PRODUCTS</text><text class="guide-copy" x="120" y="521">Better data strengthens MotionAI and Pulse</text>
+      </g>
+      <path class="guide-flow" d="M82 545V561"/><circle r="3.5" fill="#70ed69"><animateMotion dur="1.1s" repeatCount="indefinite" path="M82 547V559"/></circle>
+      <g class="guide-node" style="--delay:.64s">
+        <rect class="diagram-card" x="48" y="564" width="478" height="88" rx="10"/>
+        <circle cx="82" cy="608" r="23" fill="#06131a" stroke="#1fb9c9" stroke-width="2"/><text x="82" y="615" text-anchor="middle" style="font-size:21px;font-weight:800;fill:#70ed69">4</text>
+        <text class="guide-heading" x="120" y="600">CREATE BUSINESS VALUE</text><text class="guide-copy" x="120" y="628">SaaS, live data, partners and Arena commerce</text>
+      </g>
+      <text class="subsection" x="48" y="700">WHERE REVENUE COMES FROM</text>
+      <text class="guide-small" x="48" y="730">MotionAI data • Pulse SaaS • odds feed • HeadShield</text>
+      <text class="guide-small" x="48" y="753">Rights-holder tools • Arena marketplace and commerce</text>
+      <g class="guide-node" style="--delay:.82s">
+        <rect class="diagram-card" x="48" y="786" width="478" height="139" rx="11"/>
+        <text class="guide-heading" x="68" y="822">A SHARE OF NET REVENUE</text>
+        <path class="guide-flow" d="M78 847H171"/><circle cx="78" cy="847" r="5" fill="#70ed69"/>
+        <text class="guide-copy" x="190" y="854">can support the Arena Treasury</text>
+        <text class="guide-emphasis" x="68" y="892">Buybacks • jackpots • ecosystem programs</text>
+      </g>
+      <text class="guide-small" x="48" y="966">Engagement is productive—not just entertainment.</text>
+
+      </g>
+      <g class="overview-panel-2">
+      <text class="section" x="611" y="171">HOW $FXI WORKS</text>
+      <text class="body" x="611" y="204">Three ways in. One currency inside Arena.</text>
+      <text class="subsection" x="611" y="250">THE SIMPLE PATH</text>
+      <circle cx="682" cy="297" r="31" fill="#07141a" stroke="#1fb9c9" stroke-width="2"/><text x="682" y="303" text-anchor="middle" style="font-size:17px;font-weight:800;fill:#7fd8cc">PLAY</text>
+      <path class="guide-flow" d="M719 297H783"/><circle r="3.5" fill="#70ed69"><animateMotion dur="1.5s" repeatCount="indefinite" path="M724 297H779"/></circle>
+      <circle cx="850" cy="297" r="31" fill="#07141a" stroke="#1fb9c9" stroke-width="2"/><text x="850" y="303" text-anchor="middle" style="font-size:18px;font-weight:800;fill:#7fd8cc">SHOTS</text>
+      <path class="guide-flow" d="M887 297H951"/><circle r="3.5" fill="#70ed69"><animateMotion dur="1.5s" repeatCount="indefinite" path="M892 297H947"/></circle>
+      <circle cx="1018" cy="297" r="31" fill="#07141a" stroke="#70ed69" stroke-width="2"/><text x="1018" y="303" text-anchor="middle" style="font-size:19px;font-weight:800;fill:#70ed69">$FXI</text>
+      <text class="subsection" x="611" y="361">THREE WAYS TO GET IT</text>
+      <g class="guide-node" style="--delay:.3s">
+        <rect class="diagram-card" x="607" y="380" width="153" height="231" rx="10"/>
+        <circle cx="631" cy="411" r="14" fill="#06131a" stroke="#1fb9c9" stroke-width="1.7"/><text x="631" y="417" text-anchor="middle" style="font-size:16px;font-weight:800;fill:#7fd8cc">1</text>
+        <text class="guide-heading" x="654" y="418">EARN</text>
+        <text class="guide-copy" x="622" y="457">Games + AI tasks</text><text class="guide-copy" x="622" y="481">earn Shots, then</text><text class="guide-copy" x="622" y="505">convert to $FXI.</text>
+        <text class="guide-emphasis" x="622" y="551">Existing rewards</text><text class="guide-emphasis" x="622" y="574">pool; no new tokens.</text>
+      </g>
+      <g class="guide-node" style="--delay:.48s">
+        <rect class="diagram-card" x="772" y="380" width="153" height="231" rx="10"/>
+        <circle cx="796" cy="411" r="14" fill="#06131a" stroke="#1fb9c9" stroke-width="1.7"/><text x="796" y="417" text-anchor="middle" style="font-size:16px;font-weight:800;fill:#7fd8cc">2</text>
+        <text class="guide-heading" x="819" y="418">BUY</text>
+        <text class="guide-copy" x="787" y="457">Pay normally.</text><text class="guide-copy" x="787" y="481">Approved providers</text><text class="guide-copy" x="787" y="505">source $FXI for you.</text>
+        <text class="guide-emphasis" x="787" y="551">External purchases</text><text class="guide-emphasis" x="787" y="574">add market demand.</text>
+      </g>
+      <g class="guide-node" style="--delay:.66s">
+        <rect class="diagram-card" x="937" y="380" width="153" height="231" rx="10"/>
+        <circle cx="961" cy="411" r="14" fill="#06131a" stroke="#1fb9c9" stroke-width="1.7"/><text x="961" y="417" text-anchor="middle" style="font-size:16px;font-weight:800;fill:#7fd8cc">3</text>
+        <text class="guide-heading" x="984" y="418">BRING</text>
+        <text class="guide-copy" x="952" y="457">Already hold $FXI?</text><text class="guide-copy" x="952" y="481">Connect a wallet;</text><text class="guide-copy" x="952" y="505">Arena sees benefits.</text>
+        <text class="guide-emphasis" x="952" y="551">No separate crypto</text><text class="guide-emphasis" x="952" y="574">version of Arena.</text>
+      </g>
+      <text class="subsection" x="611" y="663">USE $FXI FOR</text>
+      <g class="guide-node" style="--delay:.82s">
+        <rect class="diagram-card" x="607" y="682" width="486" height="102" rx="10"/>
+        <circle cx="650" cy="729" r="19" fill="#06131a" stroke="#1fb9c9" stroke-width="1.8"/><text x="650" y="735" text-anchor="middle" style="font-size:17px;font-weight:800;fill:#7fd8cc">1</text>
+        <text class="guide-copy" x="680" y="723">Marketplace</text><text class="guide-small" x="680" y="746">drops + inventory</text>
+        <circle cx="815" cy="729" r="19" fill="#06131a" stroke="#1fb9c9" stroke-width="1.8"/><text x="815" y="735" text-anchor="middle" style="font-size:17px;font-weight:800;fill:#7fd8cc">2</text>
+        <text class="guide-copy" x="845" y="723">Jackpots</text><text class="guide-small" x="845" y="746">entries + prizes</text>
+        <circle cx="968" cy="729" r="19" fill="#06131a" stroke="#1fb9c9" stroke-width="1.8"/><text x="968" y="735" text-anchor="middle" style="font-size:17px;font-weight:800;fill:#7fd8cc">3</text>
+        <text class="guide-copy" x="998" y="723">Premium</text><text class="guide-small" x="998" y="746">tiers + Heritage</text>
+      </g>
+      <text class="guide-small" x="611" y="819">Fixed supply; demand follows use. Everyday actions stay off-chain.</text>
+      <g class="guide-node" style="--delay:.98s">
+        <rect class="diagram-card" x="607" y="845" width="486" height="115" rx="10"/>
+        <text class="guide-heading" x="627" y="881">CRYPTO STAYS UNDER THE PRODUCT</text>
+        <text class="guide-copy" x="627" y="911">Custody manages assets and gas; Ethereum is mainly</text>
+        <text class="guide-copy" x="627" y="936">for external transfers and settlement.</text>
+      </g>
+
+      </g>
+      <g class="overview-panel-3">
+      <text class="section" x="1199" y="171">ACCESS THAT GROWS</text>
+      <text class="body" x="1199" y="204">More involvement can unlock more Arena.</text>
+      <g class="guide-node" style="--delay:.55s">
+        <rect class="diagram-card" x="1195" y="240" width="145" height="290" rx="10"/>
+        <text class="guide-heading" x="1210" y="276">HOLD</text>
+        <circle cx="1267" cy="329" r="26" fill="#06131a" stroke="#1fb9c9" stroke-width="2"/><text x="1267" y="336" text-anchor="middle" style="font-size:20px;font-weight:800;fill:#70ed69">$</text>
+        <text class="guide-copy" x="1210" y="383">Keep $FXI in</text><text class="guide-copy" x="1210" y="407">your account.</text>
+        <text class="guide-small" x="1210" y="455">Member pricing,</text><text class="guide-small" x="1210" y="478">early drops and</text><text class="guide-small" x="1210" y="501">partner benefits.</text>
+      </g>
+      <g class="guide-node" style="--delay:.73s">
+        <rect class="diagram-card" x="1352" y="240" width="145" height="290" rx="10"/>
+        <text class="guide-heading" x="1367" y="276">LOCK</text>
+        <circle cx="1424" cy="329" r="26" fill="#06131a" stroke="#1fb9c9" stroke-width="2"/><path d="M1414 329V324A10 10 0 0 1 1434 324V329M1412 329H1436V344H1412Z" class="icon"/>
+        <text class="guide-copy" x="1367" y="383">30 days, 90 days</text><text class="guide-copy" x="1367" y="407">or full season.</text>
+        <text class="guide-small" x="1367" y="455">Still yours, but</text><text class="guide-small" x="1367" y="478">not spendable until</text><text class="guide-small" x="1367" y="501">unlock. No APY.</text>
+      </g>
+      <g class="guide-node" style="--delay:.91s">
+        <rect class="diagram-card" x="1509" y="240" width="145" height="290" rx="10"/>
+        <text class="guide-heading" x="1524" y="276">HERITAGE</text>
+        <path d="M1561 306H1587V328C1587 337 1574 344 1574 344S1561 337 1561 328Z" class="icon"/><path d="M1574 312L1577 319L1584 320L1579 325L1580 332L1574 328L1568 332L1569 325L1564 320L1571 319Z" class="icon-pink"/>
+        <text class="guide-copy" x="1524" y="383">OG recognition</text><text class="guide-copy" x="1524" y="407">stays forever.</text>
+        <text class="guide-small" x="1524" y="455">Balance and lock</text><text class="guide-small" x="1524" y="478">add active perks.</text><text class="guide-small" x="1524" y="501">Recognition remains.</text>
+      </g>
+      <text class="subsection" x="1199" y="577">A SIMPLE ACCESS LADDER</text>
+      <g class="guide-node" style="--delay:1.09s">
+        <rect class="diagram-card" x="1195" y="596" width="460" height="68" rx="10"/>
+        <text class="guide-heading" x="1210" y="638">OG / HERITAGE</text><path class="guide-flow" d="M1338 630H1370"/>
+        <text class="guide-heading" x="1382" y="638">HOLDERS</text><path class="guide-flow" d="M1466 630H1490"/>
+        <text class="guide-heading" x="1500" y="638">ARENA</text>
+      </g>
+      <text class="guide-small" x="1199" y="707">Early access • reserved drops • tickets • premium content</text>
+      <text class="guide-small" x="1199" y="732">Creator tools • partner offers • events • community</text>
+      <path d="M1199 759H1652" stroke="#14535c" stroke-width="1.5"/>
+      <text class="subsection" x="1199" y="797">LEVELS &amp; LAUNCH</text>
+      <g class="guide-node" style="--delay:1.27s">
+        <text class="guide-heading" x="1199" y="832">ARENA <tspan fill="#1fb9c9">→</tspan> PRO <tspan fill="#1fb9c9">→</tspan> ELITE <tspan fill="#1fb9c9">→</tspan> HERITAGE + ACTIVE</text>
+        <text class="guide-small" x="1199" y="860">Balance, lock, participation and Heritage can shape levels.</text>
+        <text class="guide-emphasis" x="1199" y="905">TELEGRAM + HERITAGE <tspan fill="#1fb9c9">→</tspan> JACKPOT <tspan fill="#1fb9c9">→</tspan> PRIVATE <tspan fill="#1fb9c9">→</tspan> PUBLIC</text>
+        <text class="guide-small" x="1199" y="933">Community, rewards and business lines grow together.</text>
+      </g>
+      <text class="guide-small" x="1199" y="980">No price promise: the focus is real reasons to use $FXI.</text>
+      </g>
+    </g>
+
+    <g class="mode-toggle details-toggle" data-panel="1" tabindex="0" role="button" aria-expanded="false" aria-label="Show full ecosystem details">
+      <rect x="408" y="140" width="126" height="38" rx="8"/><text x="471" y="164">FULL DETAILS +</text>
+    </g>
+    <g class="mode-toggle details-toggle" data-panel="2" tabindex="0" role="button" aria-expanded="false" aria-label="Show full token details">
+      <rect x="973" y="140" width="126" height="38" rx="8"/><text x="1036" y="164">FULL DETAILS +</text>
+    </g>
+    <g class="mode-toggle details-toggle" data-panel="3" tabindex="0" role="button" aria-expanded="false" aria-label="Show full membership details">
+      <rect x="1527" y="140" width="127" height="38" rx="8"/><text x="1590" y="164">FULL DETAILS +</text>
+    </g>
+    <g class="mode-toggle overview-toggle" data-panel="1" tabindex="0" role="button" aria-expanded="false" aria-label="Return to simple overview">
+      <rect x="408" y="140" width="126" height="38" rx="8"/><text x="471" y="164">BACK TO GUIDE</text>
+    </g>
+    <g class="mode-toggle overview-toggle" data-panel="2" tabindex="0" role="button" aria-expanded="false" aria-label="Return to simple overview">
+      <rect x="973" y="140" width="126" height="38" rx="8"/><text x="1036" y="164">BACK TO GUIDE</text>
+    </g>
+    <g class="mode-toggle overview-toggle" data-panel="3" tabindex="0" role="button" aria-expanded="false" aria-label="Return to simple overview">
+      <rect x="1527" y="140" width="127" height="38" rx="8"/><text x="1590" y="164">BACK TO GUIDE</text>
+    </g>
+  </g>
+
+  <script><![CDATA[
+    var svgRoot = document.documentElement;
+    var detailButtons = [].slice.call(document.querySelectorAll(".details-toggle"));
+    var overviewButtons = [].slice.call(document.querySelectorAll(".overview-toggle"));
+    function setPanelMode(panelId, showDetails) {
+      ["1", "2", "3"].forEach(function(id) {
+        svgRoot.classList.remove("details-panel-" + id);
+      });
+      if (showDetails) svgRoot.classList.add("details-panel-" + panelId);
+      detailButtons.forEach(function(button) {
+        button.setAttribute("aria-expanded", String(showDetails && button.dataset.panel === panelId));
+      });
+      overviewButtons.forEach(function(button) {
+        button.setAttribute("aria-expanded", String(!showDetails && button.dataset.panel === panelId));
+      });
+    }
+    detailButtons.forEach(function(button) {
+      button.addEventListener("click", function() { setPanelMode(button.dataset.panel, true); });
+      button.addEventListener("keydown", function(event) {
+        if (event.key === "Enter" || event.key === " ") { event.preventDefault(); setPanelMode(button.dataset.panel, true); }
+      });
+    });
+    overviewButtons.forEach(function(button) {
+      button.addEventListener("click", function() { setPanelMode(button.dataset.panel, false); });
+      button.addEventListener("keydown", function(event) {
+        if (event.key === "Enter" || event.key === " ") { event.preventDefault(); setPanelMode(button.dataset.panel, false); }
+      });
+    });
+  ]]></script>
+</svg>
