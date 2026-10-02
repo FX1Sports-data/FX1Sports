@@ -432,10 +432,10 @@ title: FX1 Sports — Portal & Interactive Roadmap
               </div>
             </div>
             
-            <!-- Bloc Vidéo Natif (Remplace fx1-video.mp4 par le nom de ton fichier dans ton repo GitHub) -->
+            <!-- Bloc Vidéo Natif pointant sur FX1intro.mp4 -->
             <div class="landing-media-wrapper">
               <div class="landing-media">
-                <video src="{{ '/fx1-video.mp4' | relative_url }}" autoplay loop muted playsinline controls></video>
+                <video src="{{ '/FX1intro.mp4' | relative_url }}" autoplay loop muted playsinline controls></video>
               </div>
               <div class="twitter-link-hint">
                 <a href="https://x.com/FX1Sports/status/2010963902679695518" target="_blank">Voir le post original sur X ↗</a>
