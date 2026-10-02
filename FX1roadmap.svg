@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1040" width="100%" role="img" aria-label="FX1 ROADMAP: Parallel Deployment &amp; Model" lang="en">
+  <title>FX1 ROADMAP: Parallel Deployment &amp; Model</title>
+  
+  <defs>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="arrow-cyan" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0 0L8 4L0 8Z" fill="#1fb9c9"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0 0L8 4L0 8Z" fill="#4ade50"/>
+    </marker>
+  </defs>
+
+  <style><![CDATA[
+    @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;800&display=swap");
+    text { font-family: "Barlow Condensed", "Arial Narrow", Arial, sans-serif; fill: #e9f4f5; }
+    .b { fill: #07141a; stroke: #14535c; stroke-width: 2; transition: all 0.2s ease; }
+    .k { cursor: pointer; outline: none; }
+    .phase-hidden { display: none; }
+    .k:hover .b, .k:focus .b { stroke: #1fb9c9; filter: url(#glow); }
+    .k.sel .b { stroke: #4ade50; filter: url(#glow); fill: #0a2228; }
+    .t { font-size: 21px; font-weight: 700; fill: #fff; }
+    .s { font-size: 16px; fill: #93b0b5; }
+    .ic-badge { fill: #030d12; stroke: #1fb9c9; stroke-width: 1.8; transition: all 0.2s; }
+    .k:hover .ic-badge, .k.sel .ic-badge { stroke: #4ade50; }
+    .h { font-size: 26px; font-weight: 800; fill: #7fd8cc; }
+    .h2 { font-size: 22px; font-weight: 500; fill: #fff; }
+    .col { fill: #06131a; stroke: #1fb9c9; stroke-width: 2.5; }
+    .arrow { fill: #1fb9c9; font-size: 20px; text-anchor: middle; }
+    .guide-cover { fill: #04090c; }
+    .guide-panel { fill: #06131a; stroke: #1fb9c9; stroke-width: 2.2; }
+    .guide-card { fill: #07141a; stroke: #14535c; stroke-width: 1.5; transition: fill .2s ease, stroke .2s ease; }
+    .roadmap-choice, .roadmap-action { cursor: pointer; outline: none; }
+    .roadmap-choice text { pointer-events: none; }
+    .roadmap-choice:hover .guide-card, .roadmap-choice:focus .guide-card { stroke: #1fb9c9; }
+    .roadmap-choice[aria-pressed="true"] .guide-card { stroke: #70ed69; fill: #0a2228; filter: url(#glow); }
+    .roadmap-choice[aria-pressed="true"] .guide-number { fill: #70ed69; }
+    .guide-title { fill: #7fd8cc; font-size: 24px; font-weight: 800; }
+    .guide-subtitle { fill: #93b0b5; font-size: 16px; font-weight: 500; }
+    .guide-name { fill: #e9f4f5; font-size: 17px; font-weight: 800; }
+    .guide-copy { fill: #93b0b5; font-size: 14px; font-weight: 500; }
+    .guide-number { fill: #e9f4f5; font-size: 17px; font-weight: 800; text-anchor: middle; }
+    .guide-connector { fill: none; stroke: #1fb9c9; stroke-width: 2; marker-end: url(#arrow-cyan); }
+    .loop-link { fill: none; stroke: #14535c; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow-cyan); }
+    .loop-destination-icon { opacity: 0; visibility: hidden; }
+    .loop-destination-icon.is-blinking { visibility: visible; animation: loop-icon-blink .5s step-end 4; }
+    @keyframes loop-icon-blink { 0%, 49%, 100% { opacity: 1; } 50%, 99% { opacity: .18; } }
+    .roadmap-action { cursor: pointer; outline: none; }
+    .roadmap-action rect { fill: #07141a; stroke: #f472b6; stroke-width: 1.4; }
+    .roadmap-action text { fill: #f472b6; font-size: 14px; font-weight: 800; text-anchor: middle; pointer-events: none; }
+    .roadmap-action:hover rect, .roadmap-action:focus rect { filter: url(#glow); }
+    .roadmap-back { display: none; }
+    svg.roadmap-details .roadmap-guide { display: none; }
+    svg.roadmap-details .roadmap-back { display: inline; }
+    svg.roadmap-details .phase-hidden { display: inline; }
+    @media (prefers-reduced-motion: reduce) {
+      .guide-card { transition: none; }
+      .loop-destination-icon.is-blinking { animation: none; opacity: 1; }
+    }
+  ]]></style>
+
+  <!-- Fond sombre -->
+  <rect width="1200" height="1020" fill="#04090c"/>
+
+  <!-- En-tête / Logo -->
+  <g transform="translate(10 20) scale(.6)">
+    <path d="M25 20H49L83 53L49 86H25L58 53Z" fill="#1fb9c9"/>
+    <path d="M49 20H73L106 53L73 86H49L82 53Z" fill="#1fb9c9" opacity=".8"/>
+  </g>
+  <text x="86" y="72" style="font-size:56px;font-weight:800;font-style:italic">FX<tspan fill="#1fb9c9">1</tspan></text>
+  <text x="185" y="72" style="font-size:42px;font-weight:800;fill:#7fd8cc">FX1 ROADMAP:<tspan style="fill:#fff"> BUILD IN PARALLEL</tspan></text>
+  <text x="32" y="106" style="font-size:17px;fill:#f472b6">Five phases. Five pillars. One value loop.</text>
+  <g class="roadmap-action roadmap-details-button" tabindex="0" role="button" aria-label="Show full roadmap details">
+    <rect x="990" y="34" width="176" height="42" rx="8"/><text x="1078" y="61">FULL DETAILS +</text>
+  </g>
+  <g class="roadmap-action roadmap-back" tabindex="0" role="button" aria-label="Return to roadmap guide">
+    <rect x="990" y="34" width="176" height="42" rx="8"/><text x="1078" y="61">BACK TO GUIDE</text>
+  </g>
+
+  <!-- COLONNE GAUCHE : THE ROADMAP (MULTI-PHASED ROLLOUT) -->
+  <rect class="col" x="30" y="120" width="560" height="670" rx="22"/>
+  <text class="h" x="50" y="158">THE ROADMAP: MULTI-PHASED ROLLOUT</text>
+
+  <!-- Phase 1 : Smartphone / Foundation / Community -->
+  <g class="k card n" tabindex="0" role="button" aria-pressed="false" 
+     data-t="PHASE 1: FOUNDATION (Community Deployment)" 
+     data-d="Build technological foundation &amp; community before commercial deployment. • Proprietary Motion AI video analysis engine (Combat Sports) • File patents for intellectual property protection • Ecosystem restructuring: treasure tokens preserved &amp; central community merge • Community Growth marketing across 4 pillars (SEO, AI, Social)">
+    <rect class="b" x="50" y="175" width="520" height="92" rx="14"/>
+    <!-- Badge Icône Phase 1 -->
+    <circle class="ic-badge" cx="95" cy="221" r="25"/>
+    <g transform="translate(0,0)">
+      <!-- Smartphone -->
+      <rect x="87" y="207" width="16" height="28" rx="3" fill="#030d12" stroke="#1fb9c9" stroke-width="1.8"/>
+      <line x1="91" y1="231" x2="99" y2="231" stroke="#1fb9c9" stroke-width="1.5"/>
+      <!-- Réseau / Engrenage -->
+      <circle cx="95" cy="216" r="3" fill="#f472b6"/>
+      <circle cx="88" cy="223" r="1.5" fill="#1fb9c9"/>
+      <circle cx="102" cy="223" r="1.5" fill="#1fb9c9"/>
+      <line x1="92" y1="218" x2="89" y2="222" stroke="#4ade50" stroke-width="1"/>
+      <line x1="98" y1="218" x2="101" y2="222" stroke="#4ade50" stroke-width="1"/>
+    </g>
+    <text class="t" x="135" y="210">PHASE 1: FOUNDATION</text>
+    <text class="s" x="135" y="238">Community deployment &amp; Motion AI engine</text>
+  </g>
+  <text class="arrow phase-connector" x="310" y="282">▼</text>
+
+  <!-- Phase 2 : Rocket / Flame / Live Launch -->
+  <g class="k card n" tabindex="0" role="button" aria-pressed="false" 
+     data-t="PHASE 2: LIVE (First Commercial Products)" 
+     data-d="Launch first commercial products. • Go live with FX1 Betting Product, FX1 Pulse AI SaaS • Motion AI live environments • Initial sportsbook integrations • Deploy combat sports database (1M+ fights)">
+    <rect class="b" x="50" y="290" width="520" height="92" rx="14"/>
+    <!-- Badge Icône Phase 2 -->
+    <circle class="ic-badge" cx="95" cy="336" r="25"/>
+    <g transform="translate(0,0)">
+      <!-- Flamme extérieure -->
+      <path d="M95 317 C95 317 84 329 84 338 C84 345 88.9 350 95 350 C101.1 350 106 345 106 338 C106 329 95 317 95 317 Z" fill="#030d12" stroke="#1fb9c9" stroke-width="1.8"/>
+      <!-- Cœur de flamme néon vert -->
+      <path d="M95 327 C95 327 90 334 90 340 C90 343 92.2 346 95 346 C97.8 346 100 343 100 340 C100 334 95 327 95 327 Z" fill="#f472b6"/>
+    </g>
+    <text class="t" x="135" y="325">PHASE 2: LIVE</text>
+    <text class="s" x="135" y="353">Betting product, Pulse AI SaaS &amp; Sportsbooks</text>
+  </g>
+  <text class="arrow phase-connector" x="310" y="397">▼</text>
+
+  <!-- Phase 3 : Monitor Screen / Dashboard / Commercial Proof -->
+  <g class="k card n" tabindex="0" role="button" aria-pressed="false" 
+     data-t="PHASE 3: COMMERCIAL PROOF (Tech Viability)" 
+     data-d="Validate commercial viability of technology. • Motion AI premium enterprise partner deployment • Expansion into new sports (e.g., Tennis Proof of Concept) • Community incentive campaigns (Zealy, rewards) • Potential Affiliate platform launch with FXI rewards">
+    <rect class="b" x="50" y="405" width="520" height="92" rx="14"/>
+    <!-- Badge Icône Phase 3 -->
+    <circle class="ic-badge" cx="95" cy="451" r="25"/>
+    <g transform="translate(0,0)">
+      <!-- Écran -->
+      <rect x="81" y="436" width="28" height="20" rx="3" fill="#030d12" stroke="#1fb9c9" stroke-width="1.8"/>
+      <path d="M91 456 L99 456 M95 456 L95 461 M88 461 L102 461" stroke="#1fb9c9" stroke-width="1.8" stroke-linecap="round"/>
+      <!-- Histogramme dans l'écran -->
+      <rect x="85" y="446" width="4" height="6" fill="#1fb9c9" rx="1"/>
+      <rect x="91" y="442" width="4" height="10" fill="#f472b6" rx="1"/>
+      <rect x="97" y="440" width="4" height="12" fill="#1fb9c9" rx="1"/>
+    </g>
+    <text class="t" x="135" y="440">PHASE 3: COMMERCIAL PROOF</text>
+    <text class="s" x="135" y="468">Enterprise deployment &amp; Multi-sport expansion</text>
+  </g>
+  <text class="arrow phase-connector" x="310" y="512">▼</text>
+
+  <!-- Phase 4 : Growth Chart / Scaling -->
+  <g class="k card n" tabindex="0" role="button" aria-pressed="false" 
+     data-t="PHASE 4: SCALE (Ecosystem Scaling)" 
+     data-d="Scale validated products &amp; technology across ecosystem. • Motion AI multi-sport expansion • Scaling Pulse content production • Operational marketplace for ecosystem • Community-assisted AI model training">
+    <rect class="b" x="50" y="520" width="520" height="92" rx="14"/>
+    <!-- Badge Icône Phase 4 -->
+    <circle class="ic-badge" cx="95" cy="566" r="25"/>
+    <g transform="translate(0,0)">
+      <!-- Graphique en barres -->
+      <rect x="82" y="567" width="5" height="9" fill="#1fb9c9" rx="1"/>
+      <rect x="90" y="560" width="5" height="16" fill="#1fb9c9" rx="1"/>
+      <rect x="98" y="552" width="5" height="24" fill="#f472b6" rx="1"/>
+      <!-- Flèche de croissance -->
+      <path d="M81 561 L93 550 L106 544 M106 544 L98 544 M106 544 L106 550" fill="none" stroke="#4ade50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text class="t" x="135" y="555">PHASE 4: SCALE</text>
+    <text class="s" x="135" y="583">Multi-sport expansion &amp; Marketplace</text>
+  </g>
+  <text class="arrow phase-connector" x="310" y="627">▼</text>
+
+  <!-- Phase 5 : Stadium / Arena / Full Ecosystem -->
+  <g class="k card n" tabindex="0" role="button" aria-pressed="false" 
+     data-t="PHASE 5: FULL ECOSYSTEM (Complete Rollout)" 
+     data-d="Complete deployment of the entire FX1 ecosystem. • FX1 Arena public launch with live games • Community-powered data validation • Fully operational marketplace &amp; reward mechanisms • Self-reinforcing closed value loop">
+    <rect class="b" x="50" y="635" width="520" height="92" rx="14"/>
+    <!-- Badge Icône Phase 5 -->
+    <circle class="ic-badge" cx="95" cy="681" r="25"/>
+    <g transform="translate(0,0)">
+      <!-- Structure de Stade / Arène -->
+      <ellipse cx="95" cy="681" rx="18" ry="10" fill="#030d12" stroke="#1fb9c9" stroke-width="1.8"/>
+      <ellipse cx="95" cy="681" rx="11" ry="6" fill="none" stroke="#4ade50" stroke-width="1.5"/>
+      <ellipse cx="95" cy="681" rx="5" ry="2.5" fill="#f472b6"/>
+      <!-- Gradins / Piliers -->
+      <line x1="80" y1="681" x2="80" y2="687" stroke="#1fb9c9" stroke-width="1.5"/>
+      <line x1="110" y1="681" x2="110" y2="687" stroke="#1fb9c9" stroke-width="1.5"/>
+      <path d="M82 686 C87 693 103 693 108 686" fill="none" stroke="#1fb9c9" stroke-width="1.5"/>
+    </g>
+    <text class="t" x="135" y="670">PHASE 5: FULL ECOSYSTEM</text>
+    <text class="s" x="135" y="698">FX1 Arena public launch &amp; Closed loop</text>
+  </g>
+
+  <!-- COLONNE DROITE HAUT : STRATEGIC SUMMARY (CORE PILLARS) -->
+  <rect class="col" x="610" y="120" width="560" height="370" rx="22"/>
+  <text class="h" x="630" y="155" style="font-size:24px">THE STRATEGIC SUMMARY: CORE PILLARS</text>
+
+  <!-- Pillar 1 : Motion AI -->
+  <g class="k card" tabindex="0" role="button" aria-pressed="false" 
+      data-t="FX1 Motion AI Platform" 
+      data-d="FX1’s end-to-end platform delivers real-time data, metrics, and insights for live action sports. • Custom AI Models with Non-Disruptive Data Extraction • Live, Fast, and Accurate Data Tracking &amp; Reliable Data Processing • Secure Data Management &amp; API-Ready">
+    <rect class="b" x="630" y="170" width="520" height="52" rx="10"/>
+    <circle class="ic-badge" cx="660" cy="196" r="16"/>
+    <!-- Camera / Lens -->
+    <rect x="650" y="189" width="20" height="14" rx="2" fill="none" stroke="#1fb9c9" stroke-width="1.5"/>
+    <circle cx="660" cy="196" r="4" stroke="#f472b6" fill="none" stroke-width="1.5"/>
+    <text class="t" x="690" y="202" style="font-size:19px">1. MOTION AI</text>
+    <text class="s" x="880" y="202" style="font-size:15px">Live sports data extraction</text>
+  </g>
+
+  <!-- Pillar 2 : Pulse -->
+  <g class="k card" tabindex="0" role="button" aria-pressed="false" 
+     data-t="2. PULSE" 
+      data-d="Automated AI-driven sports content generation platform producing instant highlights and data feeds. • Articles &amp; Newsletters • Social media posts • Athlete &amp; Creator content • Personalized marketing content">
+    <rect class="b" x="630" y="230" width="520" height="52" rx="10"/>
+    <circle class="ic-badge" cx="660" cy="256" r="16"/>
+    <!-- Content / Lightning -->
+    <path d="M653 249 L661 249 M653 253 L659 253 M653 257 L661 257 M653 261 L658 261" stroke="#1fb9c9" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M663 247 L657 256 L661 256 L655 265" stroke="#f472b6" fill="none" stroke-width="1.5"/>
+    <text class="t" x="690" y="262" style="font-size:19px">2. PULSE</text>
+    <text class="s" x="880" y="262" style="font-size:15px">Automated AI content generation</text>
+  </g>
+
+  <!-- Pillar 3 : Sports Betting Solutions -->
+  <g class="k card" tabindex="0" role="button" aria-pressed="false" 
+      data-t="3. SPORTS BETTING" 
+      data-d="Commercial data feeds &amp; next-gen sports analytics provided directly to sportsbooks for real-time odds and micro-markets. • AI Probability Odds &amp; Spread Analysis • Fighter &amp; Event Betting Trends &amp; Expanded Prop Bet Options • Sports Data API &amp; Live Event Widgets">
+    <rect class="b" x="630" y="290" width="520" height="52" rx="10"/>
+    <circle class="ic-badge" cx="660" cy="316" r="16"/>
+    <!-- Growth Odds -->
+    <path d="M651 322 L657 314 L661 317 L667 309" stroke="#f472b6" fill="none" stroke-width="1.8" stroke-linecap="round"/>
+    <polygon points="663,309 667,309 667,313" fill="#4ade50"/>
+    <text class="t" x="690" y="322" style="font-size:19px">3. SPORTS BETTING</text>
+    <text class="s" x="880" y="322" style="font-size:15px">Sportsbook data feeds</text>
+  </g>
+
+  <!-- Pillar 4 : Arena -->
+  <g class="k card" tabindex="0" role="button" aria-pressed="false" 
+     data-t="4. ARENA" 
+      data-d="Gamified community platform where fans play games, earn rewards, and power FX1's AI data engine • daily games, live event tournaments, powered by real MotionAI data • Fan Battles — knowledge tests, sportscasting face-offs, club vs club • Competitive annotation — label clips head-to-head, scored against AI ground truth">
+    <rect class="b" x="630" y="350" width="520" height="52" rx="10"/>
+    <circle class="ic-badge" cx="660" cy="376" r="16"/>
+    <!-- Users / Community -->
+    <circle cx="660" cy="371" r="3" fill="#1fb9c9"/>
+    <path d="M653 382 C653 377 667 377 667 382" stroke="#1fb9c9" fill="none" stroke-width="1.5"/>
+    <circle cx="652" cy="373" r="2" fill="#f472b6"/>
+    <circle cx="668" cy="373" r="2" fill="#4ade50"/>
+    <text class="t" x="690" y="382" style="font-size:19px">4. ARENA</text>
+    <text class="s" x="880" y="382" style="font-size:15px">Gamified community validation</text>
+  </g>
+
+  <!-- Pillar 5 : FXI Token -->
+  <g class="k card" tabindex="0" role="button" aria-pressed="false" 
+     data-t="5. FXI TOKEN" 
+      data-d="$FXI has a single clear role — it's the currency of Arena, nothing more complicated than that. • Max Supply : 300 Million $FXI • Holding more $FXI makes Arena more valuable • Locking $FXI unlocks better Arena status, marketplace priority, premium content, etc.">
+    <rect class="b" x="630" y="410" width="520" height="52" rx="10"/>
+    <circle class="ic-badge" cx="660" cy="436" r="16"/>
+    <!-- Token Icon -->
+    <circle cx="660" cy="436" r="9" fill="none" stroke="#1fb9c9" stroke-width="1.5"/>
+    <text x="660" y="440" font-size="11" font-weight="800" fill="#f472b6" text-anchor="middle">$</text>
+    <text class="t" x="690" y="442" style="font-size:19px">5. FXI TOKEN</text>
+    <text class="s" x="880" y="442" style="font-size:15px">Ecosystem utility &amp; incentives</text>
+  </g>
+
+  <!-- COLONNE DROITE BAS : CLOSED VALUE LOOP -->
+  <rect class="col" x="610" y="505" width="560" height="285" rx="22"/>
+  <text class="h" x="630" y="538" style="font-size:22px">THE CLOSED VALUE LOOP <tspan class="h2" style="font-size:18px">(SELF-REINFORCING)</tspan></text>
+
+  <!-- Node 1 (Haut-Gauche) -->
+  <g class="k card" tabindex="0" role="button" aria-pressed="false" 
+     data-t="BETTER PRODUCTS GENERATE MORE REVENUE" 
+      data-d="Market-leading AI solutions driving expanded enterprise adoption and revenue growth • B2B monetization — premium data feeds and SaaS tools command higher enterprise pricing • Partner acquisition — superior accuracy attracts major sportsbooks, broadcasters, and rights holders • Scalable cash flow — high-margin commercial products generate strong recurring revenue streams">
+    <rect class="b" x="625" y="555" width="240" height="60" rx="12"/>
+    <text class="t" x="635" y="580" style="font-size:16px;fill:#4ade50">BETTER PRODUCTS</text>
+    <text class="s" x="635" y="600" style="font-size:14px">Generate More Revenue</text>
+    <circle class="ic-badge" cx="815" cy="585" r="15"/>
+    <rect x="807" y="587" width="3" height="6" rx="1" fill="#1fb9c9"/>
+    <rect x="812" y="583" width="3" height="10" rx="1" fill="#1fb9c9"/>
+    <rect x="817" y="579" width="3" height="14" rx="1" fill="#f472b6"/>
+    <path d="M806 584 L812 579 L817 581 L824 575 M820 575 L824 575 L824 579" fill="none" stroke="#4ade50" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Flèche H1 -> H2 -->
+  <text class="arrow" x="888" y="590" style="font-size:24px;fill:#4ade50">➜</text>
+
+  <!-- Node 2 (Haut-Droite) -->
+  <g class="k card" tabindex="0" role="button" aria-pressed="false" 
+     data-t="REVENUE FUNDS REINVESTMENT" 
+      data-d="Sustainable token economy anchored to real operating revenue from FX1's commercial business lines • Commercial products — MotionAI, Pulse SaaS, betting feeds, HeadShield, and partnerships • Enterprise monetization — B2B revenue from enterprise data, platform tools, and engagement • Treasury backing — net revenue directly funds $FXI buybacks, jackpots, and ecosystem programs">
+    <rect class="b" x="915" y="555" width="240" height="60" rx="12"/>
+    <text class="t" x="925" y="580" style="font-size:16px;fill:#1fb9c9">REVENUE FUNDS</text>
+    <text class="s" x="925" y="600" style="font-size:14px">Tech • Buybacks • Rewards</text>
+    <circle class="ic-badge" cx="1115" cy="585" r="15"/>
+    <circle cx="1115" cy="585" r="8" fill="none" stroke="#1fb9c9" stroke-width="1.5"/>
+    <text x="1115" y="589" font-size="11" font-weight="800" fill="#f472b6" text-anchor="middle">$</text>
+  </g>
+
+  <!-- Flèche Revenue Funds -> Community -->
+  <text class="arrow" x="1135" y="676" style="font-size:24px;fill:#1fb9c9">▼</text>
+
+  <!-- Node Center Core -->
+  <g class="k card" tabindex="0" role="button" aria-pressed="false" 
+     data-t="POWERS ECOSYSTEM" 
+      data-d="Unified data engine driving sports betting, Pulse AI, and commercial partner integration • Sportsbook solutions — real-time odds, micro-markets, and live analytics feeds • Pulse AI SaaS — automated sports content generation and instant social highlights • Commercial APIs — scalable B2B data distribution for rights holders and partners">
+    <rect class="b" x="740" y="630" width="300" height="65" rx="14" style="stroke:#4ade50;fill:#08241c"/>
+    <text class="t" x="890" y="656" style="font-size:20px;fill:#4ade50;text-anchor:middle">POWERS ECOSYSTEM</text>
+    <text class="s" x="890" y="678" style="font-size:15px;text-anchor:middle">Betting, Pulse, APIs, Partners</text>
+  </g>
+
+  <!-- Node 3 (Bas-Gauche) -->
+  <g class="k card" tabindex="0" role="button" aria-pressed="false" 
+     data-t="BETTER DATA IMPROVES AI MODELS" 
+      data-d="Continuous data refinement elevating MotionAI accuracy and commercial product performance • Ground-truth validation — community-verified inputs continuously train computer vision models • Model precision — richer sports datasets reduce tracking errors and lower processing latency • Commercial edge — superior AI outputs deliver higher-value metrics for sportsbooks and partners">
+    <rect class="b" x="625" y="710" width="240" height="60" rx="12"/>
+    <text class="t" x="635" y="735" style="font-size:16px;fill:#1fb9c9">BETTER DATA</text>
+    <text class="s" x="635" y="755" style="font-size:14px">Improves AI Models</text>
+    <circle class="ic-badge" cx="815" cy="740" r="15"/>
+    <path d="M810 736 L820 736 L815 744 Z" fill="none" stroke="#1fb9c9" stroke-width="1.4" stroke-linejoin="round"/>
+    <circle cx="810" cy="736" r="2" fill="#4ade50"/>
+    <circle cx="820" cy="736" r="2" fill="#1fb9c9"/>
+    <circle cx="815" cy="744" r="2" fill="#f472b6"/>
+  </g>
+
+  <!-- Flèche Better Data -> Better Products -->
+  <text class="arrow" x="650" y="676" style="font-size:24px;fill:#1fb9c9">▲</text>
+
+  <!-- Flèche B2 -> B1 -->
+  <text class="arrow" x="888" y="745" transform="rotate(180 888 745)" style="font-size:24px;fill:#4ade50">➜</text>
+
+  <!-- Node 4 (Bas-Droite) -->
+  <g class="k card" tabindex="0" role="button" aria-pressed="false" 
+     data-t="COMMUNITY IMPROVES DATA" 
+      data-d="Productive fan engagement powering a self-reinforcing AI and revenue flywheel • Structured AI training — Arena activities directly train and validate MotionAI data models • Closed-loop flywheel — fan data improves products, driving commercial revenue back into Arena • Productive participation — engagement creates real enterprise value beyond typical fan rewards">
+    <rect class="b" x="915" y="710" width="240" height="60" rx="12"/>
+    <text class="t" x="925" y="735" style="font-size:16px;fill:#4ade50">COMMUNITY</text>
+    <text class="s" x="925" y="755" style="font-size:14px">Improves &amp; Validates Data</text>
+    <circle class="ic-badge" cx="1115" cy="740" r="15"/>
+    <circle cx="1115" cy="735" r="2.5" fill="#f472b6"/>
+    <circle cx="1109" cy="738" r="2" fill="#1fb9c9"/>
+    <circle cx="1121" cy="738" r="2" fill="#1fb9c9"/>
+    <path d="M1110 747 C1110 742 1120 742 1120 747 M1105 747 C1105 743 1111 743 1111 747 M1119 747 C1119 743 1125 743 1125 747" fill="none" stroke="#1fb9c9" stroke-width="1.3" stroke-linecap="round"/>
+  </g>
+
+  <!-- CADRE DU BAS : DETAILS DYNAMIQUES -->
+  <rect x="30" y="805" width="1140" height="210" rx="16" fill="#0a1e25" stroke="#4ade50" stroke-width="2"/>
+  <text id="dt" x="55" y="842" data-t0="FX1 ROADMAP &amp; VALUE MODEL" style="font-size:26px;font-weight:800;fill:#7fd8cc"></text>
+  <text id="db" x="55" y="878" data-x0="Click any phase (1-5), strategic pillar, or value loop element to display its technical details here." data-x="" style="font-size:19px;fill:#cfe4e6"></text>
+  <text x="1150" y="1000" text-anchor="end" style="font-size:16px;fill:#93b0b5">FX1.IO</text>
+
+  <!-- SCRIPT D'INTERACTIVITÉ -->
+  <script><![CDATA[
+    var ns = "http://www.w3.org/2000/svg";
+    var dt = document.getElementById("dt");
+    var db = document.getElementById("db");
+    var phases = [].slice.call(document.querySelectorAll(".n"));
+    var phaseConnectors = [].slice.call(document.querySelectorAll(".phase-connector"));
+    var nextPhaseToUnlock = 0;
+
+    phases.forEach(function(phase, index) {
+      if (index > 0) phase.classList.add("phase-hidden");
+    });
+    phaseConnectors.forEach(function(connector, index) {
+      if (index > 0) connector.classList.add("phase-hidden");
+    });
+
+    function wrap(t, w) {
+      while (t.firstChild) t.removeChild(t.firstChild);
+      var words = t.getAttribute("data-x").split(" "), line = "";
+      var tsp = document.createElementNS(ns, "tspan");
+      tsp.setAttribute("x", t.getAttribute("x"));
+      tsp.setAttribute("dy", "0");
+      t.appendChild(tsp);
+
+      words.forEach(function(wd) {
+        if (wd === "•" && line) {
+          tsp = document.createElementNS(ns, "tspan");
+          tsp.setAttribute("x", t.getAttribute("x"));
+          tsp.setAttribute("dy", "26");
+          t.appendChild(tsp);
+          line = wd;
+          tsp.textContent = line;
+          return;
+        }
+        var test = line ? line + " " + wd : wd;
+        tsp.textContent = test;
+        if (tsp.getComputedTextLength() > w && line) {
+          tsp.textContent = line;
+          tsp = document.createElementNS(ns, "tspan");
+          tsp.setAttribute("x", t.getAttribute("x"));
+          tsp.setAttribute("dy", "26");
+          t.appendChild(tsp);
+          line = wd;
+          tsp.textContent = wd;
+        } else {
+          line = test;
+        }
+      });
+    }
+
+    function show(t, b) {
+      dt.textContent = t;
+      db.setAttribute("data-x", b);
+      wrap(db, 1090);
+    }
+
+    var all = [].slice.call(document.querySelectorAll(".k"));
+    all.forEach(function(g) {
+      function go() {
+        var phaseIndex = phases.indexOf(g);
+        if (phaseIndex === nextPhaseToUnlock && phaseIndex < phases.length - 1) {
+          phases[phaseIndex + 1].classList.remove("phase-hidden");
+          if (phaseConnectors[phaseIndex + 1]) {
+            phaseConnectors[phaseIndex + 1].classList.remove("phase-hidden");
+          }
+          nextPhaseToUnlock++;
+        }
+        all.forEach(function(o) {
+          o.classList.remove("sel");
+          o.setAttribute("aria-pressed", "false");
+        });
+        g.classList.add("sel");
+        g.setAttribute("aria-pressed", "true");
+        show(g.getAttribute("data-t"), g.getAttribute("data-d"));
+      }
+      g.addEventListener("click", go);
+      g.addEventListener("keydown", function(e) {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          go();
+        }
+      });
+    });
+
+    // Affichage initial
+    show(dt.getAttribute("data-t0"), db.getAttribute("data-x0"));
+  ]]></script>
+
+  <g class="roadmap-guide" id="roadmap-guide">
+    <rect class="guide-cover" x="30" y="120" width="1140" height="895"/>
+    <rect class="guide-panel" x="30" y="120" width="360" height="670" rx="18"/>
+    <rect class="guide-panel" x="405" y="120" width="370" height="670" rx="18"/>
+    <rect class="guide-panel" x="790" y="120" width="380" height="670" rx="18"/>
+    <rect class="guide-panel" x="30" y="805" width="1140" height="210" rx="16"/>
+
+    <text class="guide-title" x="50" y="159">FIVE PHASES</text>
+    <text class="guide-subtitle" x="50" y="184">Build the foundation, then expand.</text>
+
+    <g class="roadmap-choice phase-choice" data-phase="1" data-guide-title="PHASE 1 · FOUNDATION" data-guide-copy="Build the proprietary MotionAI engine, protect IP and unite the community before commercial deployment." tabindex="0" role="button" aria-pressed="false">
+      <rect class="guide-card" x="48" y="201" width="324" height="83" rx="10"/>
+      <circle cx="76" cy="242" r="19" fill="#030d12" stroke="#1fb9c9" stroke-width="1.8"/><text class="guide-number" x="76" y="248">1</text>
+      <text class="guide-name" x="106" y="235">FOUNDATION</text><text class="guide-copy" x="106" y="260">Community + MotionAI engine</text>
+    </g>
+    <path class="guide-connector" d="M76 284V301"/>
+    <g class="roadmap-choice phase-choice" data-phase="2" data-guide-title="PHASE 2 · LIVE" data-guide-copy="Launch the first commercial products: betting, Pulse AI SaaS, live MotionAI environments and sportsbook integrations." tabindex="0" role="button" aria-pressed="false">
+      <rect class="guide-card" x="48" y="310" width="324" height="83" rx="10"/>
+      <circle cx="76" cy="351" r="19" fill="#030d12" stroke="#1fb9c9" stroke-width="1.8"/><text class="guide-number" x="76" y="357">2</text>
+      <text class="guide-name" x="106" y="344">LIVE PRODUCTS</text><text class="guide-copy" x="106" y="369">Pulse AI + sportsbook feeds</text>
+    </g>
+    <path class="guide-connector" d="M76 393V410"/>
+    <g class="roadmap-choice phase-choice" data-phase="3" data-guide-title="PHASE 3 · COMMERCIAL PROOF" data-guide-copy="Test technical viability with enterprise partners and new-sport pilots; explore community campaigns and affiliate distribution." tabindex="0" role="button" aria-pressed="false">
+      <rect class="guide-card" x="48" y="419" width="324" height="83" rx="10"/>
+      <circle cx="76" cy="460" r="19" fill="#030d12" stroke="#1fb9c9" stroke-width="1.8"/><text class="guide-number" x="76" y="466">3</text>
+      <text class="guide-name" x="106" y="453">PROVE THE MODEL</text><text class="guide-copy" x="106" y="478">Enterprise + multi-sport pilots</text>
+    </g>
+    <path class="guide-connector" d="M76 502V519"/>
+    <g class="roadmap-choice phase-choice" data-phase="4" data-guide-title="PHASE 4 · SCALE" data-guide-copy="Expand MotionAI across sports, scale Pulse production, grow the marketplace and train models with community-assisted data." tabindex="0" role="button" aria-pressed="false">
+      <rect class="guide-card" x="48" y="528" width="324" height="83" rx="10"/>
+      <circle cx="76" cy="569" r="19" fill="#030d12" stroke="#1fb9c9" stroke-width="1.8"/><text class="guide-number" x="76" y="575">4</text>
+      <text class="guide-name" x="106" y="562">SCALE</text><text class="guide-copy" x="106" y="587">Sports + marketplace growth</text>
+    </g>
+    <path class="guide-connector" d="M76 611V628"/>
+    <g class="roadmap-choice phase-choice" data-phase="5" data-guide-title="PHASE 5 · FULL ECOSYSTEM" data-guide-copy="Launch Arena publicly, validate data with the community and connect the marketplace, rewards and value loop." tabindex="0" role="button" aria-pressed="false">
+      <rect class="guide-card" x="48" y="637" width="324" height="83" rx="10"/>
+      <circle cx="76" cy="678" r="19" fill="#030d12" stroke="#70ed69" stroke-width="1.8"/><text class="guide-number" x="76" y="684">5</text>
+      <text class="guide-name" x="106" y="671">FULL ECOSYSTEM</text><text class="guide-copy" x="106" y="696">Public Arena + closed loop</text>
+    </g>
+    <text class="guide-copy" x="50" y="759">Select a phase to see what it builds.</text>
+
+    <text class="guide-title" x="425" y="159">BUILT IN PARALLEL</text>
+    <text class="guide-subtitle" x="425" y="184">Five pillars develop together.</text>
+    <g class="roadmap-choice pillar-choice" data-guide-title="MOTIONAI · THE DATA ENGINE" data-guide-copy="MotionAI structures live sports data and delivers real-time metrics, insights and API-ready feeds for action sports." tabindex="0" role="button" aria-pressed="false">
+      <rect class="guide-card" x="423" y="201" width="334" height="83" rx="10"/>
+      <circle cx="452" cy="242" r="19" fill="#030d12" stroke="#1fb9c9" stroke-width="1.7"/><circle cx="452" cy="242" r="7" fill="none" stroke="#f472b6" stroke-width="1.6"/>
+      <text class="guide-name" x="482" y="235">MOTIONAI</text><text class="guide-copy" x="482" y="260">Live sport data + insights</text>
+    </g>
+    <g class="roadmap-choice pillar-choice" data-guide-title="PULSE · SPORTS CONTENT" data-guide-copy="Pulse turns sports data into automated articles, newsletters, social posts and personalized content for athletes, creators and clubs." tabindex="0" role="button" aria-pressed="false">
+      <rect class="guide-card" x="423" y="310" width="334" height="83" rx="10"/>
+      <circle cx="452" cy="351" r="19" fill="#030d12" stroke="#1fb9c9" stroke-width="1.7"/><path d="M445 351H451L455 342L460 360L464 351H469" fill="none" stroke="#f472b6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <text class="guide-name" x="482" y="344">PULSE AI</text><text class="guide-copy" x="482" y="369">Automated sports content</text>
+    </g>
+    <g class="roadmap-choice pillar-choice" data-guide-title="SPORTSBOOK DATA" data-guide-copy="Commercial data feeds support live odds, probability analysis, event trends, micro-markets and sportsbook tools." tabindex="0" role="button" aria-pressed="false">
+      <rect class="guide-card" x="423" y="419" width="334" height="83" rx="10"/>
+      <circle cx="452" cy="460" r="19" fill="#030d12" stroke="#1fb9c9" stroke-width="1.7"/><path d="M442 468L449 461L454 464L463 452M459 452H463V456" fill="none" stroke="#f472b6" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+      <text class="guide-name" x="482" y="453">SPORTSBOOKS</text><text class="guide-copy" x="482" y="478">Odds + live event feeds</text>
+    </g>
+    <g class="roadmap-choice pillar-choice" data-guide-title="ARENA · COMMUNITY" data-guide-copy="Fans play, earn rewards and label sport moments. Community-verified inputs help validate MotionAI data models." tabindex="0" role="button" aria-pressed="false">
+      <rect class="guide-card" x="423" y="528" width="334" height="83" rx="10"/>
+      <circle cx="452" cy="569" r="19" fill="#030d12" stroke="#1fb9c9" stroke-width="1.7"/><circle cx="452" cy="563" r="4" fill="#f472b6"/><path d="M444 578C444 570 460 570 460 578M441 578C441 573 446 572 449 574" fill="none" stroke="#1fb9c9" stroke-width="1.6"/>
+      <text class="guide-name" x="482" y="562">ARENA</text><text class="guide-copy" x="482" y="587">Games + validated fan data</text>
+    </g>
+    <g class="roadmap-choice pillar-choice" data-guide-title="$FXI · ARENA CURRENCY" data-guide-copy="$FXI powers Arena purchases and incentives. Holding and locking can add marketplace priority, status and other benefits." tabindex="0" role="button" aria-pressed="false">
+      <rect class="guide-card" x="423" y="637" width="334" height="83" rx="10"/>
+      <circle cx="452" cy="678" r="19" fill="#030d12" stroke="#1fb9c9" stroke-width="1.7"/><text x="452" y="684" text-anchor="middle" style="font-size:17px;font-weight:800;fill:#70ed69">$</text>
+      <text class="guide-name" x="482" y="671">$FXI TOKEN</text><text class="guide-copy" x="482" y="696">Arena utility + incentives</text>
+    </g>
+    <text class="guide-copy" x="425" y="759">Shared data connects the products.</text>
+
+    <text class="guide-title" x="810" y="159" style="font-size:22px">THE VALUE LOOP</text>
+    <text class="guide-subtitle" x="810" y="196">A model mechanism, not a price promise.</text>
+    <g class="roadmap-action roadmap-run-loop" tabindex="0" role="button" aria-label="Run the value loop animation">
+      <rect x="1012" y="137" width="139" height="32" rx="8"/><text x="1081" y="158">RUN LOOP</text>
+    </g>
+
+    <g transform="translate(0 58)">
+    <path class="loop-link" d="M1052 244C1074 244 1085 269 1085 307"/>
+    <path class="loop-link" d="M1085 385V507"/>
+    <path class="loop-link" d="M1016 546H948"/>
+    <path class="loop-link" d="M876 507V385"/>
+    <path class="loop-link" d="M876.5 307C877 279 890 252 908 244"/>
+
+    <g class="roadmap-choice loop-choice" data-guide-title="BETTER PRODUCTS GENERATE MORE REVENUE" data-guide-copy="Premium data, SaaS and sportsbook tools can attract enterprise customers and recurring commercial revenue." tabindex="0" role="button" aria-pressed="false">
+      <rect class="guide-card" x="908" y="208" width="144" height="72" rx="10"/><circle cx="927" cy="226" r="9" fill="#030d12" stroke="#70ed69" stroke-width="1.5"/><text class="guide-number" x="927" y="231" style="font-size:13px">1</text>
+      <text class="guide-name" x="924" y="249" style="font-size:14px">BETTER PRODUCTS</text><text class="guide-copy" x="924" y="268" style="font-size:13px">MotionAI + Pulse</text>
+      <g id="loop-icon-products" class="loop-destination-icon"><circle cx="1035" cy="224" r="9" fill="#030d12" stroke="#70ed69" stroke-width="1.5"/><path d="M1030 228V224M1034 228V220M1038 228V217M1029 229H1041" fill="none" stroke="#70ed69" stroke-width="1.2" stroke-linecap="round"/></g>
+    </g>
+    <g class="roadmap-choice loop-choice" data-guide-title="COMMERCIAL REVENUE FUNDS REINVESTMENT" data-guide-copy="Commercial lines include MotionAI, Pulse, sportsbook data, HeadShield, partnerships and Arena commerce." tabindex="0" role="button" aria-pressed="false">
+      <rect class="guide-card" x="1016" y="307" width="139" height="78" rx="10"/><circle cx="1035" cy="325" r="9" fill="#030d12" stroke="#1fb9c9" stroke-width="1.5"/><text class="guide-number" x="1035" y="330" style="font-size:13px">2</text>
+      <text class="guide-name" x="1030" y="350" style="font-size:13px">REVENUE FUNDS</text><text class="guide-copy" x="1030" y="370" style="font-size:12px">Data + SaaS + partners</text>
+      <g id="loop-icon-revenue" class="loop-destination-icon"><circle cx="1136" cy="324" r="9" fill="#030d12" stroke="#70ed69" stroke-width="1.5"/><text x="1136" y="329" text-anchor="middle" style="font-size:12px;font-weight:800;fill:#70ed69">$</text></g>
+    </g>
+    <g class="roadmap-choice loop-choice" data-guide-title="REINVESTMENT POWERS THE ECOSYSTEM" data-guide-copy="A defined share of net revenue can support buybacks, jackpots and ecosystem programs through the treasury." tabindex="0" role="button" aria-pressed="false">
+      <rect class="guide-card" x="1016" y="507" width="139" height="78" rx="10"/><circle cx="1035" cy="525" r="9" fill="#030d12" stroke="#1fb9c9" stroke-width="1.5"/><text class="guide-number" x="1035" y="530" style="font-size:13px">3</text>
+      <text class="guide-name" x="1030" y="550" style="font-size:13px">REINVEST</text><text class="guide-copy" x="1030" y="570" style="font-size:12px">Treasury + rewards</text>
+      <g id="loop-icon-treasury" class="loop-destination-icon"><circle cx="1136" cy="524" r="9" fill="#030d12" stroke="#70ed69" stroke-width="1.5"/><path d="M1130 524L1136 519L1142 524V529H1130ZM1133 523V526M1136 523V526M1139 523V526" fill="none" stroke="#70ed69" stroke-width="1.1" stroke-linejoin="round"/></g>
+    </g>
+    <g class="roadmap-choice loop-choice" data-guide-title="THE COMMUNITY HELPS VALIDATE DATA" data-guide-copy="Fans label live sport moments and provide structured inputs that help validate AI models." tabindex="0" role="button" aria-pressed="false">
+      <rect class="guide-card" x="805" y="507" width="143" height="78" rx="10"/><circle cx="824" cy="525" r="9" fill="#030d12" stroke="#1fb9c9" stroke-width="1.5"/><text class="guide-number" x="824" y="530" style="font-size:13px">4</text>
+      <text class="guide-name" x="819" y="550" style="font-size:13px">COMMUNITY</text><text class="guide-copy" x="819" y="570" style="font-size:12px">Fans validate sport data</text>
+      <g id="loop-icon-community" class="loop-destination-icon"><circle cx="928" cy="524" r="9" fill="#030d12" stroke="#70ed69" stroke-width="1.5"/><circle cx="928" cy="521" r="1.8" fill="#70ed69"/><path d="M924 529C924 525 932 525 932 529M922 529C922 527 924 526 925 527" fill="none" stroke="#70ed69" stroke-width="1.1" stroke-linecap="round"/></g>
+    </g>
+    <g class="roadmap-choice loop-choice" data-guide-title="BETTER DATA IMPROVES THE PRODUCTS" data-guide-copy="Richer, community-validated sports datasets can improve MotionAI precision and the products built on it." tabindex="0" role="button" aria-pressed="false">
+      <rect class="guide-card" x="805" y="307" width="143" height="78" rx="10"/><circle cx="824" cy="325" r="9" fill="#030d12" stroke="#70ed69" stroke-width="1.5"/><text class="guide-number" x="824" y="330" style="font-size:13px">5</text>
+      <text class="guide-name" x="819" y="350" style="font-size:13px">BETTER DATA</text><text class="guide-copy" x="819" y="370" style="font-size:12px">Improves models</text>
+      <g id="loop-icon-data" class="loop-destination-icon"><circle cx="928" cy="324" r="9" fill="#030d12" stroke="#70ed69" stroke-width="1.5"/><circle cx="925" cy="322" r="1.3" fill="#70ed69"/><circle cx="931" cy="322" r="1.3" fill="#70ed69"/><circle cx="928" cy="327" r="1.3" fill="#70ed69"/><path d="M925 322L931 322L928 327Z" fill="none" stroke="#70ed69" stroke-width=".8"/></g>
+    </g>
+
+    <circle cx="980" cy="442" r="46" fill="#07141a" stroke="#4ade50" stroke-width="2"/>
+    <text x="980" y="439" text-anchor="middle" style="font-size:23px;font-weight:800;fill:#fff">FX1</text>
+    <text x="980" y="461" text-anchor="middle" style="font-size:11px;font-weight:800;fill:#7fd8cc">VALUE LOOP</text>
+    <path id="loop-arrow-traveler" d="M-3 -6L10 0L-3 6Z" fill="#70ed69" filter="url(#glow)" opacity="0">
+      <animateMotion id="loop-arrow-motion" dur=".8s" begin="indefinite" fill="freeze" path="M1052 244C1074 244 1085 269 1085 307"/>
+    </path>
+    </g>
+    <text class="guide-copy" x="810" y="754">The final arrow returns community-validated data to products.</text>
+
+    <rect class="guide-panel" x="30" y="805" width="1140" height="210" rx="16"/>
+    <text x="55" y="842" style="font-size:25px;font-weight:800;fill:#7fd8cc">ROADMAP DETAIL</text>
+    <text class="guide-subtitle" id="guide-detail-title" x="55" y="878" style="font-size:21px;font-weight:700;fill:#70ed69">THE PLAN, AT A GLANCE</text>
+    <text class="guide-copy" id="guide-detail-copy" x="55" y="916" style="font-size:18px">Select any phase, pillar or loop step to explore its role.</text>
+    <text class="guide-copy" x="55" y="969">The original technical notes remain available under FULL DETAILS.</text>
+  </g>
+
+  <script><![CDATA[
+    var roadmapRoot = document.documentElement;
+    var roadmapGuide = document.getElementById("roadmap-guide");
+    var detailsButton = document.querySelector(".roadmap-details-button");
+    var backButton = document.querySelector(".roadmap-back");
+    var roadmapChoices = [].slice.call(document.querySelectorAll(".roadmap-choice"));
+    var guideDetailTitle = document.getElementById("guide-detail-title");
+    var guideDetailCopy = document.getElementById("guide-detail-copy");
+    var loopSequenceTimer = 0;
+    var loopSequenceId = 0;
+    var loopArrow = document.getElementById("loop-arrow-traveler");
+    var loopArrowMotion = document.getElementById("loop-arrow-motion");
+    var loopSteps = [
+      {path:"M1052 244C1074 244 1085 269 1085 307", icon:"loop-icon-revenue"},
+      {path:"M1085 385V507", icon:"loop-icon-treasury"},
+      {path:"M1016 546H948", icon:"loop-icon-community"},
+      {path:"M876 507V385", icon:"loop-icon-data"},
+      {path:"M876.5 307C877 279 890 252 908 244", icon:"loop-icon-products"}
+    ];
+    function bindAction(element, action) {
+      element.addEventListener("click", action);
+      element.addEventListener("keydown", function(event) {
+        if (event.key === "Enter" || event.key === " ") { event.preventDefault(); action(); }
+      });
+    }
+    bindAction(detailsButton, function() {
+      roadmapRoot.classList.add("roadmap-details");
+      loopSequenceId++;
+      window.clearTimeout(loopSequenceTimer);
+      loopArrow.setAttribute("opacity", "0");
+      document.querySelectorAll(".loop-destination-icon").forEach(function(icon) { icon.classList.remove("is-blinking"); });
+      phases.forEach(function(phase) { phase.classList.remove("phase-hidden"); });
+      phaseConnectors.forEach(function(connector) { connector.classList.remove("phase-hidden"); });
+    });
+    bindAction(backButton, function() { roadmapRoot.classList.remove("roadmap-details"); });
+    function runLoop() {
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      loopSequenceId++;
+      var sequence = loopSequenceId;
+      window.clearTimeout(loopSequenceTimer);
+      loopArrow.setAttribute("opacity", "0");
+      document.querySelectorAll(".loop-destination-icon").forEach(function(icon) { icon.classList.remove("is-blinking"); });
+      function advance(index) {
+        if (sequence !== loopSequenceId) return;
+        if (index >= loopSteps.length) { loopArrow.setAttribute("opacity", "0"); return; }
+        var step = loopSteps[index];
+        loopArrowMotion.setAttribute("path", step.path);
+        loopArrow.setAttribute("opacity", "1");
+        loopArrowMotion.beginElement();
+        loopSequenceTimer = window.setTimeout(function() {
+          loopArrow.setAttribute("opacity", "0");
+          var icon = document.getElementById(step.icon);
+          icon.classList.add("is-blinking");
+          loopSequenceTimer = window.setTimeout(function() {
+            icon.classList.remove("is-blinking");
+            advance(index + 1);
+          }, 2000);
+        }, 800);
+      }
+      advance(0);
+    }
+    roadmapChoices.forEach(function(choice) {
+      bindAction(choice, function() {
+        roadmapChoices.forEach(function(item) {
+          item.classList.remove("sel");
+          item.setAttribute("aria-pressed", String(item === choice));
+        });
+        choice.classList.add("sel");
+        guideDetailTitle.textContent = choice.getAttribute("data-guide-title");
+        guideDetailCopy.textContent = choice.getAttribute("data-guide-copy");
+        if (choice.classList.contains("loop-choice") && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) runLoop();
+      });
+    });
+    bindAction(document.querySelector(".roadmap-run-loop"), runLoop);
+  ]]></script>
+</svg>
