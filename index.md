@@ -298,7 +298,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
     <div id="view-arena" class="view-panel">
       <div class="fx1-topbar">
         <h1>FX1 Arena</h1>
-        <p>Plateforme de compétition et d'engagement de la communauté.</p>
+        <p>FX1 Arena blends gamified fan experiences—predictions, battles, and trivia—with live AI data training to deliver real-world rewards like VIP access, exclusive gear, and seamless cashouts. By turning everyday fan participation into productive B2B revenue without any crypto friction, Arena bridges play and performance. Explore the visual below to see how the Arena engine powers the whole ecosystem.</p>
       </div>
       <div class="fx1-card">
         <object data="{{ '/FX1arena.svg' | relative_url }}?v=1" type="image/svg+xml">
