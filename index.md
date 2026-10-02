@@ -314,7 +314,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
     <div id="view-token" class="view-panel">
       <div class="fx1-topbar">
         <h1>Token Utility</h1>
-        <p>Utilisation, staking et gouvernance du jeton natif FX1.</p>
+        <p>The $FXI token fuels a self-sustaining utility loop—linking gameplay, AI validation, and real commercial revenues to create long-term value. By anchoring holding and locking benefits directly to actual platform activity, the ecosystem turns engagement into escalating rewards. Explore the visual below to see how $FXI powers this closed-loop economy.</p>
       </div>
       <div class="fx1-card">
         <object data="{{ '/FX1utility.svg' | relative_url }}?v=1" type="image/svg+xml">
