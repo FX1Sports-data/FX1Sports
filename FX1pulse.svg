@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1548 688" width="100%" role="img" aria-labelledby="svg-title svg-desc" lang="en">
+  <title id="svg-title">FX1 Pulse AI: Automated AI-Driven Sport Content Generation Platform</title>
+  <desc id="svg-desc">A three-part infographic showing Pulse AI data inputs, platform capabilities, and user use cases.</desc>
+  <defs>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrow-cyan" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0 0 L8 4.5 L0 9Z" fill="#1fb9c9"/>
+    </marker>
+    <marker id="arrow-pink" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0 0 L8 4.5 L0 9Z" fill="#f472b6"/>
+    </marker>
+    <marker id="arrow-cycle" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0L5 2.5L0 5Z" fill="#4ade50"/>
+    </marker>
+    <style><![CDATA[
+      @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&display=swap");
+      text { font-family: "Barlow Condensed", "Arial Narrow", Arial, sans-serif; fill: #e9f4f5; }
+      .bg { fill: #04090c; }
+      .grid { fill: url(#grid); opacity: .12; }
+      .panel { fill: #06131a; stroke: #1fb9c9; stroke-width: 2.5; }
+      .panel-stage { cursor: pointer; outline: none; }
+      .panel-stage-hidden { display: none; }
+      .panel-stage > .panel { transition: stroke .2s ease, filter .2s ease; }
+      .panel-stage:hover > .panel, .panel-stage:focus > .panel { stroke: #4ade50; filter: url(#glow); }
+      .card { fill: #07141a; stroke: #14535c; stroke-width: 2; }
+      .column-title { fill: #7fd8cc; font-size: 29px; font-weight: 800; }
+      .card-title { fill: #7fd8cc; font-size: 25px; font-weight: 700; }
+      .card-copy { fill: #e9f4f5; font-size: 18px; font-weight: 500; }
+      .bullet-copy { font-size: 17px; }
+      .bullet { fill: #f472b6; }
+      .capability-wide-card .card-title { font-size: 25px; }
+      .platform-capabilities .bullet-copy { font-size: 18px; }
+      .platform-capabilities .capability-card { opacity: 0; transform-box: fill-box; transform-origin: center; }
+      .platform-capabilities.capabilities-revealed .capability-card { animation: capability-impact .72s cubic-bezier(.2,.9,.3,1.25) both; }
+      .capability-card-2 { animation-delay: .22s !important; }
+      .capability-card-3 { animation-delay: .44s !important; }
+      .capability-card-4 { animation-delay: .66s !important; }
+      .capability-card-5 { animation-delay: .88s !important; }
+      .capability-card-6 { animation-delay: 1.1s !important; }
+      @keyframes capability-impact {
+        0% { opacity: 0; transform: translateY(26px) scale(.78); filter: url(#glow); }
+        65% { opacity: 1; transform: translateY(-5px) scale(1.04); filter: url(#glow); }
+        100% { opacity: 1; transform: translateY(0) scale(1); filter: none; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .platform-capabilities.capabilities-revealed .capability-card { animation-duration: .01ms; animation-delay: 0s !important; }
+        #panel3.user-blocks-revealed .user-block { animation-duration: .01ms; animation-delay: 0s !important; }
+      }
+      #panel3 .user-block { opacity: 0; transform-box: fill-box; transform-origin: center; }
+      #panel3.user-blocks-revealed .user-block { animation: user-block-impact .72s cubic-bezier(.2,.9,.3,1.25) both; }
+      #panel3.user-blocks-revealed .user-block-2 { animation-delay: .32s !important; }
+      #panel3.user-blocks-revealed .user-block-3 { animation-delay: .64s !important; }
+      @keyframes user-block-impact {
+        0% { opacity: 0; transform: translateX(-22px) scale(.9); filter: url(#glow); }
+        65% { opacity: 1; transform: translateX(4px) scale(1.02); filter: url(#glow); }
+        100% { opacity: 1; transform: translateX(0) scale(1); filter: none; }
+      }
+      .muted { fill: #93b0b5; }
+      .cyan { fill: #1fb9c9; }
+      .pink { fill: #f472b6; }
+      .green { fill: #4ade50; }
+      .icon-stroke { fill: none; stroke: #1fb9c9; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .icon-pink { fill: none; stroke: #f472b6; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .flow { fill: none; stroke: #1fb9c9; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; opacity: .9; marker-end: url(#arrow-cyan); }
+      .feedback { fill: none; stroke: #f472b6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; opacity: .9; marker-end: url(#arrow-pink); }
+      .cycle-flow { fill: none; stroke: #1fb9c9; stroke-width: 1.6; stroke-linecap: round; marker-end: url(#arrow-cycle); }
+    ]]></style>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#1fb9c9" stroke-width=".5"/>
+    </pattern>
+  </defs>
+
+  <rect class="bg" width="1548" height="688"/>
+  <rect class="grid" width="1548" height="688"/>
+
+  <path d="M22 20H46L69 44L46 68H22L45 44Z" fill="#1fb9c9"/>
+  <path d="M45 20H68L91 44L68 68H45L68 44Z" fill="#1fb9c9" opacity=".8"/>
+  <text x="104" y="61" style="font-size:54px;font-weight:800;font-style:italic;fill:#fff">FX<tspan fill="#1fb9c9">1</tspan></text>
+  <text x="214" y="59" style="font-size:38px;font-weight:800;fill:#fff">PULSE AI: AUTOMATED AI-DRIVEN SPORT CONTENT GENERATION PLATFORM</text>
+  <text x="214" y="82" style="font-size:14px;fill:#f472b6">Click each panel to reveal the next</text>
+  <path d="M22 90H1526" stroke="#14535c" stroke-width="1.5"/>
+  <path d="M22 90H405" stroke="#1fb9c9" stroke-width="3" filter="url(#glow)"/>
+
+  <!-- Inputs and generation engine -->
+  <g id="panel1" class="panel-stage" tabindex="0" role="button" aria-label="Show FX1 Pulse platform capabilities" aria-expanded="false">
+  <rect class="panel" x="22" y="99" width="319.5" height="568" rx="18"/>
+  <text class="column-title" x="39" y="140" style="font-size:21px">SAAS GENERATION ENGINE &amp; INPUTS</text>
+
+  <g aria-label="Live sport data feed">
+    <rect class="card" x="38" y="161" width="288" height="48" rx="8"/>
+    <circle cx="62" cy="185" r="16" fill="#030d12" stroke="#1fb9c9" stroke-width="1.8"/>
+    <circle cx="62" cy="185" r="11" class="icon-stroke"/>
+    <path d="M51 185H73M62 174C57 179 57 191 62 196M62 174C67 179 67 191 62 196" class="icon-stroke"/>
+    <text class="card-copy" x="90" y="191" style="font-size:18px">Live Sport Data Feed</text>
+  </g>
+  <g aria-label="Game transcripts and audio">
+    <rect class="card" x="38" y="215" width="288" height="48" rx="8"/>
+    <rect x="52" y="225" width="20" height="28" rx="2" fill="#030d12" stroke="#1fb9c9" stroke-width="1.8"/>
+    <path d="M56 231H68M56 236H68M56 241H65M56 247L60 243L64 247L68 243" class="icon-stroke"/>
+    <text class="card-copy" x="90" y="245" style="font-size:18px">Game Transcripts &amp; Audio</text>
+  </g>
+  <g aria-label="Athlete statistics and profiles">
+    <rect class="card" x="38" y="269" width="288" height="48" rx="8"/>
+    <path d="M51 305H75M54 302V294M61 302V287M68 302V280M75 302V276" class="icon-stroke"/>
+    <path d="M52 291L60 285L66 289L76 276" class="icon-pink"/>
+    <text class="card-copy" x="90" y="299" style="font-size:18px">Athlete Stats &amp; Profiles</text>
+  </g>
+
+  <path class="flow" d="M182 318V344"/>
+
+  <g transform="translate(-207 89) scale(1.1)">
+  <rect x="223" y="237" width="255" height="263" rx="13" fill="#07141a" stroke="#1fb9c9" stroke-width="2.5" filter="url(#glow)"/>
+  <rect x="236" y="250" width="236" height="173" rx="7" fill="#030d12" stroke="#14535c" stroke-width="1.5"/>
+  <path d="M248 389V277H342V389ZM358 389V277H460V389" fill="#06131a" stroke="#14535c" stroke-width="1"/>
+  <path d="M255 370L272 346L288 354L305 326L321 338L336 303M365 372L377 359L388 366L400 320L411 336L423 294L435 309L454 284" class="icon-stroke"/>
+  <path d="M254 379H336M365 379H459M249 288H340M361 288H458" stroke="#14535c" stroke-width="1"/>
+  <circle cx="356" cy="337" r="42" fill="#030d12" stroke="#1fb9c9" stroke-width="3" filter="url(#glow)"/>
+  <g class="data-icon">
+    <ellipse cx="356" cy="321" rx="16" ry="6" fill="#07141a" stroke="#7fd8cc" stroke-width="2"/>
+    <path d="M340 321V351C340 354 347 357 356 357S372 354 372 351V321" fill="none" stroke="#7fd8cc" stroke-width="2"/>
+    <path d="M340 331C340 334 347 337 356 337S372 334 372 331M340 341C340 344 347 347 356 347S372 344 372 341" class="icon-pink"/>
+    <circle cx="350" cy="326" r="1.5" fill="#1fb9c9"/>
+    <circle cx="362" cy="326" r="1.5" fill="#1fb9c9"/>
+  </g>
+  <text x="354" y="458" text-anchor="middle" style="font-size:24px;font-weight:800;fill:#7fd8cc">PULSE AI CORE ENGINE</text>
+  <text x="354" y="484" text-anchor="middle" style="font-size:20px">(ML, NLG, Data Analysis)</text>
+  </g>
+  <path class="flow" d="M319 485H374"/>
+  </g>
+
+  <!-- Platform capabilities -->
+  <g id="panel2" class="panel-stage panel-stage-hidden platform-capabilities" transform="translate(-144 0) translate(522 0) scale(0.96549 1) translate(-522 0)" tabindex="0" role="button" aria-label="Show FX1 Pulse users and use-cases" aria-expanded="false">
+  <rect class="panel" x="522" y="99" width="623" height="568" rx="18"/>
+  <text class="column-title" x="542" y="140">FX1 PULSE PLATFORM CAPABILITIES</text>
+
+  <g class="capability-card capability-card-1">
+    <rect class="card" x="535" y="161" width="290" height="151" rx="11"/>
+    <rect x="547" y="209" width="49" height="57" rx="4" fill="#030d12" stroke="#1fb9c9" stroke-width="2"/>
+    <path d="M554 221H589M554 229H584M554 237H589M554 245H581M554 253H588" class="icon-stroke"/>
+    <text x="571" y="204" text-anchor="middle" style="font-size:15px;font-weight:700;fill:#1fb9c9">NEWS</text>
+    <g transform="translate(20 0)">
+    <text class="card-title" x="612" y="197">Articles</text>
+    <circle class="bullet" cx="614" cy="219" r="3"/><text class="card-copy bullet-copy" x="624" y="225">Game reports &amp; analysis</text>
+    <circle class="bullet" cx="614" cy="245" r="3"/><text class="card-copy bullet-copy" x="624" y="251">Player features</text>
+    <circle class="bullet" cx="614" cy="271" r="3"/><text class="card-copy bullet-copy" x="624" y="277">Opinion pieces</text>
+    </g>
+  </g>
+  <g class="capability-wide-card capability-card capability-card-2">
+    <rect class="card" x="835" y="161" width="298" height="151" rx="11"/>
+    <g transform="translate(42 0)">
+    <path d="M808 211H858V261H808ZM808 214L833 235L858 214M808 261L826 244M858 261L840 244" class="icon-stroke"/>
+    <circle cx="833" cy="225" r="10" fill="#030d12" stroke="#1fb9c9" stroke-width="1.5"/><text x="833" y="231" text-anchor="middle" style="font-size:17px;fill:#f472b6">@</text>
+    <g transform="translate(25 0)">
+    <text class="card-title" x="871" y="197">Newsletters</text>
+    <circle class="bullet" cx="873" cy="219" r="3"/><text class="card-copy bullet-copy" x="883" y="225">Daily &amp; weekly digests</text>
+    <circle class="bullet" cx="873" cy="245" r="3"/><text class="card-copy bullet-copy" x="883" y="251">Club updates</text>
+    <circle class="bullet" cx="873" cy="271" r="3"/><text class="card-copy bullet-copy" x="883" y="277">Curated fan newsletters</text>
+    </g>
+    </g>
+  </g>
+  <g class="capability-card capability-card-3">
+    <rect class="card" x="535" y="324" width="290" height="151" rx="11"/>
+    <circle cx="558" cy="367" r="11" fill="none" stroke="#1fb9c9" stroke-width="2"/><text x="558" y="373" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#f472b6">f</text>
+    <circle cx="583" cy="367" r="11" fill="none" stroke="#1fb9c9" stroke-width="2"/><circle cx="583" cy="367" r="5" fill="none" stroke="#f472b6" stroke-width="1.5"/>
+    <circle cx="558" cy="397" r="11" fill="none" stroke="#1fb9c9" stroke-width="2"/><path d="M554 397L558 393L562 397L558 401Z" fill="#f472b6"/>
+    <circle cx="583" cy="397" r="11" fill="none" stroke="#1fb9c9" stroke-width="2"/><path d="M580 402L586 392" class="icon-pink"/>
+    <g transform="translate(20 0)">
+    <text class="card-title" x="612" y="359">Social Media</text><text class="card-title" x="612" y="383">Posts</text>
+    <circle class="bullet" cx="614" cy="403" r="3"/><text class="card-copy bullet-copy" x="624" y="409">Stats &amp; graphics</text>
+    <circle class="bullet" cx="614" cy="430" r="3"/><text class="card-copy bullet-copy" x="624" y="436">Highlight reels</text>
+    <circle class="bullet" cx="614" cy="457" r="3"/><text class="card-copy bullet-copy" x="624" y="463">Interactive polls</text>
+    </g>
+  </g>
+  <g class="capability-wide-card capability-card capability-card-4">
+    <rect class="card" x="835" y="324" width="298" height="151" rx="11"/>
+    <g transform="translate(42 0)">
+    <path d="M812 403C821 387 836 381 850 383L860 389L848 394L840 404L834 419L826 415L831 402L821 410L812 408Z" class="icon-stroke"/>
+    <path d="M817 404L810 416M842 402L851 413M827 386L825 379M849 388L855 381" class="icon-pink"/>
+    <g transform="translate(25 0)">
+    <text class="card-title" x="871" y="359">Athlete Content</text>
+    <circle class="bullet" cx="873" cy="384" r="3"/><text class="card-copy bullet-copy" x="883" y="390">Performance profiles</text>
+    <circle class="bullet" cx="873" cy="412" r="3"/><text class="card-copy bullet-copy" x="883" y="418">Injury updates</text>
+    <circle class="bullet" cx="873" cy="440" r="3"/><text class="card-copy bullet-copy" x="883" y="446">Interviews &amp; summaries</text>
+    </g>
+    </g>
+  </g>
+  <g class="capability-card capability-card-5">
+    <rect class="card" x="535" y="487" width="290" height="160" rx="11"/>
+    <circle cx="570" cy="540" r="22" fill="#030d12" stroke="#1fb9c9" stroke-width="2"/>
+    <circle cx="570" cy="530" r="7" fill="none" stroke="#f472b6" stroke-width="2"/>
+    <path d="M556 555C557 543 583 543 584 555M550 559H590V572H550ZM559 563H581" class="icon-stroke"/>
+    <g transform="translate(20 0)">
+    <text class="card-title" x="612" y="522">Creator</text><text class="card-title" x="612" y="546">Content</text>
+    <circle class="bullet" cx="614" cy="564" r="3"/><text class="card-copy bullet-copy" x="624" y="570">Script outlines</text>
+    <circle class="bullet" cx="614" cy="592" r="3"/><text class="card-copy bullet-copy" x="624" y="598">Podcast summaries</text>
+    <circle class="bullet" cx="614" cy="620" r="3"/><text class="card-copy bullet-copy" x="624" y="626">Fan engagement ideas</text>
+    </g>
+  </g>
+  <g class="capability-wide-card capability-card capability-card-6">
+    <rect class="card" x="835" y="487" width="298" height="160" rx="11"/>
+    <g transform="translate(42 0)">
+    <circle cx="829" cy="550" r="29" fill="#030d12" stroke="#1fb9c9" stroke-width="2"/>
+    <circle cx="829" cy="550" r="18" fill="none" stroke="#14535c" stroke-width="2"/>
+    <circle cx="829" cy="550" r="7" fill="none" stroke="#f472b6" stroke-width="2"/>
+    <path d="M829 522V538M829 562V578M801 550H817M841 550H857M809 530L821 542M837 558L849 570M849 530L837 542M821 558L809 570" class="icon-stroke"/>
+    <g transform="translate(25 0)">
+    <text class="card-title" x="871" y="522">Personalized</text><text class="card-title" x="871" y="546">Marketing Content</text>
+    <circle class="bullet" cx="873" cy="564" r="3"/><text class="card-copy bullet-copy" x="883" y="570">Targeted fan offers</text>
+    <circle class="bullet" cx="873" cy="592" r="3"/><text class="card-copy bullet-copy" x="883" y="598">Custom email campaigns</text>
+    <circle class="bullet" cx="873" cy="620" r="3"/><text class="card-copy bullet-copy" x="883" y="626">Unique club experiences</text>
+    </g>
+    </g>
+  </g>
+  <path class="flow" d="M1145 378H1180"/>
+  </g>
+
+  <!-- Users and use cases -->
+  <g id="panel3" class="panel-stage panel-stage-hidden" tabindex="0" role="button" aria-label="FX1 Pulse users and use-cases" aria-expanded="false">
+  <path class="panel" d="M1036 99H1507Q1526 99 1526 118V610Q1526 633 1502 633H1428C1407 633 1394 667 1377 667H1040Q1016 667 1016 643V118Q1016 99 1036 99Z"/>
+  <text class="column-title" x="1034" y="140">FX1 PULSE USERS &amp; USE-CASES</text>
+
+  <path class="flow" d="M1370 226H1439V291"/>
+  <path class="flow" d="M1370 395H1380"/>
+  <path class="flow" d="M1370 567H1439V431"/>
+  <path class="feedback" d="M1458 292V192H1377"/>
+  <path class="feedback" d="M1458 435V601H1377"/>
+
+  <g transform="translate(-60 0)">
+    <g class="user-block user-block-1">
+    <rect class="card" x="1094" y="162" width="336" height="131" rx="11"/>
+    <text x="1106" y="194" style="font-size:23px;font-weight:700;fill:#7fd8cc">ATHLETES &amp; CREATORS</text>
+    <circle cx="1120" cy="222" r="8" class="icon-stroke"/><circle cx="1144" cy="224" r="7" class="icon-stroke"/><circle cx="1164" cy="224" r="7" class="icon-stroke"/>
+    <path d="M1106 255C1106 237 1134 237 1134 255M1133 255C1133 240 1155 240 1155 255M1154 255C1154 241 1176 241 1176 255" class="icon-stroke"/>
+    <path d="M1114 262H1171M1118 267H1165" class="icon-pink"/>
+    <circle class="bullet" cx="1203" cy="213" r="3"/><text class="card-copy bullet-copy" x="1213" y="219">Automated social posts</text>
+    <circle class="bullet" cx="1203" cy="234" r="3"/><text class="card-copy bullet-copy" x="1213" y="240">Seamless brand integration</text>
+    <circle class="bullet" cx="1203" cy="255" r="3"/><text class="card-copy bullet-copy" x="1213" y="261">Exclusive newsletters</text>
+    <circle class="bullet" cx="1203" cy="276" r="3"/><text class="card-copy bullet-copy" x="1213" y="282">Quick official statements</text>
+    </g>
+  </g>
+  <g transform="translate(-60 21)">
+    <g class="user-block user-block-2">
+    <rect class="card" x="1094" y="310" width="336" height="131" rx="11"/>
+    <text x="1106" y="342" style="font-size:24px;font-weight:700;fill:#7fd8cc">MEDIA OUTLETS</text>
+    <rect x="1107" y="362" width="57" height="43" rx="3" fill="#030d12" stroke="#1fb9c9" stroke-width="2"/>
+    <path d="M1115 371H1157M1115 378H1146M1115 385H1157M1115 392H1149M1115 399H1140" class="icon-stroke"/>
+    <path d="M1101 368V411H1158" class="icon-pink"/>
+    <circle class="bullet" cx="1203" cy="360" r="3"/><text class="card-copy bullet-copy" x="1213" y="366">Instant match reports</text>
+    <circle class="bullet" cx="1203" cy="381" r="3"/><text class="card-copy bullet-copy" x="1213" y="387">Niche sports coverage</text>
+    <circle class="bullet" cx="1203" cy="402" r="3"/><text class="card-copy bullet-copy" x="1213" y="408">Articles into social snippets</text>
+    <circle class="bullet" cx="1203" cy="423" r="3"/><text class="card-copy bullet-copy" x="1213" y="429">Personalized newsletters</text>
+    </g>
+  </g>
+  <g transform="translate(-60 42)">
+    <g class="user-block user-block-3">
+    <rect class="card" x="1094" y="458" width="336" height="145" rx="11"/>
+    <text x="1106" y="490" style="font-size:23px;font-weight:700;fill:#7fd8cc">SPORT BRANDS &amp; CLUBS</text>
+    <path d="M1118 525L1138 515L1158 525V551L1138 562L1118 551Z" class="icon-stroke"/>
+    <path d="M1138 515V562M1118 538H1158M1128 522L1138 529L1148 522M1128 554L1138 547L1148 554" class="icon-pink"/>
+    <path d="M1108 551H1167M1115 558L1109 568M1160 558L1167 568" class="icon-stroke"/>
+    <circle class="bullet" cx="1203" cy="514" r="3"/><text class="card-copy bullet-copy" x="1213" y="520">Pre-fight hype building</text>
+    <circle class="bullet" cx="1203" cy="535" r="3"/><text class="card-copy bullet-copy" x="1213" y="541">Targeted PPV marketing</text>
+    <circle class="bullet" cx="1203" cy="556" r="3"/><text class="card-copy bullet-copy" x="1213" y="562">Round-by-round updates</text>
+    <circle class="bullet" cx="1203" cy="577" r="3"/><text class="card-copy bullet-copy" x="1213" y="583">Automated fighter stats</text>
+    </g>
+  </g>
+
+  <g>
+    <rect x="1380" y="299" width="138" height="132" rx="13" fill="#07141a" stroke="#1fb9c9" stroke-width="2.5" filter="url(#glow)"/>
+    <path d="M1449 331A34 34 0 0 1 1478.4 382M1478.4 382A34 34 0 0 1 1419.6 382M1419.6 382A34 34 0 0 1 1449 331" class="cycle-flow"/>
+    <g class="cycle-nodes">
+    <animateTransform id="cycle-spin" attributeName="transform" attributeType="XML" type="rotate" from="0 1449 365" to="360 1449 365" dur="3s" begin="indefinite" fill="freeze"/>
+    <circle cx="1449" cy="320" r="3.2" fill="#4ade50"/>
+    <circle cx="1488" cy="387" r="3.2" fill="#4ade50"/>
+    <circle cx="1410" cy="387" r="3.2" fill="#4ade50"/>
+    </g>
+    <text x="1449" y="356" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#7fd8cc">Content</text>
+    <text x="1449" y="377" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#7fd8cc">Lifecycle</text>
+  </g>
+
+  <text x="1418" y="654" style="font-size:14px;font-weight:700;fill:#7fd8cc">FX1.IO</text>
+  <text x="1486" y="663" text-anchor="middle" style="font-size:34px;font-weight:800;font-style:italic;fill:#fff">FX<tspan fill="#1fb9c9">1</tspan></text>
+  </g>
+
+  <script><![CDATA[
+    var stages = [].slice.call(document.querySelectorAll(".panel-stage"));
+    stages.forEach(function(stage, index) {
+      function advance() {
+        var next = stages[index + 1];
+        if (next && next.classList.contains("panel-stage-hidden")) {
+          next.classList.remove("panel-stage-hidden");
+          stage.setAttribute("aria-expanded", "true");
+          if (next.id === "panel2") next.classList.add("capabilities-revealed");
+          if (next.id === "panel3") {
+            next.classList.add("user-blocks-revealed");
+            if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+              document.querySelector("#cycle-spin").beginElement();
+            }
+          }
+        }
+      }
+      stage.addEventListener("click", advance);
+      stage.addEventListener("keydown", function(event) {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          advance();
+        }
+      });
+    });
+  ]]></script>
+</svg>
