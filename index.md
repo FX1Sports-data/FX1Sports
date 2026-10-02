@@ -86,7 +86,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
   .nav-btn {
     background: transparent;
     border: 1px solid transparent;
-    color: #94A3B8;
+    color: #E2E8F0; /* Changement de couleur ici (anciennement #94A3B8) */
     padding: 10px 14px;
     border-radius: 8px;
     font-weight: 600;
@@ -137,9 +137,10 @@ title: FX1 Sports — Portal & Interactive Roadmap
   }
 
   .fx1-topbar p {
-    color: #64748B;
+    color: #CBD5E1; /* Changement de couleur ici (anciennement #64748B) */
     margin: 0;
     font-size: 0.85rem;
+    line-height: 1.4; /* Amélioration de la lisibilité des paragraphes longs */
   }
 
   /* Panneaux de vue - CORRIGÉ POUR LES SVG INTERACTIFS */
@@ -187,7 +188,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
   .placeholder-box {
     padding: 40px;
     text-align: center;
-    color: #94A3B8;
+    color: #E2E8F0; /* Changement de couleur ici (anciennement #94A3B8) */
   }
 
   /* Adaptation mobile */
@@ -257,7 +258,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
       </div>
       <div class="fx1-card">
         <object data="{{ '/FX1roadmap.svg' | relative_url }}?v=5" type="image/svg+xml">
-          <p style="padding:20px; text-align:center; color:#94A3B8;">
+          <p style="padding:20px; text-align:center; color:#E2E8F0;">
             Votre navigateur ne charge pas le SVG. 
             <a href="{{ '/FX1roadmap.svg' | relative_url }}?v=5" style="color:#00E5FF;">Cliquez ici pour l'ouvrir directement</a>.
           </p>
@@ -273,7 +274,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
       </div>
       <div class="fx1-card">
         <object data="{{ '/FX1pulse.svg' | relative_url }}?v=1" type="image/svg+xml">
-          <p style="padding:20px; text-align:center; color:#94A3B8;">
+          <p style="padding:20px; text-align:center; color:#E2E8F0;">
             Votre navigateur ne charge pas le SVG. 
             <a href="{{ '/FX1pulse.svg' | relative_url }}?v=1" style="color:#00E5FF;">Cliquez ici pour l'ouvrir directement</a>.
           </p>
@@ -301,7 +302,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
       </div>
       <div class="fx1-card">
         <object data="{{ '/FX1arena.svg' | relative_url }}?v=1" type="image/svg+xml">
-          <p style="padding:20px; text-align:center; color:#94A3B8;">
+          <p style="padding:20px; text-align:center; color:#E2E8F0;">
             Votre navigateur ne charge pas le SVG. 
             <a href="{{ '/FX1arena.svg' | relative_url }}?v=1" style="color:#00E5FF;">Cliquez ici pour l'ouvrir directement</a>.
           </p>
@@ -317,7 +318,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
       </div>
       <div class="fx1-card">
         <object data="{{ '/FX1utility.svg' | relative_url }}?v=1" type="image/svg+xml">
-          <p style="padding:20px; text-align:center; color:#94A3B8;">
+          <p style="padding:20px; text-align:center; color:#E2E8F0;">
             Votre navigateur ne charge pas le SVG. 
             <a href="{{ '/FX1utility.svg' | relative_url }}?v=1" style="color:#00E5FF;">Cliquez ici pour l'ouvrir directement</a>.
           </p>
@@ -333,7 +334,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
       </div>
       <div class="fx1-card">
         <object data="{{ '/FX1status.svg' | relative_url }}?v=1" type="image/svg+xml">
-          <p style="padding:20px; text-align:center; color:#94A3B8;">
+          <p style="padding:20px; text-align:center; color:#E2E8F0;">
             Votre navigateur ne charge pas le SVG. 
             <a href="{{ '/FX1status.svg' | relative_url }}?v=1" style="color:#00E5FF;">Cliquez ici pour l'ouvrir directement</a>.
           </p>
