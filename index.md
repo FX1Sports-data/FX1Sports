@@ -329,7 +329,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
     <div id="view-status" class="view-panel">
       <div class="fx1-topbar">
         <h1>Status & Benefits</h1>
-        <p>Niveaux de membre, privilèges VIP et avantages pour les détenteurs.</p>
+        <p>Our ecosystem permanently rewards early supporters with exclusive OG benefits, while allowing new users to dynamically build their own premium status through our Arena Levels. Check out the visual below to see exactly how our tiered membership, priority access, and escalating rewards work for everyone.</p>
       </div>
       <div class="fx1-card">
         <object data="{{ '/FX1status.svg' | relative_url }}?v=1" type="image/svg+xml">
