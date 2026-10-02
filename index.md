@@ -208,6 +208,15 @@ title: FX1 Sports — Portal & Interactive Roadmap
     align-items: center;
   }
 
+  /* Style du gros logo FX1 */
+  .landing-logo {
+    height: 52px;
+    width: auto;
+    margin-bottom: 16px;
+    display: block;
+    object-fit: contain;
+  }
+
   .landing-text h2 {
     color: #FFFFFF;
     font-size: 2rem;
@@ -424,6 +433,9 @@ title: FX1 Sports — Portal & Interactive Roadmap
           <!-- Hero Section -->
           <div class="landing-hero">
             <div class="landing-text">
+              <!-- LOGO FX1 AJOUTÉ ICI -->
+              <img src="{{ '/FX1logo.webp' | relative_url }}" alt="FX1 Sports Logo" class="landing-logo">
+              
               <h2>Bridging <span>Fan Engagement</span> & AI Data</h2>
               <p>FX1 transforms everyday sports fandom into productive AI validation and real-world B2B revenue. Play games, make predictions, and unlock incredible real-world rewards—all with zero crypto friction.</p>
               <div class="landing-cta-group">
@@ -432,7 +444,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
               </div>
             </div>
             
-            <!-- Bloc Vidéo Natif pointant sur FX1intro.mp4 -->
+            <!-- Bloc Vidéo Natif (FX1intro.mp4) -->
             <div class="landing-media-wrapper">
               <div class="landing-media">
                 <video src="{{ '/FX1intro.mp4' | relative_url }}" autoplay loop muted playsinline controls></video>
