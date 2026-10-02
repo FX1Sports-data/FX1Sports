@@ -425,7 +425,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
     <!-- OVERVIEW / LANDING PAGE -->
     <div id="view-overview" class="view-panel active">
       <div class="fx1-topbar">
-        <h1>Project Overview</h1>
+        <h1>FX1Sports Overview</h1>
         <p>Discover the core engine powering the next generation of sports engagement and AI data.</p>
       </div>
       <div class="fx1-card">
