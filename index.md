@@ -201,6 +201,36 @@ title: FX1 Sports — Portal & Interactive Roadmap
     margin: auto;
   }
 
+  /* --- BANNIERE AVERTISSEMENT / DISCLAIMER --- */
+  .disclaimer-banner {
+    background: rgba(255, 170, 0, 0.1);
+    border: 1px solid rgba(255, 170, 0, 0.3);
+    border-radius: 8px;
+    padding: 12px 16px;
+    color: #FFD166;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    line-height: 1.5;
+  }
+  
+  .disclaimer-banner strong {
+    color: #FFB347;
+  }
+
+  .disclaimer-banner a {
+    color: #00E5FF;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+
+  .disclaimer-banner a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+  }
+
   .landing-hero {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
@@ -430,10 +460,19 @@ title: FX1 Sports — Portal & Interactive Roadmap
       </div>
       <div class="fx1-card">
         <div class="landing-container">
+          
+          <!-- NOUVEAU BLOC AVERTISSEMENT -->
+          <div class="disclaimer-banner">
+            <div>⚠️</div>
+            <div>
+              <strong>Avertissement :</strong> Ce site web n'est pas le site officiel de FX1. Il s'agit d'un portail à but purement pédagogique conçu pour présenter l'écosystème FX1 et expliquer ses différentes fonctionnalités. Pour accéder au site officiel, veuillez vous rendre sur <a href="https://fx1.io" target="_blank" rel="noopener noreferrer">FX1.io</a>.
+            </div>
+          </div>
+          <!-- FIN BLOC AVERTISSEMENT -->
+
           <!-- Hero Section -->
           <div class="landing-hero">
             <div class="landing-text">
-              <!-- LOGO FX1 AJOUTÉ ICI -->
               <img src="{{ '/FX1logo.webp' | relative_url }}" alt="FX1 Sports Logo" class="landing-logo">
               
               <h2>Bridging <span>Fan Engagement</span> & AI Data</h2>
