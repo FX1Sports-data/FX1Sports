@@ -461,14 +461,14 @@ title: FX1 Sports — Portal & Interactive Roadmap
       <div class="fx1-card">
         <div class="landing-container">
           
-          <!-- NOUVEAU BLOC AVERTISSEMENT -->
+          <!-- BANNIERE AVERTISSEMENT EN ANGLAIS -->
           <div class="disclaimer-banner">
             <div>⚠️</div>
             <div>
-              <strong>Avertissement :</strong> Ce site web n'est pas le site officiel de FX1. Il s'agit d'un portail à but purement pédagogique conçu pour présenter l'écosystème FX1 et expliquer ses différentes fonctionnalités. Pour accéder au site officiel, veuillez vous rendre sur <a href="https://fx1.io" target="_blank" rel="noopener noreferrer">FX1.io</a>.
+              <strong>Disclaimer:</strong> This website is not the official FX1 website. It is an educational portal designed to present the FX1 ecosystem and explain its features. To access the official website, please visit <a href="https://fx1.io" target="_blank" rel="noopener noreferrer">FX1.io</a>.
             </div>
           </div>
-          <!-- FIN BLOC AVERTISSEMENT -->
+          <!-- FIN BANNIERE AVERTISSEMENT -->
 
           <!-- Hero Section -->
           <div class="landing-hero">
@@ -522,8 +522,8 @@ title: FX1 Sports — Portal & Interactive Roadmap
       <div class="fx1-card">
         <object data="{{ '/FX1ecosystem.svg' | relative_url }}?v=1" type="image/svg+xml">
           <p style="padding:20px; text-align:center; color:#E2E8F0;">
-            Votre navigateur ne charge pas le SVG. 
-            <a href="{{ '/FX1ecosystem.svg' | relative_url }}?v=1" style="color:#00E5FF;">Cliquez ici pour l'ouvrir directement</a>.
+            Your browser does not load the SVG. 
+            <a href="{{ '/FX1ecosystem.svg' | relative_url }}?v=1" style="color:#00E5FF;">Click here to open it directly</a>.
           </p>
         </object>
       </div>
@@ -538,8 +538,8 @@ title: FX1 Sports — Portal & Interactive Roadmap
       <div class="fx1-card">
         <object data="{{ '/FX1roadmap.svg' | relative_url }}?v=5" type="image/svg+xml">
           <p style="padding:20px; text-align:center; color:#E2E8F0;">
-            Votre navigateur ne charge pas le SVG. 
-            <a href="{{ '/FX1roadmap.svg' | relative_url }}?v=5" style="color:#00E5FF;">Cliquez ici pour l'ouvrir directement</a>.
+            Your browser does not load the SVG. 
+            <a href="{{ '/FX1roadmap.svg' | relative_url }}?v=5" style="color:#00E5FF;">Click here to open it directly</a>.
           </p>
         </object>
       </div>
@@ -554,8 +554,8 @@ title: FX1 Sports — Portal & Interactive Roadmap
       <div class="fx1-card">
         <object data="{{ '/FX1arena.svg' | relative_url }}?v=1" type="image/svg+xml">
           <p style="padding:20px; text-align:center; color:#E2E8F0;">
-            Votre navigateur ne charge pas le SVG. 
-            <a href="{{ '/FX1arena.svg' | relative_url }}?v=1" style="color:#00E5FF;">Cliquez ici pour l'ouvrir directement</a>.
+            Your browser does not load the SVG. 
+            <a href="{{ '/FX1arena.svg' | relative_url }}?v=1" style="color:#00E5FF;">Click here to open it directly</a>.
           </p>
         </object>
       </div>
@@ -570,8 +570,8 @@ title: FX1 Sports — Portal & Interactive Roadmap
       <div class="fx1-card">
         <object data="{{ '/FX1utility.svg' | relative_url }}?v=1" type="image/svg+xml">
           <p style="padding:20px; text-align:center; color:#E2E8F0;">
-            Votre navigateur ne charge pas le SVG. 
-            <a href="{{ '/FX1utility.svg' | relative_url }}?v=1" style="color:#00E5FF;">Cliquez ici pour l'ouvrir directement</a>.
+            Your browser does not load the SVG. 
+            <a href="{{ '/FX1utility.svg' | relative_url }}?v=1" style="color:#00E5FF;">Click here to open it directly</a>.
           </p>
         </object>
       </div>
@@ -586,8 +586,8 @@ title: FX1 Sports — Portal & Interactive Roadmap
       <div class="fx1-card">
         <object data="{{ '/FX1status.svg' | relative_url }}?v=1" type="image/svg+xml">
           <p style="padding:20px; text-align:center; color:#E2E8F0;">
-            Votre navigateur ne charge pas le SVG. 
-            <a href="{{ '/FX1status.svg' | relative_url }}?v=1" style="color:#00E5FF;">Cliquez ici pour l'ouvrir directement</a>.
+            Your browser does not load the SVG. 
+            <a href="{{ '/FX1status.svg' | relative_url }}?v=1" style="color:#00E5FF;">Click here to open it directly</a>.
           </p>
         </object>
       </div>
@@ -602,8 +602,8 @@ title: FX1 Sports — Portal & Interactive Roadmap
       <div class="fx1-card">
         <object data="{{ '/FX1pulse.svg' | relative_url }}?v=1" type="image/svg+xml">
           <p style="padding:20px; text-align:center; color:#E2E8F0;">
-            Votre navigateur ne charge pas le SVG. 
-            <a href="{{ '/FX1pulse.svg' | relative_url }}?v=1" style="color:#00E5FF;">Cliquez ici pour l'ouvrir directement</a>.
+            Your browser does not load the SVG. 
+            <a href="{{ '/FX1pulse.svg' | relative_url }}?v=1" style="color:#00E5FF;">Click here to open it directly</a>.
           </p>
         </object>
       </div>
