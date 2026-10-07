@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1340 768" width="100%" role="img" aria-labelledby="svg-title svg-desc" lang="en">
+  <title id="svg-title">FX1 Arena: Play, Earn &amp; Power AI Data</title>
+  <desc id="svg-desc">Three panels explain FX1 Arena gameplay, rewards, and how its real-data token economy differs from other fan apps.</desc>
+  <defs>
+    <filter id="glow" x="-35%" y="-35%" width="170%" height="170%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#1fb9c9" stroke-width=".5"/>
+    </pattern>
+    <style><![CDATA[
+      @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&display=swap");
+      text { font-family: "Barlow Condensed", "Arial Narrow", Arial, sans-serif; fill: #e9f4f5; }
+      .bg { fill: #04090c; }
+      .grid { fill: url(#grid); opacity: .12; }
+      .panel { fill: #06131a; stroke: #1fb9c9; stroke-width: 2.5; }
+      .panel-stage { cursor: pointer; outline: none; }
+      .panel-stage-hidden { display: none; }
+      .panel-stage > .panel { transition: stroke .2s ease, filter .2s ease; }
+      .panel-stage:hover > .panel, .panel-stage:focus > .panel { stroke: #4ade50; filter: url(#glow); }
+      .reward-item { opacity: 0; visibility: hidden; transition: opacity .25s ease; }
+      .reward-item-visible { opacity: 1; visibility: visible; }
+      .reward-summary { opacity: 0; visibility: hidden; transform-box: fill-box; transform-origin: center; }
+      .reward-summary-visible { visibility: visible; animation: reward-bounce 2s ease-out both; }
+      @keyframes reward-bounce {
+        0% { opacity: 0; transform: translateY(-18px) scale(.88); }
+        18% { opacity: 1; transform: translateY(0) scale(1.1); }
+        34% { transform: translateY(-8px) scale(.97); }
+        50% { transform: translateY(0) scale(1.03); }
+        65% { transform: translateY(-3px) scale(.99); }
+        80%, 100% { opacity: 1; transform: translateY(0) scale(1); }
+      }
+      .card { fill: #07141a; stroke: #14535c; stroke-width: 2; }
+      .mint { fill: #7fd8cc; }
+      .cyan { fill: #1fb9c9; }
+      .pink { fill: #f472b6; }
+      .green { fill: #70ed69; }
+      .title { font-size: 46px; font-weight: 800; }
+      .section { font-size: 31px; font-weight: 800; fill: #7fd8cc; }
+      .subsection { font-size: 28px; font-weight: 500; }
+      .body { font-size: 22px; font-weight: 500; }
+      .difference-content .body { font-size: 23px; }
+      .body-strong { font-size: 23px; font-weight: 700; }
+      .small { font-size: 19px; font-weight: 500; }
+      .icon { fill: none; stroke: #1fb9c9; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+      .icon-pink { fill: none; stroke: #f472b6; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .glow { filter: url(#glow); }
+      .arena-overview { font-family: "Barlow Condensed", "Arial Narrow", Arial, sans-serif; }
+      .arena-overview-panel { fill: #06131a; stroke: #1fb9c9; stroke-width: 2.5; }
+      .arena-card { fill: #07141a; stroke: #14535c; stroke-width: 1.6; }
+      .arena-label { fill: #7fd8cc; font-size: 15px; font-weight: 800; }
+      .arena-copy { fill: #e9f4f5; font-size: 17px; font-weight: 500; }
+      .arena-muted { fill: #93b0b5; font-size: 15px; font-weight: 500; }
+      .arena-option, .arena-mode-button { cursor: pointer; outline: none; }
+      .arena-option rect, .arena-mode-button rect { fill: #07141a; stroke: #14535c; stroke-width: 1.5; transition: fill .2s ease, stroke .2s ease; }
+      .arena-option text, .arena-mode-button text { fill: #e9f4f5; font-size: 15px; font-weight: 700; }
+      .arena-details-button rect { stroke: #f472b6; }
+      .arena-details-button text { fill: #f472b6; }
+      .arena-option[aria-pressed="true"] rect, .arena-mode-button[aria-pressed="true"] rect { fill: #10262b; stroke: #70ed69; filter: url(#glow); }
+      .arena-option[aria-pressed="true"] text, .arena-mode-button[aria-pressed="true"] text { fill: #70ed69; }
+      .arena-option:hover rect, .arena-option:focus rect, .arena-mode-button:hover rect, .arena-mode-button:focus rect { stroke: #1fb9c9; }
+      .arena-details-button:hover rect, .arena-details-button:focus rect { stroke: #f472b6; filter: url(#glow); }
+      .action-visual { display: none; }
+      .arena-overview[data-action="predict"] .action-visual[data-visual="predict"],
+      .arena-overview[data-action="battle"] .action-visual[data-visual="battle"],
+      .arena-overview[data-action="annotate"] .action-visual[data-visual="annotate"] { display: inline; }
+      .battle-versus, .annotation-hit { transform-box: fill-box; transform-origin: center; }
+      .arena-overview[data-action="battle"].is-playing .battle-versus { animation: versus-pop .55s cubic-bezier(.2,.9,.3,1.3) 2; }
+      .arena-overview[data-action="annotate"].is-playing .annotation-hit { animation: hit-pulse .65s ease-in-out 2; }
+      @keyframes versus-pop { 50% { transform: scale(1.25); filter: url(#glow); } }
+      @keyframes hit-pulse { 50% { transform: scale(1.5); filter: url(#glow); } }
+      svg.arena-details .arena-overview { display: none; }
+      svg.arena-details .panel-stage-hidden { display: inline; }
+      svg.arena-details #panel2 .reward-item { opacity: 1; visibility: visible; }
+      svg.arena-details #panel2 .reward-summary { opacity: 1; visibility: visible; transform: none; animation: none; }
+      .arena-back-button { display: none; }
+      svg.arena-details .arena-details-button { display: none; }
+      svg.arena-details .arena-back-button { display: inline; }
+      @media (prefers-reduced-motion: reduce) {
+        .arena-overview[data-action="battle"].is-playing .battle-versus,
+        .arena-overview[data-action="annotate"].is-playing .annotation-hit { animation: none; }
+        .arena-overview animateMotion { display: none; }
+      }
+    ]]></style>
+  </defs>
+
+  <rect class="bg" width="1340" height="768"/>
+  <rect class="grid" width="1340" height="768"/>
+
+  <path d="M25 20H49L83 53L49 86H25L58 53Z" fill="#1fb9c9"/>
+  <path d="M49 20H73L106 53L73 86H49L82 53Z" fill="#1fb9c9" opacity=".8"/>
+  <text x="124" y="78" style="font-size:61px;font-weight:800;font-style:italic;fill:#fff">FX<tspan fill="#1fb9c9">1</tspan></text>
+  <text class="title" x="250" y="73" fill="#fff">ARENA: <tspan>LIVE MATCHDAY</tspan></text>
+  <text x="250" y="101" style="font-size:14px;fill:#f472b6">Choose a play. Follow the data. Pick a reward.</text>
+  <g class="arena-mode-button arena-details-button" tabindex="0" role="button" aria-label="Show full Arena details">
+    <rect x="1122" y="40" width="192" height="38" rx="8" stroke="#f472b6"/><text x="1143" y="64" fill="#f472b6">FULL DETAILS +</text>
+  </g>
+  <g class="arena-mode-button arena-back-button" tabindex="0" role="button" aria-label="Return to live matchday overview">
+    <rect x="1122" y="40" width="192" height="38" rx="8"/><text x="1143" y="64">BACK TO LIVE</text>
+  </g>
+  <path d="M26 107H1330" stroke="#14535c" stroke-width="1.5"/>
+  <path d="M26 107H454" stroke="#1fb9c9" stroke-width="3" filter="url(#glow)"/>
+
+  <!-- Gameplay -->
+  <g id="panel1" class="panel-stage" tabindex="0" role="button" aria-label="Reveal rewards panel" aria-expanded="false">
+  <rect class="panel" x="26" y="114" width="432" height="638" rx="18"/>
+  <text class="section" x="51" y="169">WHAT YOU DO</text>
+  <text class="subsection" x="51" y="204">(GAMEPLAY)</text>
+  <g class="glow" aria-label="Gameplay controller" transform="translate(13 0)">
+    <path d="M335 184L341 164Q343 159 350 159H405Q412 159 414 165L421 185Q425 197 416 200Q411 202 406 197L397 188H358L349 198Q343 203 338 200Q331 197 335 184Z" class="icon"/>
+    <path d="M354 174H370M362 166V182M390 170V171M400 178V179" class="icon-pink"/>
+  </g>
+  <text class="body-strong" x="51" y="248">Where fans play, earn, and power</text>
+  <text class="body-strong" x="51" y="276">FX1's AI data engine.</text>
+
+  <g>
+    <rect class="card" x="38" y="309" width="408" height="108" rx="11"/>
+    <g transform="translate(72 348) scale(.5) translate(-377.5 -181)">
+      <path d="M335 184L341 164Q343 159 350 159H405Q412 159 414 165L421 185Q425 197 416 200Q411 202 406 197L397 188H358L349 198Q343 203 338 200Q331 197 335 184Z" class="icon" vector-effect="non-scaling-stroke"/>
+      <path d="M354 174H370M362 166V182M390 170V171M400 178V179" class="icon-pink" vector-effect="non-scaling-stroke"/>
+    </g>
+    <circle cx="132" cy="337" r="3" class="pink"/>
+    <text class="body" x="142" y="345">Trivia &amp; Predictions — daily</text>
+    <text class="body" x="142" y="369">games, live event tournaments,</text>
+    <text class="body" x="142" y="393">powered by real MotionAI data</text>
+  </g>
+
+  <g>
+    <rect class="card" x="38" y="429" width="408" height="119" rx="11"/>
+    <g transform="translate(78 472) scale(.55) translate(-242 -361)">
+      <circle cx="211" cy="342" r="11" fill="#07141a" stroke="#1fb9c9" stroke-width="2"/>
+      <path d="M190 379C191 357 231 357 232 379V387H190ZM196 390H226" fill="#07141a" stroke="#1fb9c9" stroke-width="2" stroke-linejoin="round"/>
+      <circle cx="273" cy="342" r="11" fill="#07141a" stroke="#f472b6" stroke-width="2"/>
+      <path d="M252 379C253 357 293 357 294 379V387H252ZM258 390H288" fill="#07141a" stroke="#f472b6" stroke-width="2" stroke-linejoin="round"/>
+      <circle cx="242" cy="366" r="15" fill="#06131a" stroke="#70ed69" stroke-width="1.8"/><text x="242" y="372" text-anchor="middle" style="font-size:16px;font-weight:800;fill:#70ed69">VS</text>
+    </g>
+    <circle cx="132" cy="454" r="3" class="pink"/>
+    <text class="body" x="142" y="462">Fan Battles — knowledge</text>
+    <text class="body" x="142" y="486">tests, sportscasting face-offs,</text>
+    <text class="body" x="142" y="510">club vs club, building toward</text>
+    <text class="body" x="142" y="534">talk-show debates</text>
+  </g>
+
+  <g>
+    <rect class="card" x="38" y="560" width="408" height="130" rx="11"/>
+    <rect x="50" y="587" width="50" height="36" rx="4" fill="#030d12" stroke="#1fb9c9" stroke-width="2"/>
+    <path d="M56 587V623M94 587V623M50 595H56M50 605H56M50 615H56M94 595H100M94 605H100M94 615H100" class="icon" stroke-width="1.2"/>
+    <rect x="60" y="597" width="20" height="16" rx="2" fill="none" stroke="#f472b6" stroke-width="1.8" stroke-dasharray="3 2"/>
+    <rect x="60" y="591" width="12" height="6" rx="1.5" fill="#f472b6"/>
+    <path d="M70 606L88 602V617H70Z" fill="none" stroke="#1fb9c9" stroke-width="1.6" stroke-linejoin="round"/>
+    <circle cx="94" cy="624" r="8" fill="#030d12" stroke="#70ed69" stroke-width="1.8"/>
+    <path d="M90 624L93 627L98 621" fill="none" stroke="#70ed69" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="132" cy="578" r="3" class="pink"/>
+    <text class="body" x="142" y="586">Competitive Annotation —</text>
+    <text class="body" x="142" y="610">label clips head-to-head,</text>
+    <text class="body" x="142" y="634">scored against AI ground</text>
+    <text class="body" x="142" y="658">truth (nobody does this)</text>
+  </g>
+  <text x="44" y="722" style="font-size:22px;font-weight:500">Simple on the surface, incredibly productive</text>
+  </g>
+
+  <!-- Rewards -->
+  <g id="panel2" class="panel-stage panel-stage-hidden" tabindex="0" role="button" aria-label="Reveal FX1 Difference panel" aria-expanded="false">
+  <rect class="panel" x="470" y="114" width="439" height="638" rx="18"/>
+  <text class="section" x="492" y="169">WHY IT'S WORTH IT</text>
+  <text class="subsection" x="492" y="204">(REWARDS)</text>
+  <g class="glow" aria-label="Rewards trophy" transform="translate(0 4)">
+    <path d="M829 146H879V162C879 179 868 190 854 193C840 190 829 179 829 162Z" class="icon"/>
+    <path d="M829 153H819V161C819 171 824 177 836 179M879 153H889V161C889 171 884 177 872 179" class="icon"/>
+    <path d="M854 153L858 163L869 164L861 171L863 182L854 176L845 182L847 171L839 164L850 163Z" class="icon-pink"/>
+    <path d="M854 193V201M844 201H864M840 206H868" class="icon"/>
+  </g>
+  <text class="body" x="492" y="251">Front-row experience, exclusive items.</text>
+
+  <g class="reward-item">
+    <text x="508" y="330" style="font-size:60px;font-weight:800;fill:#70ed69">1<tspan fill="#70ed69">.</tspan></text>
+    <g transform="translate(0 -11)">
+      <text class="body" x="569" y="316">Front-row UFC tickets</text>
+      <text class="small" x="569" y="342">($5K to $50K + tickets)</text>
+    </g>
+    <g class="icon" transform="translate(0 -3.5)">
+      <circle cx="856" cy="302" r="6"/><circle cx="840" cy="311" r="5"/><circle cx="872" cy="311" r="5"/>
+      <path d="M845 329V324C845 312 867 312 867 324V329M830 329V322C830 314 840 312 846 316M882 329V322C882 314 872 312 866 316"/>
+    </g>
+  </g>
+  <g class="reward-item">
+    <text x="508" y="406" style="font-size:60px;font-weight:800;fill:#70ed69">2<tspan fill="#70ed69">.</tspan></text>
+    <g transform="translate(0 -18.5)">
+      <text class="body" x="569" y="388">Cornerman access,</text>
+      <text class="small" x="569" y="413">training camp visits,</text>
+      <text class="small" x="569" y="437">athletes meet-and-greets</text>
+    </g>
+    <g transform="translate(1 -18.0)">
+      <rect x="829" y="381" width="52" height="35" rx="4" fill="none" stroke="#1fb9c9" stroke-width="2"/>
+      <path d="M836 390H849M836 396H861M836 402H854" class="icon"/>
+      <circle cx="870" cy="414" r="11" fill="#06131a" stroke="#1fb9c9" stroke-width="2"/>
+      <path d="M865 414L869 418L875 410" class="icon-pink"/>
+    </g>
+  </g>
+  <g class="reward-item">
+    <text x="508" y="484" style="font-size:60px;font-weight:800;fill:#70ed69">3<tspan fill="#70ed69">.</tspan></text>
+    <g transform="translate(0 -7)">
+      <text class="body" x="569" y="466">Real cash — cash <tspan fill="#70ed69">$FXI</tspan></text>
+      <text class="small" x="569" y="492">anytime</text>
+    </g>
+    <g transform="translate(3 -6.0)">
+      <circle cx="853" cy="469" r="19" fill="none" stroke="#1fb9c9" stroke-width="2"/>
+      <circle cx="853" cy="469" r="11" fill="none" stroke="#7fd8cc" stroke-width="1.5"/>
+      <path d="M853 461V477M848 464H856M848 474H856M867 451L858 462" class="icon-pink"/>
+    </g>
+  </g>
+  <g class="reward-item">
+    <text x="508" y="560" style="font-size:60px;font-weight:800;fill:#70ed69">4<tspan fill="#70ed69">.</tspan></text>
+    <g transform="translate(0 -7)">
+      <text class="body" x="569" y="542">Exclusive signed gear</text>
+      <text class="small" x="569" y="568">&amp; merch drops</text>
+    </g>
+    <g transform="translate(5 -13.0)">
+      <path d="M842 536L851 531L860 536L875 539L870 553L865 550V573H837V550L832 553L827 539Z" class="icon"/>
+      <path d="M845 536L851 543L857 536M845 555H857" class="icon-pink"/>
+    </g>
+  </g>
+  <g class="reward-item">
+    <text x="508" y="636" style="font-size:60px;font-weight:800;fill:#70ed69">5<tspan fill="#70ed69">.</tspan></text>
+    <g transform="translate(0 -19)">
+      <text class="body" x="569" y="618">Leaderboard status +</text>
+      <text class="small" x="569" y="644">Founding Supporter</text>
+      <text class="small" x="569" y="668">perks</text>
+    </g>
+    <g transform="translate(-1 -4.5)">
+      <path d="M841 594H873V624C873 636 857 645 857 645S841 636 841 624Z" class="icon"/>
+      <path d="M857 599L860 607L869 608L862 614L864 623L857 618L849 623L851 614L845 608L854 607Z" class="icon-pink"/>
+      <path d="M846 645H868M850 640V645M864 640V645" class="icon"/>
+    </g>
+  </g>
+  <text class="reward-summary" x="492" y="722" style="font-size:23px;font-weight:700">Rewards <tspan style="font-weight:500">that money often can't buy.</tspan></text>
+  </g>
+
+  <!-- FX1 difference -->
+  <g id="panel3" class="panel-stage panel-stage-hidden" tabindex="0" role="button" aria-label="FX1 Difference panel" aria-expanded="false">
+  <path class="panel" d="M936 114H1296Q1314 114 1314 132V671Q1314 701 1284 701H1160C1145 701 1145 752 1125 752H936Q918 752 918 734V132Q918 114 936 114Z"/>
+  <g class="difference-content">
+  <text class="section" x="943" y="169">THE FX1</text>
+  <text class="section" x="943" y="204">DIFFERENCE</text>
+  <g class="glow" aria-label="Comparison icon" transform="translate(-38 3)">
+    <circle cx="1304" cy="177" r="28" fill="#06131a" stroke="#1fb9c9" stroke-width="2"/>
+    <path d="M1287 164V158M1287 164L1280 172M1287 164L1294 172M1321 190V196M1321 190L1314 182M1321 190L1328 182" class="icon"/>
+    <text x="1304" y="186" text-anchor="middle" style="font-size:24px;font-weight:800;fill:#f472b6">≠</text>
+  </g>
+  <text class="body-strong" x="943" y="249">The crypto part? Invisible.</text>
+
+  <g>
+    <circle cx="963" cy="294" r="19" class="icon"/>
+    <circle cx="963" cy="288" r="6" class="icon"/>
+    <path d="M951 306C952 294 974 294 975 306M990 283V310M985 305L990 310L995 305" class="icon-pink"/>
+    <ellipse cx="990" cy="322" rx="15" ry="5" fill="#06131a" stroke="#1fb9c9" stroke-width="2"/>
+    <path d="M975 322V338C975 341 982 344 990 344S1005 341 1005 338V322M975 330C975 333 982 336 990 336S1005 333 1005 330" class="icon"/>
+    <circle cx="1019" cy="288" r="3" class="pink"/>
+    <text class="body" x="1030" y="297">Sign up with email, earn</text>
+    <text class="body" x="1030" y="323">Shots, cashout <tspan fill="#70ed69">$FXI</tspan></text>
+    <text class="body" x="1030" y="350">No wallet headaches</text>
+    <text class="body" x="1030" y="376">unless you want them</text>
+  </g>
+
+  <text class="body-strong" x="943" y="425">Why FX1 ≠ other fan apps.</text>
+  <g>
+    <ellipse cx="960" cy="458" rx="17" ry="7" fill="#06131a" stroke="#1fb9c9" stroke-width="2"/>
+    <path d="M943 458V482C943 486 951 489 960 489S977 486 977 482V458M943 470C943 474 951 477 960 477S977 474 977 470" class="icon"/>
+    <ellipse cx="985" cy="478" rx="17" ry="7" fill="#06131a" stroke="#1fb9c9" stroke-width="2"/>
+    <path d="M968 478V500C968 504 976 507 985 507S1002 504 1002 500V478M968 489C968 493 976 496 985 496S1002 493 1002 489" class="icon"/>
+    <circle cx="997" cy="501" r="10" fill="#06131a" stroke="#f472b6" stroke-width="1.8"/>
+    <text x="997" y="506" text-anchor="middle" style="font-size:15px;font-weight:700;fill:#f472b6">$</text>
+    <circle cx="1019" cy="457" r="3" class="pink"/>
+    <text class="body" x="1030" y="466">Real training data <tspan fill="#e9f4f5">-&gt;</tspan></text>
+    <text class="body" x="1030" y="493"><tspan fill="#7fd8cc">Real B2B revenue</tspan> <tspan fill="#e9f4f5">-&gt;</tspan></text>
+    <text class="body" x="1030" y="520">Real rewards</text>
+  </g>
+
+  <g>
+    <circle cx="1019" cy="564" r="3" class="pink"/>
+    <text class="body" x="1030" y="573">Other platforms give you gift</text>
+    <text class="body" x="1030" y="599">cards: <tspan fill="#70ed69">FX1 gives championship</tspan></text>
+    <text class="body" x="1030" y="625"><tspan fill="#70ed69">tickets</tspan>, backed by a business</text>
+    <text class="body" x="1030" y="651">model that actually funds it</text>
+    <g class="icon" transform="translate(0 0)">
+      <ellipse cx="957" cy="562" rx="15" ry="6"/><path d="M942 562V578C942 582 949 585 957 585S972 582 972 578V562M942 570C942 574 949 577 957 577S972 574 972 570"/>
+      <ellipse cx="987" cy="562" rx="15" ry="6"/><path d="M972 562V578C972 582 979 585 987 585S1002 582 1002 578V562M972 570C972 574 979 577 987 577S1002 574 1002 570"/>
+      <ellipse cx="957" cy="598" rx="15" ry="6"/><path d="M942 598V614C942 618 949 621 957 621S972 618 972 614V598M942 606C942 610 949 613 957 613S972 610 972 606"/>
+      <path d="M969 583L979 590M979 590L972 590M979 590L977 584M957 585V592"/>
+    </g>
+  </g>
+
+  <text class="body" x="943" y="682">A token economy anchored to <tspan fill="#70ed69">operating</tspan></text>
+  <text class="body" x="943" y="709"><tspan fill="#70ed69">revenue</tspan>, not just</text>
+  <text class="body" x="943" y="736">trading volume.</text>
+  <text x="1170" y="734" style="font-size:17px;font-weight:700;fill:#7fd8cc">FX1.IO</text>
+  <text x="1262" y="742" text-anchor="middle" style="font-size:38px;font-weight:800;font-style:italic;fill:#fff">FX<tspan fill="#1fb9c9">1</tspan></text>
+  </g>
+  </g>
+
+  <script><![CDATA[
+    var stages = [].slice.call(document.querySelectorAll(".panel-stage"));
+    var rewardItems = [].slice.call(document.querySelectorAll(".reward-item"));
+    var rewardSummary = document.querySelector(".reward-summary");
+    stages.forEach(function(stage, index) {
+      function advance() {
+        var next = stages[index + 1];
+        if (!next || !next.classList.contains("panel-stage-hidden")) return;
+        next.classList.remove("panel-stage-hidden");
+        stage.setAttribute("aria-expanded", "true");
+        if (next.id === "panel2") {
+          rewardItems.forEach(function(item, itemIndex) {
+            window.setTimeout(function() {
+              item.classList.add("reward-item-visible");
+            }, itemIndex * 1000);
+          });
+          window.setTimeout(function() {
+            rewardSummary.classList.add("reward-summary-visible");
+          }, rewardItems.length * 1000);
+        }
+      }
+      stage.addEventListener("click", advance);
+      stage.addEventListener("keydown", function(event) {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          advance();
+        }
+      });
+    });
+  ]]></script>
+
+  <g class="arena-overview" id="arena-live-overview" data-action="predict">
+    <rect class="arena-overview-panel" x="28" y="116" width="428" height="634" rx="16"/>
+    <rect class="arena-overview-panel" x="472" y="116" width="435" height="634" rx="16"/>
+    <path class="arena-overview-panel" d="M938 116H1294Q1312 116 1312 134V671Q1312 699 1282 699H1172C1150 699 1142 748 1125 748H938Q920 748 920 730V134Q920 116 938 116Z"/>
+
+    <text class="section" x="49" y="157">PLAY THE LIVE EVENT</text>
+    <text class="arena-muted" x="49" y="182">Choose how you want to join the action.</text>
+    <g class="arena-option" data-action="predict" tabindex="0" role="button" aria-pressed="false" aria-label="Choose Predictions">
+      <rect x="48" y="199" width="120" height="42" rx="8"/><text x="62" y="225">PREDICT</text>
+    </g>
+    <g class="arena-option" data-action="battle" tabindex="0" role="button" aria-pressed="false" aria-label="Choose Fan Battles">
+      <rect x="177" y="199" width="120" height="42" rx="8"/><text x="191" y="225">BATTLE</text>
+    </g>
+    <g class="arena-option" data-action="annotate" tabindex="0" role="button" aria-pressed="false" aria-label="Choose Competitive Annotation">
+      <rect x="306" y="199" width="128" height="42" rx="8"/><text x="317" y="225">ANNOTATE</text>
+    </g>
+
+    <rect class="arena-card" x="48" y="258" width="388" height="218" rx="11"/>
+    <text class="arena-label" x="66" y="284">LIVE EVENT</text>
+    <circle cx="147" cy="279" r="4" fill="#f472b6"/><text class="arena-muted" x="158" y="284">ROUND 2</text>
+    <text class="arena-label" x="366" y="284" text-anchor="end">06:42</text>
+    <g class="action-visual" data-visual="predict">
+      <circle cx="242" cy="365" r="62" fill="#030d12" stroke="#14535c" stroke-width="2"/>
+      <circle cx="242" cy="365" r="45" fill="none" stroke="#1fb9c9" stroke-width="1.5" opacity=".65"/>
+      <path d="M242 305V425M182 365H302" stroke="#14535c" stroke-width="1.2"/>
+      <circle cx="215" cy="348" r="10" fill="#07141a" stroke="#1fb9c9" stroke-width="2"/>
+      <circle cx="269" cy="382" r="10" fill="#07141a" stroke="#f472b6" stroke-width="2"/>
+      <path d="M220 354L236 364M264 376L248 366" class="icon"/>
+    </g>
+    <g class="action-visual" data-visual="battle">
+      <rect x="178" y="307" width="128" height="116" rx="18" fill="#030d12" stroke="#14535c" stroke-width="2"/>
+      <path d="M242 315V415" stroke="#14535c" stroke-width="1.5"/>
+      <circle cx="211" cy="342" r="11" fill="#07141a" stroke="#1fb9c9" stroke-width="2"/>
+      <path d="M190 379C191 357 231 357 232 379V387H190ZM196 390H226" fill="#07141a" stroke="#1fb9c9" stroke-width="2" stroke-linejoin="round"/>
+      <circle cx="273" cy="342" r="11" fill="#07141a" stroke="#f472b6" stroke-width="2"/>
+      <path d="M252 379C253 357 293 357 294 379V387H252ZM258 390H288" fill="#07141a" stroke="#f472b6" stroke-width="2" stroke-linejoin="round"/>
+      <g class="battle-versus"><circle cx="242" cy="366" r="15" fill="#06131a" stroke="#70ed69" stroke-width="1.8"/><text x="242" y="372" text-anchor="middle" style="font-size:16px;font-weight:800;fill:#70ed69">VS</text></g>
+      <text class="arena-label" x="211" y="411" text-anchor="middle">FAN A</text><text class="arena-label" x="273" y="411" text-anchor="middle">FAN B</text>
+    </g>
+    <g class="action-visual" data-visual="annotate">
+      <path d="M211 312H273L301 335V395L273 418H211L183 395V335Z" fill="#030d12" stroke="#1fb9c9" stroke-width="2"/>
+      <path d="M221 313V418M263 313V418M184 345H299M184 385H299" stroke="#14535c" stroke-width="1.2"/>
+      <circle cx="216" cy="351" r="9" fill="#07141a" stroke="#1fb9c9" stroke-width="2"/>
+      <path d="M216 361L227 375L215 390M226 375L240 370L249 359" class="icon"/>
+      <circle cx="270" cy="361" r="9" fill="#07141a" stroke="#f472b6" stroke-width="2"/>
+      <path d="M270 371L258 384L267 397M258 384L246 373" class="icon-pink"/>
+      <path d="M235 362Q247 347 261 354" fill="none" stroke="#f472b6" stroke-width="1.8" stroke-dasharray="4 3"/>
+      <g class="annotation-hit"><circle cx="249" cy="351" r="7" fill="#f472b6" stroke="#fff" stroke-width="1.5"/><path d="M249 340V326H288" fill="none" stroke="#f472b6" stroke-width="1.5"/><rect x="267" y="315" width="49" height="20" rx="5" fill="#07141a" stroke="#f472b6" stroke-width="1"/><text x="291" y="329" text-anchor="middle" style="font-size:10px;font-weight:800;fill:#f472b6">STRIKE</text></g>
+    </g>
+    <text class="arena-label" x="66" y="453">YOUR MOVE</text>
+    <text class="arena-label" id="action-title" x="164" y="449">READY TO PLAY</text>
+    <text class="arena-copy" id="action-status" x="164" y="472">Pick an action to start the pulse.</text>
+    <path d="M68 509H406" stroke="#14535c" stroke-width="1.5"/>
+    <circle cx="75" cy="509" r="5" fill="#70ed69"/><text class="arena-label" x="91" y="514">PLAY</text>
+    <path d="M144 509H245" class="flow"/>
+    <circle cx="273" cy="509" r="5" fill="#1fb9c9"/><text class="arena-label" x="289" y="514">SPORT DATA</text>
+    <circle id="live-signal" r="4" fill="#70ed69" opacity="0">
+      <animateMotion id="live-signal-motion" dur="1.5s" begin="indefinite" fill="freeze" path="M144 509H245"/>
+      <animate attributeName="opacity" from="0" to="1" dur=".1s" begin="live-signal-motion.begin" fill="freeze"/>
+    </circle>
+    <text class="arena-muted" x="49" y="559">A play creates a moment that MotionAI can learn from.</text>
+    <path d="M49 584H435" stroke="#14535c" stroke-width="1.3"/>
+    <text class="arena-label" x="49" y="617">WHAT THIS POWERS</text>
+    <text class="arena-copy" x="49" y="647">Better data → better products → more ways to play.</text>
+    <text class="arena-muted" x="49" y="682">The same activity creates fan value and useful AI data.</text>
+
+    <text class="section" x="493" y="157">PICK A REWARD PATH</text>
+    <text class="arena-muted" x="493" y="182">Choose one to follow how Arena benefits connect.</text>
+    <g class="arena-option reward-option" data-reward="tickets" tabindex="0" role="button" aria-pressed="false" aria-label="Select front-row tickets">
+      <rect x="492" y="205" width="395" height="58" rx="9"/><circle cx="519" cy="234" r="15" fill="#06131a" stroke="#1fb9c9" stroke-width="1.5"/>
+      <path d="M513 227H525V241H513ZM516 230H522M516 234H522M516 238H521" class="icon"/>
+      <text class="arena-copy" style="fill:#70ed69" x="546" y="231">Front-row tickets</text><text class="arena-muted" x="546" y="250">Live-event access</text>
+    </g>
+    <g class="arena-option reward-option" data-reward="cash" tabindex="0" role="button" aria-pressed="false" aria-label="Select cash in $FXI">
+      <rect x="492" y="272" width="395" height="58" rx="9"/><circle cx="519" cy="301" r="15" fill="#06131a" stroke="#1fb9c9" stroke-width="1.5"/>
+      <text x="519" y="307" text-anchor="middle" style="font-size:18px;font-weight:800;fill:#70ed69">$</text>
+      <text class="arena-copy" style="fill:#70ed69" x="546" y="298">Cash out in $FXI</text><text class="arena-muted" x="546" y="317">Available cash rewards</text>
+    </g>
+    <g class="arena-option reward-option" data-reward="cornerman" tabindex="0" role="button" aria-pressed="false" aria-label="Select cornerman access">
+      <rect x="492" y="339" width="395" height="58" rx="9"/><circle cx="519" cy="368" r="15" fill="#06131a" stroke="#1fb9c9" stroke-width="1.5"/>
+      <path d="M512 373V366C512 358 526 358 526 366V373M516 361V358M523 361V358" class="icon"/>
+      <text class="arena-copy" style="fill:#70ed69" x="546" y="365">Cornerman access</text><text class="arena-muted" x="546" y="384">Meet athletes and teams</text>
+    </g>
+    <g class="arena-option reward-option" data-reward="gear" tabindex="0" role="button" aria-pressed="false" aria-label="Select signed gear">
+      <rect x="492" y="406" width="395" height="58" rx="9"/><circle cx="519" cy="435" r="15" fill="#06131a" stroke="#1fb9c9" stroke-width="1.5"/>
+      <path d="M513 430L519 426L525 430L529 432L526 439L523 437V445H515V437L512 439L509 432Z" class="icon"/>
+      <text class="arena-copy" style="fill:#70ed69" x="546" y="432">Signed gear</text><text class="arena-muted" x="546" y="451">Limited merchandise drops</text>
+    </g>
+    <g class="arena-option reward-option" data-reward="status" tabindex="0" role="button" aria-pressed="false" aria-label="Select leaderboard status">
+      <rect x="492" y="473" width="395" height="58" rx="9"/><circle cx="519" cy="502" r="15" fill="#06131a" stroke="#1fb9c9" stroke-width="1.5"/>
+      <path d="M519 491L522 498L530 499L524 504L526 512L519 508L512 512L514 504L508 499L516 498Z" class="icon-pink"/>
+      <text class="arena-copy" style="fill:#70ed69" x="546" y="499">Leaderboard status</text><text class="arena-muted" x="546" y="518">Founding Supporter perks</text>
+    </g>
+    <rect class="arena-card" x="492" y="554" width="395" height="129" rx="10"/>
+    <text class="arena-label" x="512" y="582">FOLLOW THE VALUE</text>
+    <circle cx="526" cy="620" r="15" fill="#06131a" stroke="#1fb9c9" stroke-width="1.5"/><text x="526" y="626" text-anchor="middle" style="font-size:16px;font-weight:800;fill:#7fd8cc">S</text>
+    <path d="M546 620H604" class="flow"/>
+    <circle cx="629" cy="620" r="15" fill="#06131a" stroke="#1fb9c9" stroke-width="1.5"/><text x="629" y="626" text-anchor="middle" style="font-size:16px;font-weight:800;fill:#7fd8cc">$</text>
+    <path d="M650 620H712" class="flow"/>
+    <circle cx="738" cy="620" r="15" fill="#06131a" stroke="#70ed69" stroke-width="1.5"/><path d="M731 615H745V625H731Z" class="icon"/>
+    <text class="arena-muted" x="506" y="659">Shots</text><text class="arena-muted" x="610" y="659">$FXI</text><text class="arena-muted" x="712" y="659">Your pick</text>
+    <text class="arena-copy" id="reward-status" x="512" y="708">Select a reward to trace an example path.</text>
+
+    <text class="section" x="941" y="157">WHY ARENA IS DIFFERENT</text>
+    <text class="arena-muted" x="941" y="182">Two models. See what connects the fan to the reward.</text>
+    <g class="arena-mode-button comparison-button" data-comparison="typical" tabindex="0" role="button" aria-pressed="false" aria-label="Compare a typical fan app">
+      <rect x="940" y="199" width="164" height="39" rx="8"/><text x="955" y="224">TYPICAL APP</text>
+    </g>
+    <g class="arena-mode-button comparison-button" data-comparison="fx1" tabindex="0" role="button" aria-pressed="true" aria-label="Show the FX1 Arena model">
+      <rect x="1115" y="199" width="174" height="39" rx="8"/><text x="1130" y="224">FX1 ARENA</text>
+    </g>
+    <g id="comparison-typical" style="display:none">
+      <rect class="arena-card" x="940" y="257" width="349" height="294" rx="10"/>
+      <circle cx="1114" cy="328" r="35" fill="#06131a" stroke="#14535c" stroke-width="2"/>
+      <path d="M1096 316H1132V341H1096ZM1103 324H1125M1103 330H1120M1112 316V311H1120V316" class="icon"/>
+      <text class="arena-label" x="1114" y="395" text-anchor="middle">PLAY → GENERIC REWARD</text>
+      <text class="arena-copy" x="966" y="438">A simple fan app may stop at a</text>
+      <text class="arena-copy" x="966" y="464">gift card or a one-off promotion.</text>
+      <text class="arena-muted" x="966" y="505">Little connection to live sport data.</text>
+    </g>
+    <g id="comparison-fx1">
+      <rect class="arena-card" x="940" y="257" width="349" height="390" rx="10"/>
+      <path d="M970 310V611" stroke="#14535c" stroke-width="2"/>
+      <circle cx="970" cy="311" r="12" fill="#06131a" stroke="#1fb9c9" stroke-width="2"/><text x="970" y="317" text-anchor="middle" style="font-size:16px;font-weight:800;fill:#70ed69">1</text>
+      <text class="arena-label" style="font-size:19px" x="998" y="307">FAN PLAYS</text><text class="arena-muted" style="font-size:17px" x="998" y="328">Prediction, battle or annotation</text>
+      <circle cx="970" cy="386" r="12" fill="#06131a" stroke="#1fb9c9" stroke-width="2"/><text x="970" y="392" text-anchor="middle" style="font-size:16px;font-weight:800;fill:#70ed69">2</text>
+      <text class="arena-label" style="font-size:19px" x="998" y="382">SPORT MOMENT IS LABELED</text><text class="arena-muted" style="font-size:17px" x="998" y="403">Structured data validates AI</text>
+      <circle cx="970" cy="461" r="12" fill="#06131a" stroke="#1fb9c9" stroke-width="2"/><text x="970" y="467" text-anchor="middle" style="font-size:16px;font-weight:800;fill:#70ed69">3</text>
+      <text class="arena-label" style="font-size:19px" x="998" y="457">PRODUCTS IMPROVE</text><text class="arena-muted" style="font-size:17px" x="998" y="478">MotionAI and Pulse get better</text>
+      <circle cx="970" cy="536" r="12" fill="#06131a" stroke="#1fb9c9" stroke-width="2"/><text x="970" y="542" text-anchor="middle" style="font-size:16px;font-weight:800;fill:#70ed69">4</text>
+      <text class="arena-label" style="font-size:19px" x="998" y="532">BUSINESS CREATES VALUE</text><text class="arena-muted" style="font-size:17px" x="998" y="553">Sponsors, data and commerce</text>
+      <circle cx="970" cy="611" r="12" fill="#06131a" stroke="#70ed69" stroke-width="2"/><text x="970" y="617" text-anchor="middle" style="font-size:16px;font-weight:800;fill:#70ed69">5</text>
+      <text class="arena-label" style="font-size:19px" x="998" y="607">MORE REASONS TO RETURN</text><text class="arena-muted" style="font-size:17px" x="998" y="628">Rewards connect back to fans</text>
+      <circle id="arena-data-pulse" cx="970" cy="311" r="4.5" fill="#70ed69" opacity="0">
+        <animateMotion id="arena-data-motion" dur="2.3s" begin="indefinite" fill="freeze" path="M970 311V611"/>
+        <animate attributeName="opacity" from="0" to="1" dur=".1s" begin="arena-data-motion.begin" fill="freeze"/>
+      </circle>
+    </g>
+    <text class="arena-muted" x="941" y="684">Illustrative flow; actual benefits depend on program terms.</text>
+    <text class="arena-label" x="941" y="716">YOUR CHOICE: <tspan id="reward-choice-label" fill="#70ed69">NO REWARD SELECTED</tspan></text>
+    <text x="1170" y="734" style="font-size:17px;font-weight:700;fill:#7fd8cc">FX1.IO</text>
+    <text x="1262" y="742" text-anchor="middle" style="font-size:38px;font-weight:800;font-style:italic;fill:#fff">FX<tspan fill="#1fb9c9">1</tspan></text>
+  </g>
+
+  <script><![CDATA[
+    var arenaRoot = document.documentElement;
+    var detailsButton = document.querySelector(".arena-details-button");
+    var backButton = document.querySelector(".arena-back-button");
+    var activityOptions = [].slice.call(document.querySelectorAll(".arena-option[data-action]"));
+    var rewardOptions = [].slice.call(document.querySelectorAll(".reward-option"));
+    var comparisonButtons = [].slice.call(document.querySelectorAll(".comparison-button"));
+    function activateByKeyboard(element, callback) {
+      element.addEventListener("click", callback);
+      element.addEventListener("keydown", function(event) {
+        if (event.key === "Enter" || event.key === " ") { event.preventDefault(); callback(); }
+      });
+    }
+    activateByKeyboard(detailsButton, function() { arenaRoot.classList.add("arena-details"); });
+    activateByKeyboard(backButton, function() { arenaRoot.classList.remove("arena-details"); });
+    var actionMessages = {
+      predict: ["PREDICTION ACTIVE", "Your pick becomes a match signal."],
+      battle: ["BATTLE ACTIVE", "Fan face-offs create AI feedback."],
+      annotate: ["ANNOTATION ACTIVE", "Labels help validate sports AI."]
+    };
+    activityOptions.forEach(function(option) {
+      activateByKeyboard(option, function() {
+        var action = option.getAttribute("data-action");
+        activityOptions.forEach(function(item) { item.setAttribute("aria-pressed", String(item === option)); });
+        document.querySelector("#arena-live-overview").setAttribute("data-action", action);
+        document.querySelector("#action-title").textContent = actionMessages[action][0];
+        document.querySelector("#action-status").textContent = actionMessages[action][1];
+        document.querySelector("#arena-live-overview").classList.add("is-playing");
+        document.querySelector("#arena-data-pulse").setAttribute("opacity", "1");
+        document.querySelector("#arena-data-motion").beginElement();
+      });
+    });
+    var rewardNames = {tickets:"FRONT-ROW TICKETS", cash:"CASH IN $FXI", cornerman:"CORNERMAN ACCESS", gear:"SIGNED GEAR", status:"LEADERBOARD STATUS"};
+    rewardOptions.forEach(function(option) {
+      activateByKeyboard(option, function() {
+        var reward = option.getAttribute("data-reward");
+        rewardOptions.forEach(function(item) { item.setAttribute("aria-pressed", String(item === option)); });
+        var name = rewardNames[reward];
+        document.querySelector("#reward-status").textContent = "Example path selected: Shots → $FXI → " + name + ".";
+        document.querySelector("#reward-choice-label").textContent = name;
+      });
+    });
+    comparisonButtons.forEach(function(button) {
+      activateByKeyboard(button, function() {
+        var isFx1 = button.getAttribute("data-comparison") === "fx1";
+        comparisonButtons.forEach(function(item) { item.setAttribute("aria-pressed", String(item === button)); });
+        document.querySelector("#comparison-typical").style.display = isFx1 ? "none" : "inline";
+        document.querySelector("#comparison-fx1").style.display = isFx1 ? "inline" : "none";
+      });
+    });
+  ]]></script>
+</svg>
