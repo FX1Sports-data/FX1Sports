@@ -461,14 +461,16 @@ title: FX1 Sports — Portal & Interactive Roadmap
       <div class="fx1-card">
         <div class="landing-container">
           
-          <!-- BANNIERE AVERTISSEMENT EN ANGLAIS -->
-          <div class="disclaimer-banner">
-            <div>⚠️</div>
-            <div>
-              <strong>Disclaimer:</strong> This website is not the official FX1 website. It is an educational portal designed to present the FX1 ecosystem and explain its features. To access the official website, please visit <a href="https://fx1.io" target="_blank" rel="noopener noreferrer">FX1.io</a>. We will never ask you to connect your wallet!
-            </div>
-          </div>
-          <!-- FIN BANNIERE AVERTISSEMENT -->
+<!-- BANNIERE AVERTISSEMENT EN ANGLAIS -->
+<div class="disclaimer-banner">
+  <div>⚠️</div>
+  <div>
+    <strong>Disclaimer:</strong> This website is not the official FX1 website. It is an educational portal designed to present the FX1 ecosystem and explain its features. To access the official website, please visit <a href="https://fx1.io" target="_blank" rel="noopener noreferrer">FX1.io</a>.
+    <br>
+    We will never ask you to connect your wallet!
+  </div>
+</div>
+<!-- FIN BANNIERE AVERTISSEMENT -->
 
           <!-- Hero Section -->
           <div class="landing-hero">
