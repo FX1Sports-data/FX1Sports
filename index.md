@@ -140,7 +140,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
   .fx1-topbar p {
     color: #CBD5E1;
     margin: 0;
-    font-size: 0.85rem;
+   font-size: 0.85rem;
     line-height: 1.4;
   }
 
@@ -148,7 +148,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
   .view-panel {
     display: flex;
     flex-direction: column;
-    height: 0;
+   height: 0;
     overflow: hidden;
     opacity: 0;
     visibility: hidden;
@@ -209,7 +209,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
     padding: 12px 16px;
     color: #FFD166;
     font-size: 0.85rem;
-    display: flex;
+   display: flex;
     align-items: flex-start;
     gap: 12px;
     line-height: 1.5;
@@ -221,7 +221,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
 
   .disclaimer-banner a {
     color: #00E5FF;
-    text-decoration: none;
+   text-decoration: none;
     font-weight: 600;
     transition: color 0.2s;
   }
@@ -234,7 +234,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
   .landing-hero {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
-    gap: 30px;
+   gap: 30px;
     align-items: center;
   }
 
@@ -275,366 +275,4 @@ title: FX1 Sports — Portal & Interactive Roadmap
   .btn-primary {
     background: #00E5FF;
     color: #050811;
-    padding: 10px 20px;
-    border-radius: 6px;
-    font-weight: 700;
-    font-size: 0.9rem;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-    transition: opacity 0.2s;
-  }
-
-  .btn-primary:hover {
-    opacity: 0.9;
-  }
-
-  .btn-secondary {
-    background: rgba(0, 229, 255, 0.1);
-    color: #00E5FF;
-    padding: 10px 20px;
-    border-radius: 6px;
-    font-weight: 700;
-    font-size: 0.9rem;
-    border: 1px solid rgba(0, 229, 255, 0.3);
-    cursor: pointer;
-    text-decoration: none;
-    transition: background 0.2s;
-  }
-
-  .btn-secondary:hover {
-    background: rgba(0, 229, 255, 0.2);
-  }
-
-  /* Conteneur Vidéo Natif */
-  .landing-media-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .landing-media {
-    background: rgba(5, 8, 17, 0.9);
-    border: 1px solid rgba(0, 229, 255, 0.3);
-    border-radius: 12px;
-    overflow: hidden;
-    aspect-ratio: 16/9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 20px rgba(0, 229, 255, 0.1);
-  }
-
-  .landing-media video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .twitter-link-hint {
-    text-align: right;
-    font-size: 0.75rem;
-  }
-
-  .twitter-link-hint a {
-    color: #64748B;
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
-  .twitter-link-hint a:hover {
-    color: #00E5FF;
-  }
-
-  /* Grille des fonctionnalités clés sur la landing */
-  .landing-features {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-  }
-
-  .feature-box {
-    background: rgba(11, 15, 25, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 16px;
-    border-radius: 8px;
-    transition: border-color 0.2s;
-  }
-
-  .feature-box:hover {
-    border-color: rgba(0, 229, 255, 0.4);
-  }
-
-  .feature-box h4 {
-    color: #FFFFFF;
-    margin: 0 0 6px 0;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-
-  .feature-box p {
-    color: #94A3B8;
-    font-size: 0.82rem;
-    margin: 0;
-    line-height: 1.4;
-  }
-
-  .placeholder-box {
-    padding: 40px;
-    text-align: center;
-    color: #E2E8F0;
-  }
-
-  /* Adaptation mobile */
-  @media (max-width: 900px) {
-    .landing-hero {
-      grid-template-columns: 1fr;
-    }
-    .landing-features {
-      grid-template-columns: 1fr;
-    }
-    html, body {
-      overflow: auto !important;
-      height: auto !important;
-    }
-    .fx1-dashboard {
-      flex-direction: column;
-      position: relative;
-      height: auto;
-    }
-    .fx1-sidebar {
-      width: 100%;
-      border-right: none;
-      border-bottom: 1px solid rgba(0, 229, 255, 0.15);
-    }
-    .fx1-card {
-      height: auto;
-      max-height: none;
-    }
-  }
-</style>
-
-<div class="fx1-dashboard">
-  <!-- SIDEBAR GAUCHE -->
-  <aside class="fx1-sidebar">
-    <div class="fx1-brand">
-      FX1 <span>PROT</span>
-    </div>
-    
-    <button class="nav-btn active" onclick="switchTab('overview', this)">
-      🚀 Overview
-    </button>
-    <button class="nav-btn" onclick="switchTab('ecosystem', this)">
-      🌐 Ecosystem
-    </button>
-    <button class="nav-btn" onclick="switchTab('roadmap', this)">
-      🗺 Interactive Roadmap
-    </button>
-    <button class="nav-btn" onclick="switchTab('arena', this)">
-      🏟️ Arena
-    </button>
-    <button class="nav-btn" onclick="switchTab('token', this)">
-      🪙 Token Utility
-    </button>
-    <button class="nav-btn" onclick="switchTab('status', this)">
-      ⭐ Status & Benefits
-    </button>
-    <button class="nav-btn" onclick="switchTab('pulse', this)">
-      ⚡ Pulse
-    </button>
-    <button class="nav-btn" onclick="switchTab('docs', this)">
-      📄 Documentation
-    </button>
-  </aside>
-
-  <!-- CONTENU PRINCIPAL A DROITE -->
-  <main class="fx1-content">
-    
-    <!-- OVERVIEW / LANDING PAGE -->
-    <div id="view-overview" class="view-panel active">
-      <div class="fx1-topbar">
-        <h1>FX1Sports Overview</h1>
-        <p>Discover the core engine powering the next generation of sports engagement and AI data.</p>
-      </div>
-      <div class="fx1-card">
-        <div class="landing-container">
-          
-<!-- BANNIERE AVERTISSEMENT EN ANGLAIS -->
-<div class="disclaimer-banner">
-  <div>⚠️</div>
-  <div>
-    <strong>Disclaimer:</strong> This website is not the official FX1 website. It is an educational portal designed to present the FX1 ecosystem and explain its features. To access the official websites, please visit <a href="https://fx1.io" target="_blank" rel="noopener noreferrer">FX1.io</a> and <a href="https://FX1Pulse.com" target="_blank" rel="noopener noreferrer">FX1Pulse.com</a>.
-    <br>
-    We will never ask you to connect your wallet!
-  </div>
-</div>
-<!-- FIN BANNIERE AVERTISSEMENT -->
-
-          <!-- Hero Section -->
-          <div class="landing-hero">
-            <div class="landing-text">
-              <img src="{{ '/FX1logo.webp' | relative_url }}" alt="FX1 Sports Logo" class="landing-logo">
-              
-              <h2>Bridging <span>Fan Engagement</span> & AI Data</h2>
-              <p>FX1 transforms everyday sports fandom into productive AI validation and real-world B2B revenue. Play games, make predictions, and unlock incredible real-world rewards—all with zero crypto friction.</p>
-              <div class="landing-cta-group">
-                <button class="btn-primary" onclick="switchTab('ecosystem', document.querySelectorAll('.nav-btn')[1])">Explore Ecosystem</button>
-                <button class="btn-secondary" onclick="switchTab('roadmap', document.querySelectorAll('.nav-btn')[2])">View Roadmap</button>
-              </div>
-            </div>
-            
-            <!-- Bloc Vidéo Natif (FX1intro.mp4) -->
-            <div class="landing-media-wrapper">
-              <div class="landing-media">
-                <video src="{{ '/FX1intro.mp4' | relative_url }}" autoplay loop muted playsinline controls></video>
-              </div>
-              <div class="twitter-link-hint">
-                <a href="https://x.com/FX1Sports/status/2010963902679695518" target="_blank">View original post on X ↗</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Feature Cards / Aperçu rapide -->
-          <div class="landing-features">
-            <div class="feature-box" onclick="switchTab('arena', document.querySelectorAll('.nav-btn')[3])" style="cursor: pointer;">
-              <h4>🏟️ FX1 Arena</h4>
-              <p>Gamified predictions, trivia, and head-to-head fan battles fueled by MotionAI live data.</p>
-            </div>
-            <div class="feature-box" onclick="switchTab('pulse', document.querySelectorAll('.nav-btn')[6])" style="cursor: pointer;">
-              <h4>⚡ Pulse SaaS</h4>
-              <p>Automated personalized content creation for athletes, creators, and combat sports promotions.</p>
-            </div>
-            <div class="feature-box" onclick="switchTab('token', document.querySelectorAll('.nav-btn')[4])" style="cursor: pointer;">
-              <h4>🪙 Token Utility</h4>
-              <p>A self-sustaining utility loop anchored to real operating revenues, buybacks, and ecosystem rewards.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ECOSYSTEM -->
-    <div id="view-ecosystem" class="view-panel">
-      <div class="fx1-topbar">
-        <h1>Ecosystem</h1>
-        <p>The FX1 Ecosystem connects fan engagement, AI data training, and real commercial revenue lines into a single, self-sustaining network.</p>
-      </div>
-      <div class="fx1-card">
-        <object data="{{ '/FX1ecosystem.svg' | relative_url }}?v=1" type="image/svg+xml">
-          <p style="padding:20px; text-align:center; color:#E2E8F0;">
-            Your browser does not load the SVG. 
-            <a href="{{ '/FX1ecosystem.svg' | relative_url }}?v=1" style="color:#00E5FF;">Click here to open it directly</a>.
-          </p>
-        </object>
-      </div>
-    </div>
-
-    <!-- ROADMAP -->
-    <div id="view-roadmap" class="view-panel">
-      <div class="fx1-topbar">
-        <h1>Interactive Roadmap</h1>
-        <p>Discover our strategic vision and the multi-phased rollout of the platform.</p>
-      </div>
-      <div class="fx1-card">
-        <object data="{{ '/FX1roadmap.svg' | relative_url }}?v=5" type="image/svg+xml">
-          <p style="padding:20px; text-align:center; color:#E2E8F0;">
-            Your browser does not load the SVG. 
-            <a href="{{ '/FX1roadmap.svg' | relative_url }}?v=5" style="color:#00E5FF;">Click here to open it directly</a>.
-          </p>
-        </object>
-      </div>
-    </div>
-
-    <!-- ARENA -->
-    <div id="view-arena" class="view-panel">
-      <div class="fx1-topbar">
-        <h1>FX1 Arena</h1>
-        <p>FX1 Arena blends gamified fan experiences—predictions, battles, and trivia—with live AI data training to deliver real-world rewards.</p>
-      </div>
-      <div class="fx1-card">
-        <object data="{{ '/FX1arena.svg' | relative_url }}?v=1" type="image/svg+xml">
-          <p style="padding:20px; text-align:center; color:#E2E8F0;">
-            Your browser does not load the SVG. 
-            <a href="{{ '/FX1arena.svg' | relative_url }}?v=1" style="color:#00E5FF;">Click here to open it directly</a>.
-          </p>
-        </object>
-      </div>
-    </div>
-
-    <!-- TOKEN UTILITY -->
-    <div id="view-token" class="view-panel">
-      <div class="fx1-topbar">
-        <h1>Token Utility</h1>
-        <p>The $FXI token fuels a self-sustaining utility loop—linking gameplay, AI validation, and real commercial revenues.</p>
-      </div>
-      <div class="fx1-card">
-        <object data="{{ '/FX1utility.svg' | relative_url }}?v=1" type="image/svg+xml">
-          <p style="padding:20px; text-align:center; color:#E2E8F0;">
-            Your browser does not load the SVG. 
-            <a href="{{ '/FX1utility.svg' | relative_url }}?v=1" style="color:#00E5FF;">Click here to open it directly</a>.
-          </p>
-        </object>
-      </div>
-    </div>
-
-    <!-- STATUS & BENEFITS -->
-    <div id="view-status" class="view-panel">
-      <div class="fx1-topbar">
-        <h1>Status & Benefits</h1>
-        <p>Our ecosystem permanently rewards early supporters with exclusive OG benefits, while allowing new users to dynamically build their status.</p>
-      </div>
-      <div class="fx1-card">
-        <object data="{{ '/FX1status.svg' | relative_url }}?v=1" type="image/svg+xml">
-          <p style="padding:20px; text-align:center; color:#E2E8F0;">
-            Your browser does not load the SVG. 
-            <a href="{{ '/FX1status.svg' | relative_url }}?v=1" style="color:#00E5FF;">Click here to open it directly</a>.
-          </p>
-        </object>
-      </div>
-    </div>
-
-    <!-- PULSE AI -->
-    <div id="view-pulse" class="view-panel">
-      <div class="fx1-topbar">
-        <h1>Pulse</h1>
-        <p>FX1 Pulse is an AI-powered SaaS platform engineered to automate personalized content creation for athletes and media.</p>
-      </div>
-      <div class="fx1-card">
-        <object data="{{ '/FX1pulse.svg' | relative_url }}?v=1" type="image/svg+xml">
-          <p style="padding:20px; text-align:center; color:#E2E8F0;">
-            Your browser does not load the SVG. 
-            <a href="{{ '/FX1pulse.svg' | relative_url }}?v=1" style="color:#00E5FF;">Click here to open it directly</a>.
-          </p>
-        </object>
-      </div>
-    </div>
-
-    <!-- DOCUMENTATION -->
-    <div id="view-docs" class="view-panel">
-      <div class="fx1-topbar">
-        <h1>Documentation</h1>
-        <p>Whitepaper, technical guides and documentation.</p>
-      </div>
-      <div class="fx1-card placeholder-box">
-        <h2 style="color:#00E5FF;">Docs & Whitepaper</h2>
-        <p>Consult FX1's technical resources</p>
-      </div>
-    </div>
-
-  </main>
-</div>
-
-<script>
-  function switchTab(viewId, btnElement) {
-    const views = document.querySelectorAll('.view-panel');
-    views.forEach(view => view.classList.remove('active'));
-
-    const buttons = document.querySelectorAll('.nav-btn');
-    buttons.forEach(btn => btn.classList.remove('active'));
-
-    document.getElementById('view-' + viewId).classList.add('active');
-    btnElement.classList.add('active');
-  }
-</script>
+   padding
