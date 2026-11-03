@@ -441,7 +441,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
     <button class="nav-btn" onclick="switchTab('status', this)">
       ⭐ Status & Benefits
     </button>
-    <button class="nav-btn" onclick="switchTab('pulseai', this)">
+    <button class="nav-btn" onclick="switchTab('pulse', this)">
       ⚡ PulseAI
     </button>
     <button class="nav-btn" onclick="switchTab('docs', this)">
