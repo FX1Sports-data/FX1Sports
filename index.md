@@ -442,7 +442,7 @@ title: FX1 Sports — Portal & Interactive Roadmap
       ⭐ Status & Benefits
     </button>
     <button class="nav-btn" onclick="switchTab('pulse', this)">
-      ⚡ PulseAI
+      ⚡ Pulse
     </button>
     <button class="nav-btn" onclick="switchTab('docs', this)">
       📄 Documentation
@@ -502,8 +502,8 @@ title: FX1 Sports — Portal & Interactive Roadmap
               <h4>🏟️ FX1 Arena</h4>
               <p>Gamified predictions, trivia, and head-to-head fan battles fueled by MotionAI live data.</p>
             </div>
-            <div class="feature-box" onclick="switchTab('pulseai', document.querySelectorAll('.nav-btn')[6])" style="cursor: pointer;">
-              <h4>⚡ PulseAI SaaS</h4>
+            <div class="feature-box" onclick="switchTab('pulse', document.querySelectorAll('.nav-btn')[6])" style="cursor: pointer;">
+              <h4>⚡ Pulse SaaS</h4>
               <p>Automated personalized content creation for athletes, creators, and combat sports promotions.</p>
             </div>
             <div class="feature-box" onclick="switchTab('token', document.querySelectorAll('.nav-btn')[4])" style="cursor: pointer;">
@@ -596,9 +596,9 @@ title: FX1 Sports — Portal & Interactive Roadmap
     </div>
 
     <!-- PULSE AI -->
-    <div id="view-pulseai" class="view-panel">
+    <div id="view-pulse" class="view-panel">
       <div class="fx1-topbar">
-        <h1>PulseAI</h1>
+        <h1>Pulse</h1>
         <p>FX1 Pulse is an AI-powered SaaS platform engineered to automate personalized content creation for athletes and media.</p>
       </div>
       <div class="fx1-card">
